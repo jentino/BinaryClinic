@@ -30,10 +30,8 @@ function dot_update(dbgindex, seconds, minutes){
 	    var green = "greencandle";
 	    var red = "redcandle";
   	}
-  	
-  	
-  	
-  	var xhr;
+
+ 	var xhr;
 
  	if (window.XMLHttpRequest) { // Mozilla, Safari, ...
     	xhr = new XMLHttpRequest();
@@ -53,8 +51,7 @@ function dot_update(dbgindex, seconds, minutes){
 	    if (xhr.readyState == 4) {
 	      	if (xhr.status == 200) {
 		        if(xhr.responseText == "1"){
-		        	
-		          	document.getElementById(display_div_id).innerHTML = "<img src=../img/"+green+".png>";
+		        	document.getElementById(display_div_id).innerHTML = "<img src=../img/"+green+".png>";
 		          	
 		          	if(data == "candle_id=dot3") {
 		            	if(seconds == 1) 
@@ -62,7 +59,7 @@ function dot_update(dbgindex, seconds, minutes){
 		          	}
 		        }
 	       		else if(xhr.responseText == "2"){
-	        	
+	        		
 	          		document.getElementById(display_div_id).innerHTML = "<img src=../img/"+red+".png>";
 	           		
 	           		if(data == "candle_id=dot3") {

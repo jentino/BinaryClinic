@@ -121,6 +121,7 @@
 
 	</div> 	 
 </div>
+<br>
 <!-------------------------------------- ACCOUNTING HEADER (BUTTONS) ------------------------------------ -->
 
 
@@ -181,7 +182,7 @@
 </div>
 
 <!-------------------------------------- MESSAGE CONSOLE  ------------------------------------ -->
-<hr id="divider" style="width:50%">
+<hr align="left" style="width:600px">
 <div id="mainConsole">
 		<div class="innerConsole" id="debug" onscroll="myStopFunction()"></div>
 	</div>
