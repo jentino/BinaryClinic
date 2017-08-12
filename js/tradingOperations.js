@@ -19,14 +19,21 @@ function checkWinOrLoss(amount){
 	return str_return;
 }
 
-
+var temp_min = "";
 //////////////////////////////////////////////////////////////////  AUTO TRADINNG
 function tradeOption(direction, currentMinutes) {
-    if(direction=="CALL") Buyit(tradeamount[rescue]);
-    else if (direction=="PUT") Sellit(tradeamount[rescue]);
-    document.getElementById("d3inside").innerHTML = currentMinutes;
-    document.getElementById("tradeaction").innerHTML = direction;
-    showRescueAmount();
+	
+	if(temp_min != currentMinutes) {
+		if(direction=="CALL") Buyit(tradeamount[rescue]);
+    	else if (direction=="PUT") Sellit(tradeamount[rescue]);
+    	document.getElementById("d3inside").innerHTML = currentMinutes;
+    	document.getElementById("tradeaction").innerHTML = direction;
+    	showRescueAmount();
+    	temp_min = currentMinutes;
+	}
+	else
+		return 0;
+    
 } 
  
  // if(i != -1 && currentSeconds == 0) {
