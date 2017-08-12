@@ -9,8 +9,8 @@ var countlosses = 0;
 var countwins = 0;
 
 var trader_name = "";
-var DOT3;
-var Sig;
+
+var signalCandle = "";
 
 var rescue 	= 0;
 var delayCount = -5;

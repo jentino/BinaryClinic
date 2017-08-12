@@ -164,7 +164,7 @@
 
 <table id="tblgetbuttonsDash">
 	<td>	<div id="ash" class="pad" contenteditable="true">
- 		<div id="a" class="alignDivs">MIN  = </div><div id="d3inside" class="alignDivs"></div>
+ 		<div id="a" class="alignDivs">MIN  = </div><div id="currentMinutes" class="alignDivs"></div>
 		<div id="a" class="alignDivs">ACTION =    </div><div id="tradeaction" class="alignDivs"></div>
 		<div id="a" class="alignDivs">RESCUE =   </div><div id="rescueamount" class="alignDivs"></div>
 		<!--<div id="a" class="alignDivs">REPORT =   </div><div id="showreport" class="alignDivs"></div>

@@ -57,6 +57,9 @@ function dot_update(dbgindex, seconds, minutes){
 		            	if(seconds == 1) 
 		            		tradeOption("CALL",minutes);
 		          	}
+		          	else if (data == "candle_id=candle6") {
+		          		signalCandle = "UP";
+					}
 		        }
 	       		else if(xhr.responseText == "2"){
 	        		
@@ -66,6 +69,9 @@ function dot_update(dbgindex, seconds, minutes){
 						if(seconds==1) 
 							tradeOption("PUT",minutes);
 	           		}
+	           		else if (data == "candle_id=candle6") {
+		          		signalCandle = "DOWN";
+					}
 	        	}
 		        else {
 		        	

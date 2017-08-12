@@ -3,14 +3,14 @@ function checkWinOrLoss(amount){
 	var str_return;
 	
 	if (amount > 0) {
-		playSoundCustom(20);
+		//playSoundCustom(20);
 		countwins++;
 		rescue = 0;
 		//GetStatement();
 		str_return = amount.bold().fontcolor("Green");
 	}
 	else{
-		playSoundCustom(22);
+		//playSoundCustom(22);
 		countlosses++;
 		rescue++;
 		///GetStatement();
@@ -19,17 +19,27 @@ function checkWinOrLoss(amount){
 	return str_return;
 }
 
-var temp_min = "";
+var temp_minute = "";
 //////////////////////////////////////////////////////////////////  AUTO TRADINNG
 function tradeOption(direction, currentMinutes) {
 	
-	if(temp_min != currentMinutes) {
-		if(direction=="CALL") Buyit(tradeamount[rescue]);
-    	else if (direction=="PUT") Sellit(tradeamount[rescue]);
-    	document.getElementById("d3inside").innerHTML = currentMinutes;
+	if(temp_minute != currentMinutes) {
+		if(direction=="CALL") {
+			if(signalCandle == "UP")
+				Sellit(tradeamount[rescue]);
+			else if(signalCandle == "DOWN")
+				Buyit(tradeamount[rescue]);
+		}	
+    	else if (direction=="PUT") {
+    		if(signalCandle == "UP")
+				Buyit(tradeamount[rescue]);
+			else if(signalCandle == "DOWN")
+				Sellit(tradeamount[rescue]);
+		}
+    	document.getElementById("currentMinutes").innerHTML = currentMinutes;
     	document.getElementById("tradeaction").innerHTML = direction;
     	showRescueAmount();
-    	temp_min = currentMinutes;
+    	temp_minute = currentMinutes;
 	}
 	else
 		return 0;
