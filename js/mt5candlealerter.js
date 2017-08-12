@@ -1,11 +1,37 @@
 function dot_update(dbgindex, seconds, minutes){
 
-  	if (dbgindex == 6) {
+  	if (dbgindex == "d3") {
 	    var display_div_id = "showdot3";
 	    var data = "candle_id=dot3";
 	    var green = "greendot";
 	    var red = "reddot";
   	}
+  	else if (dbgindex == "d1") {
+	    var display_div_id = "showdot1";
+	    var data = "candle_id=dot1";
+	    var green = "greendot";
+	    var red = "reddot";
+  	}
+  	else if (dbgindex == "sig") {
+	    var display_div_id = "showsignalcandle";
+	    var data = "candle_id=candle6";
+	    var green = "greencandle";
+	    var red = "redcandle";
+  	}
+  	else if (dbgindex == "cur") {
+	    var display_div_id = "showcurrentcandle";
+	    var data = "candle_id=candle1";
+	    var green = "greencandle";
+	    var red = "redcandle";
+  	}
+  	else if (dbgindex == "nxt") {
+	    var display_div_id = "shownextcandle";
+	    var data = "candle_id=candle5";
+	    var green = "greencandle";
+	    var red = "redcandle";
+  	}
+  	
+  	
   	
   	var xhr;
 
@@ -31,9 +57,9 @@ function dot_update(dbgindex, seconds, minutes){
 		          	document.getElementById(display_div_id).innerHTML = "<img src=../img/"+green+".png>";
 		          	
 		          	if(data == "candle_id=dot3") {
-		            	if(seconds==1) 
+		            	if(seconds == 1) 
 		            		tradeOption("CALL",minutes);
-		          	} 
+		          	}
 		        }
 	       		else if(xhr.responseText == "2"){
 	        	

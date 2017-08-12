@@ -115,7 +115,7 @@
     <div id="right">
       <h4>Next</h4>
         <p>
-        <div id="mycandle"></div>
+        <div id="shownextcandle"></div>
       </p>
     </div>
 
@@ -138,22 +138,23 @@
 	  		<div>D1</div>
 	  	</div>
 	  	<div id="right">
-	  		<div id="dot1"></div>
+	  		<div id="showdot1"></div>
 	  	</div>
 
 	  	<div id="left">
 	  		<div >Sig</div>
 	  	</div>
 	  	<div id="right">
-	  		<div id="candle6"></div>
+	  		<div id="showsignalcandle"></div>
 	  	</div>
 
 	  	<div id="right">
 	  		<div>Cur</div>
 	  	</div>
 	  	<div id="right">
-	  		<div id="candle1"></div>
+	  		<div id="showcurrentcandle"></div>
 	  	</div>
+	  	
 
 	</div> 	 
 </div>

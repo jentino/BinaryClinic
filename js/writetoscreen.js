@@ -25,7 +25,11 @@ function writeTimeToScreen(thetime) {
 	document.getElementById("theseconds").innerHTML = d.getSeconds();
 	var seconds = d.getSeconds();
 	var minutes = d.getMinutes();
-	dot_update(6,seconds,minutes);
+	dot_update("d1",seconds,minutes);
+	dot_update("d3",seconds,minutes);
+	dot_update("sig",seconds,minutes);
+	dot_update("cur",seconds,minutes);
+	dot_update("nxt",seconds,minutes);
 }	
 		
 function returnTime(thetime) {
