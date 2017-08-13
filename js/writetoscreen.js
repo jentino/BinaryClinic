@@ -1,19 +1,11 @@
 //////////////////////////////////////////////////// WRITE TO SCREEN FUNCTIONS ////////////////////////////////////////////////
 function writeToScreen(message) {
-	var pre = document.createElement("p");
-	pre.style.wordWrap = "break-word";
-	pre.innerHTML = message;    
-	output.appendChild(pre);    
-	pre.scrollIntoView(); 	       
+	var div = document.createElement("p");
+	div.style.wordWrap = "break-word";
+	div.innerHTML = message;    
+	output.appendChild(div);    
+	div.scrollIntoView(); 	       
 }
-/*	
-function writeToScreen(message) {
-	var pre = document.createElement("p");
-	pre.style.wordWrap = "break-word";
-	pre.innerHTML = message;    
-	output.appendChild(pre);    
-	pre.scrollIntoView(); 	       
-}*/
 		
 function writeToScreenEmail(email) {
 	document.getElementById("welcomeuser").innerHTML = trader_name.bold();
