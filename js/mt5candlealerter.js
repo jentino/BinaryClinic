@@ -56,6 +56,9 @@ function dot_update(dbgindex, minutes){
 
 	    if (xhr.readyState == 4) {
 	      	if (xhr.status == 200) {
+	      		document.querySelector('#showtradeLock').innerHTML = tradeLock;
+	      		document.querySelector('#showportfolioLock').innerHTML = portfolioLock;
+	      		document.querySelector('#showstatementLock').innerHTML = statementLock;
 	      		
 	      		var searchMinute = Intervals.indexOf(minutes);
 	      			      		
@@ -67,21 +70,24 @@ function dot_update(dbgindex, minutes){
 		          		
 		          		//If timer is 1 during the Interval minute and lock is off
 		          		if((timer2.lap('{S}') == 1) && (searchMinute != -1) && (tradeLock == "Off")){
-			               	tradeOption("CALL",minutes);
+			               	
 			               	tradeLock = "On";
+			               	tradeOption("CALL",minutes);
 						}
 						//If timer is 3 during the Interval minute and lock is off
 						else if((timer2.lap('{S}') == 3)  && (searchMinute != -1) && (portfolioLock == "Off")) {
-							GetPortfolio();
+							
 							portfolioLock = "On";
 							statementLock = "Off"
+							GetPortfolio();
 						}
 						//If timer is 1 during the next minute outside the Interval and lock is off
-						else if((timer2.lap('{S}') ==  4) && (searchMinute == -1) && (statementLock == "Off"){
-							GetStatement();
+						else if((timer2.lap('{S}') ==  4) && (searchMinute == -1) && (statementLock == "Off") && (tradeLock == "On")){
+							
 							tradeLock = "Off";
 						 	portfolioLock = "Off";
 						 	statementLock = "On";
+						 	GetStatement();
 						}	
 		          	}
 		          	else if (data == "candle_id=candle6") {
@@ -94,20 +100,23 @@ function dot_update(dbgindex, minutes){
 	           		
 	           		if(data == "candle_id=dot3") {
 	           			
-						if((timer2.lap('{S}') == 1) && (searchMinute != -1) && (tradeLock == "Off")){
-							tradeOption("PUT",minutes);
+						if((timer2.lap('{S}') == 2) && (searchMinute != -1) && (tradeLock == "Off")){
+							
 							tradeLock = "On";
+							tradeOption("PUT",minutes);
 						}
 						else if((timer2.lap('{S}') == 3) && (searchMinute != -1) && (portfolioLock == "Off")) {
-							GetPortfolio();
+							
 							portfolioLock = "On";
 							statementLock = "Off"
+							GetPortfolio();
 						} 
-						else if(timer2.lap('{S}') == 1 && (searchMinute == -1) && (statementLock == "Off")){
-							GetStatement();
+						else if(timer2.lap('{S}') == 4 && (searchMinute == -1) && (statementLock == "Off") && (tradeLock == "On")){
+							
 							tradeLock = "Off";
 						 	portfolioLock = "Off";
 						 	statementLock = "On";
+						 	GetStatement();
 						}
 	           		}
 	           		else if (data == "candle_id=candle6") {

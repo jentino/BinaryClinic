@@ -180,6 +180,35 @@
 
 	</div> 	 
 </div>
+<br>
+<div id="getTradeOpDash">
+	<div id="row">
+	
+		<div id="right">
+	  		<div> tradeLock: </div>
+	  	</div>
+	  	<div id="right">
+	  		<div id="showtradeLock"></div>
+	  	</div>
+	  	
+	  	<div id="right">
+	  		<div> portfoliLock: </div>
+	  	</div>
+	  	<div id="right">
+	  		<div id="showportfolioLock"></div>
+	  	</div>
+
+	  	<div id="left">
+	  		<div > statementLock: </div>
+	  	</div>
+	  	<div id="right">
+	  		<div id="showstatementLock"></div>
+	  	</div>
+	  	
+
+	</div> 	 
+</div>
+
 
 <!-------------------------------------- ACCOUNTING HEADER (BUTTONS) ------------------------------------ -->
 

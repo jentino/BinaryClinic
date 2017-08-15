@@ -44,10 +44,10 @@ function writeWinLossToScreen() {
 	document.getElementById("winlossDash").innerHTML = winlossresult;	
 }
 
-/*function returnTime(thetime) {
+function returnTime(thetime) {
 	var xd = new Date(0); // The 0 there is the key, which sets the date to the epoch
 	xd.setUTCSeconds(thetime);
 	expiry_seconds = xd.getSeconds();
 	document.getElementById("expirySeconds").innerHTML = expiry_seconds;
-	return  xd.getMinutes() + ":" + xd.getSeconds();
-}*/
+	return  xd.getHours() + ":" + xd.getMinutes() + ":" + xd.getSeconds();
+}

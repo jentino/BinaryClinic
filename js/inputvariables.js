@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////  Input variables
 var heartbeat = 0;
-var expiry_seconds = -5;
+//svar expiry_seconds = -5;
 
 var output;
 var outputemail;

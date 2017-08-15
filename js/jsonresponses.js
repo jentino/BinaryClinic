@@ -41,18 +41,22 @@ onMessage = function(msg) {
 		
 		
 		if (js.msg_type == 'statement') {
+			
+			//writeToScreen("> ----------------------- Trade Finished ------------------------ <");
 		
 			for(var i in js.statement.transactions)
-				writeToScreen("= " + checkWinOrLoss(js.statement.transactions[i].amount) + " ID: ".bold() + js.statement.transactions[i].transaction_id + " Payout: ".bold()  +  js.statement.transactions[i].payout + " Action : ".bold()  +  js.statement.transactions[i].action_type + " Bal After: ".bold()  + js.statement.transactions[i].balance_after);
+				writeToScreen("> " + checkWinOrLoss(js.statement.transactions[i].amount)/*/* + " ID: ".bold() + js.statement.transactions[i].transaction_id + " Payout: ".bold()  +  js.statement.transactions[i].payout + " Action : ".bold()  +  js.statement.transactions[i].action_type /*+ " Bal After: ".bold()  + js.statement.transactions[i].balance_after*/);
 				writeWinLossToScreen();
 				
         }
 		
 		
 		if (js.msg_type == 'portfolio') {
+			
+			//writeToScreen("> ----------------------- Trade Entered ------------------------ <");
         
 			for(var g in js.portfolio.contracts)
-				writeToScreen("> $" + js.portfolio.contracts[g].buy_price + " ID: ".bold() + js.portfolio.contracts[g].transaction_id /*+ " Symbol: ".bold()  +  js.portfolio.contracts[g].symbol */+ " Action : ".bold()  +  js.portfolio.contracts[g].contract_type/* + " Expiry time: ".bold()  + returnTime(js.portfolio.contracts[g].expiry_time)*/);
+				writeToScreen("> $" + js.portfolio.contracts[g].buy_price/*/* + " ID: ".bold() + js.portfolio.contracts[g].transaction_id + " Symbol: ".bold()  +  js.portfolio.contracts[g].symbol*/ + " Action : ".bold()  +  js.portfolio.contracts[g].contract_type /*+ " Expiry time: ".bold()  + returnTime(js.portfolio.contracts[g].expiry_time)*/);
 				
         }
 		
