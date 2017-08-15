@@ -1,0 +1,53 @@
+
+    <body onLoad="timer2.start();">
+    
+    <div class="container">
+      
+        <div id="timer2" class="block">
+            <span class="field2 time"></span>
+         </div>
+         <div>
+         	<input type="button" onclick="timer2.reset()" value= " Reset ">
+         </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="js/tock.js"></script>
+
+    <script>
+          
+          var timer2 = new Tock({
+          interval: 1000,
+          onTick: function() {
+            
+            document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');
+            if(timer2.lap('{S}') == 5) {
+            	timer2.reset();
+            	stTimer();
+            }
+            //if(timer2.lap('{S}') > 15) restart();            
+            
+            
+          }
+        });
+       
+       function restart() {
+            
+            timer2.start();      
+            
+            
+          }
+          st = 0;
+        function stTimer() {
+        	st++;
+        	if(st > 0)
+        		timer2.start();
+        	else
+        	    setTimeout(stTimer, 1000);
+    	}
+    	
+        document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');
+        
+        </script>
+        
+    </body>

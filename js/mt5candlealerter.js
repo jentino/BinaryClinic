@@ -1,6 +1,11 @@
-function dot_update(dbgindex, seconds, minutes){
+var tradeLock = "Off";
+var portfolioLock  = "Off";
+var statementLock = "On";
+
+function dot_update(dbgindex, minutes){
 
   	if (dbgindex == "d3") {
+  		
 	    var display_div_id = "showdot3";
 	    var data = "candle_id=dot3";
 	    var green = "greendot";
@@ -46,16 +51,38 @@ function dot_update(dbgindex, seconds, minutes){
   	xhr.send(data);         
 	
   	xhr.onreadystatechange = display_data;
-  	
-  	function display_data() {
+	
+	function display_data() {
+
 	    if (xhr.readyState == 4) {
 	      	if (xhr.status == 200) {
+	      		
+	      		var searchMinute = Intervals.indexOf(minutes);
+	      			      		
 		        if(xhr.responseText == "1"){
+		        	
 		        	document.getElementById(display_div_id).innerHTML = "<img src=../img/"+green+".png>";
 		          	
 		          	if(data == "candle_id=dot3") {
-		            	if(seconds == 1) 
-		            		tradeOption("CALL",minutes);
+		          		
+		          		//If timer is 1 during the Interval minute and lock is off
+		          		if((timer2.lap('{S}') == 1) && (searchMinute != -1) && (tradeLock == "Off")){
+			               	tradeOption("CALL",minutes);
+			               	tradeLock = "On";
+						}
+						//If timer is 3 during the Interval minute and lock is off
+						else if((timer2.lap('{S}') == 3)  && (searchMinute != -1) && (portfolioLock == "Off")) {
+							GetPortfolio();
+							portfolioLock = "On";
+							statementLock = "Off"
+						}
+						//If timer is 1 during the next minute outside the Interval and lock is off
+						else if((timer2.lap('{S}') ==  4) && (searchMinute == -1) && (statementLock == "Off"){
+							GetStatement();
+							tradeLock = "Off";
+						 	portfolioLock = "Off";
+						 	statementLock = "On";
+						}	
 		          	}
 		          	else if (data == "candle_id=candle6") {
 		          		signalCandle = "UP";
@@ -66,8 +93,22 @@ function dot_update(dbgindex, seconds, minutes){
 	          		document.getElementById(display_div_id).innerHTML = "<img src=../img/"+red+".png>";
 	           		
 	           		if(data == "candle_id=dot3") {
-						if(seconds==1) 
+	           			
+						if((timer2.lap('{S}') == 1) && (searchMinute != -1) && (tradeLock == "Off")){
 							tradeOption("PUT",minutes);
+							tradeLock = "On";
+						}
+						else if((timer2.lap('{S}') == 3) && (searchMinute != -1) && (portfolioLock == "Off")) {
+							GetPortfolio();
+							portfolioLock = "On";
+							statementLock = "Off"
+						} 
+						else if(timer2.lap('{S}') == 1 && (searchMinute == -1) && (statementLock == "Off")){
+							GetStatement();
+							tradeLock = "Off";
+						 	portfolioLock = "Off";
+						 	statementLock = "On";
+						}
 	           		}
 	           		else if (data == "candle_id=candle6") {
 		          		signalCandle = "DOWN";

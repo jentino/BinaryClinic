@@ -19,7 +19,7 @@ function Buyit(buydollars) {
 				}
 				
 			}));
-			onTimer();
+			
 			countbuys++;
 			playSoundCustom(5);
         }
@@ -47,7 +47,7 @@ function Sellit(selldollars) {
 				}
 				
 			}));
-			onTimer();
+			
 			countsells++;
 			playSoundCustom(5);
         }
@@ -90,6 +90,7 @@ function GetStatement() {
 //////////////////////////////////////////////////// GET PORTFOLIO
 	
 function GetPortfolio() {
+		// falert("inside jsoncalls.js");
         if (ws) {
 		    
             ws.send(JSON.stringify({

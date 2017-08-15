@@ -19,9 +19,16 @@
 <script type="text/javascript" src="js/writetoscreen.js"></script>
 <script type="text/javascript" src="js/mt5candlealerter.js"></script>
 <script type="text/javascript" src="js/tradingOperations.js"></script>
+<script type="text/javascript" src="js/tock.js"></script>
+
+
+
 </head>
 
-<body>
+<body> <!--onLoad="timer2.start();"-->
+
+
+
 <!-------------------------------------- AUDIO ------------------------------------------------- -->
 
 <audio id="audio" src="sounds/beep.wav" autostart="false" ></audio>
@@ -98,11 +105,25 @@
         </p>
       </div>
 
+
+	<!--<div class="container">
+      
+        <div id="timer2" class="block">
+            <span class="field2 time"></span>
+         </div>
+         <div>
+         	<input type="button" onclick="timer2.reset()" value= " Reset ">
+         </div>
+</div>-->
+         
+    
     <div id="middle">
-      <h4>Timer</h4><center></center>
-        <p>
-          <div id="mycounter"> - </div>
-        </p>
+    	
+	    <div id="timer2">
+	      <h4>Timer</h4>
+	       <span class="field2 time"></span>
+	        
+	    </div>
     </div>
 
     <div id="right">
@@ -163,13 +184,14 @@
 <!-------------------------------------- ACCOUNTING HEADER (BUTTONS) ------------------------------------ -->
 
 <table id="tblgetbuttonsDash">
-	<td>	<div id="ash" class="pad" contenteditable="true">
- 		<div id="a" class="alignDivs">MIN  = </div><div id="currentMinutes" class="alignDivs"></div>
-		<div id="a" class="alignDivs">ACTION =    </div><div id="tradeaction" class="alignDivs"></div>
-		<div id="a" class="alignDivs">RESCUE =   </div><div id="rescueamount" class="alignDivs"></div>
-		<!--<div id="a" class="alignDivs">REPORT =   </div><div id="showreport" class="alignDivs"></div>
-		<div id="a" class="alignDivs">AMOUNT =   </div><div id="showtradeamount" class="alignDivs"></div>
-		--></div>
+	<td>	
+		<div id="ash" class="pad" contenteditable="true">
+		 	<div id="a" class="alignDivs"><b>MIN</b>  = </div><div id="currentMinutes" class="alignDivs"></div>
+		 	<div id="a" class="alignDivs"><b>EXP</b>  = </div><div id="expirySeconds" class="alignDivs"></div>
+			<div id="a" class="alignDivs"><b>ACTION</b> =    </div><div id="tradeaction" class="alignDivs"></div>
+			<div id="a" class="alignDivs"><b>RESCUE</b> =   </div><div id="rescueamount" class="alignDivs"></div>
+			<div id="a" class="alignDivs"><b>ORIGINAL BAL</b> =   </div><div id="originalbalance" class="alignDivs"></div>
+		</div>
 	</td>
 </table>
 
@@ -186,5 +208,23 @@
 <div id="mainConsole">
 		<div class="innerConsole" id="debug" onscroll="myStopFunction()"></div>
 	</div>
+	
+<script type="text/javascript">
+	var timer2 = new Tock({
+    interval: 1000,
+    onTick: function() {
+            
+	    document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');
+	    if(timer2.lap('{S}') == 60) {
+	        timer2.reset();
+	        startTimer2();
+	    }
+            //if(timer2.lap('{S}') > 15) restart();              
+	}
+});
+
+document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');	
+</script>
+
 </body>
 </html>

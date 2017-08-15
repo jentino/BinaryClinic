@@ -1,30 +1,27 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////// TIMERS
 
 //////////////////////////////////////////////////// SHOW TRADING COUNTDOWN TIMER IN DASHBOARD
-i = 60;
-function onTimer() {
-  document.getElementById('mycounter').innerHTML = i;
-  i--;
-  if (i == 58) GetPortfolio();
-  //if (i < 5) playSound();
-  
-  if (i < 0) {
+/*function tradeTimer(heartbeat) {
+  	document.getElementById('mycounter').innerHTML = heartbeat;
+  	heartbeat++;
+  	
+  	/*if(heartbeat == 59)
+  			GetStatement();*/
+  	
+  	/*if (heartbeat > 60) {
+		resetTimer();
+ 	}
+  	else {
+    setTimeout(tradeTimer, 1000);
+  	}
+//}*//**/
 
-	i = 60;
-  }
-  else {
-    setTimeout(onTimer, 1000);
-  }
-  if (i == 0) {
-	setTimeout(function() {
-	//GetBalance();
-   // GetStatement();
-	}, (3 * 1000));
+function resetTimer() {
 	
-	}
+	heartbeat = 0;
+	
+	tradeTimer();
 }
-
-
 //////////////////////////////////////////////////////////////////  DISPLAY SERVER TIME SECONDS ON DASHBOARD
 ii = 86400;
 function onSecTimer() {
@@ -36,7 +33,7 @@ function onSecTimer() {
 	            }));
 	          }
 		  if (ii < 0) {
-			ii = 300000;
+			writeToScreen("Time is Up")
 		  }
 		  else {
 			setTimeout(onSecTimer, 1000);
@@ -58,6 +55,18 @@ function onPinger() {
         }
     setTimeout(onPinger, 1000);
 	
+}
+
+
+       
+stx = 0;
+
+function startTimer2() {
+    stx++;
+    if(stx > 0)
+        timer2.start();
+    else
+        setTimeout(startTimer2, 1000);
 }
 
 

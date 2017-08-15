@@ -3,18 +3,16 @@ function checkWinOrLoss(amount){
 	var str_return;
 	
 	if (amount > 0) {
-		//playSoundCustom(20);
 		countwins++;
 		rescue = 0;
-		//GetStatement();
-		str_return = amount.bold().fontcolor("Green");
+		str_return = "win ".bold().fontcolor("Green");
+		playSoundCustom(21);
 	}
 	else{
-		//playSoundCustom(22);
-		countlosses++;
 		rescue++;
-		///GetStatement();
-		str_return = amount.bold().fontcolor("Red");
+		countlosses++;
+		str_return = "loss ".bold().fontcolor("Red");
+		playSoundCustom(22);
 	}
 	return str_return;
 }
@@ -40,10 +38,9 @@ function tradeOption(direction, currentMinutes) {
     	document.getElementById("tradeaction").innerHTML = direction;
     	showRescueAmount();
     	temp_minute = currentMinutes;
+    	
 	}
 	else
 		return 0;
     
 } 
- 
- // if(i != -1 && currentSeconds == 0) {

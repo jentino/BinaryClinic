@@ -13,13 +13,13 @@ function showBalance(balance) {
 }
 
 //////////////////////////////////////////////////// SHOW PROFIT
-function showProfit(balance) {
-	var NewBalance = balance - OriginalBalance;
-	var showprofit = NewBalance.toFixed(2);
-	if(showprofit <= 0)
-	  	document.getElementById("profitupdate").innerHTML = showprofit.bold().fontcolor("Red");
+function showProfit(updatedbalance) {
+	var NewBalance = updatedbalance - OriginalBalance;
+	var shownewprofit = NewBalance.toFixed(2);
+	if(shownewprofit <= 0)
+	  	document.getElementById("profitupdate").innerHTML = shownewprofit.bold().fontcolor("Red");
 	else
-		document.getElementById("profitupdate").innerHTML = showprofit.bold().fontcolor("Green");
+		document.getElementById("profitupdate").innerHTML = shownewprofit.bold().fontcolor("Green");
 }
 
 function showRescueAmount() {
