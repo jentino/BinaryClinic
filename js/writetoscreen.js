@@ -24,10 +24,9 @@ function writeTimeToScreen(thetime) {
 		startTimer2();
 		setTimerOnce = 10000;
 	}
-	
-	
-	dot_update("d3", minutes);
+
 	dot_update("sig", minutes);
+	dot_update("d3", minutes);
 	dot_update("d1", minutes);
 	dot_update("cur", minutes);
 	dot_update("nxt", minutes);

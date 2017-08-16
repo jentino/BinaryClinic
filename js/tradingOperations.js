@@ -4,6 +4,7 @@ function checkWinOrLoss(amount){
 	
 	if (amount > 0) {
 		countwins++;
+		countlosses = 0;
 		rescue = 0;
 		str_return = "win ".bold().fontcolor("Green");
 		playSoundCustom(21);

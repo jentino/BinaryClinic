@@ -53,7 +53,7 @@ function dot_update(dbgindex, minutes){
   	xhr.onreadystatechange = display_data;
 	
 	function display_data() {
-		if(timer2.lap('{S}') === 0) alert(timer2.lap('{S}') );
+		//if(timer2.lap('{S}') == 0) alert(timer2.lap('{S}') );
 	    if (xhr.readyState == 4) {
 	      	if (xhr.status == 200) {
 	      		document.querySelector('#showtradeLock').innerHTML = tradeLock;
@@ -66,11 +66,13 @@ function dot_update(dbgindex, minutes){
 		        	
 		        	document.getElementById(display_div_id).innerHTML = "<img src=../img/"+green+".png>";
 		          	
-		          	if(data == "candle_id=dot3") {
+		          	if (data == "candle_id=candle6") {
+		          		signalCandle = "UP";
+					}
+					else if(data == "candle_id=dot3") {
 		          		
 		          		//If timer is 1 during the Interval minute and lock is off
-		          		if((timer2.lap('{S}') == 1) && (searchMinute != -1) && (tradeLock == "Off")){
-			               	
+		          		if((timer2.lap('{S}') == 1) && (searchMinute != -1) && (tradeLock == "Off")){			               	
 			               	tradeLock = "On";
 			               	tradeOption("CALL",minutes);
 						}
@@ -90,15 +92,16 @@ function dot_update(dbgindex, minutes){
 						 	GetStatement();
 						}	
 		          	}
-		          	else if (data == "candle_id=candle6") {
-		          		signalCandle = "UP";
-					}
+		          	
 		        }
 	       		else if(xhr.responseText == "2"){
 	        		
 	          		document.getElementById(display_div_id).innerHTML = "<img src=../img/"+red+".png>";
 	           		
-	           		if(data == "candle_id=dot3") {
+	           		if (data == "candle_id=candle6") {
+		          		signalCandle = "DOWN";
+					}
+					else if(data == "candle_id=dot3") {
 	           			
 						if((timer2.lap('{S}') == 1 ) && (searchMinute != -1) && (tradeLock == "Off")){
 							
@@ -119,9 +122,7 @@ function dot_update(dbgindex, minutes){
 						 	GetStatement();
 						}
 	           		}
-	           		else if (data == "candle_id=candle6") {
-		          		signalCandle = "DOWN";
-					}
+	           		
 	        	}
 		        else {
 		        	

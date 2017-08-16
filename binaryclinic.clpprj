@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="C:\BinaryClinic\binaryclinic.clpprj">
 	<settings><PM_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_URL><PM_HOME_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
-		<file name="C:\BinaryClinic\js\mt5candlealerter.js"/>
-		<file name="C:\BinaryClinic\js\inputvariables.js"/>
-		<file name="C:\BinaryClinic\index.php"/>
-		<file name="C:\BinaryClinic\css\main.css"/>
-		<file name="C:\BinaryClinic\js\writetoscreen.js"/>
+		<file name="C:\BinaryClinic\js\jsonresponses.js"/>
 	</lastopfiles>
 	<errors version="5.11">
 		<errfile name="C:\BinaryClinic\css\main.css">
@@ -44,8 +40,8 @@
 		<file name="C:\BinaryClinic\web\index_files\binary.min.css" crc="1502634095"/>
 		<file name="C:\BinaryClinic\web\index_files\binary.css" crc="1502634095"/>
 		<file name="C:\BinaryClinic\web\index.html" crc="1502634097"/>
-		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1502803426"/>
-		<file name="C:\BinaryClinic\js\tradingOperations.js" crc="1502665735"/>
+		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1502815923"/>
+		<file name="C:\BinaryClinic\js\tradingOperations.js" crc="1502877658"/>
 		<file name="C:\BinaryClinic\js\tock.min.js" crc="1419045706"/>
 		<file name="C:\BinaryClinic\js\tock.js" crc="1419045706"/>
 		<file name="C:\BinaryClinic\js\timers.js" crc="1502792884"/>
@@ -53,10 +49,10 @@
 		<file name="C:\BinaryClinic\js\scroller.js" crc="1501437156"/>
 		<file name="C:\BinaryClinic\js\playsound.js" crc="1502111740"/>
 		<file name="C:\BinaryClinic\js\onOpen.js" crc="1501458144"/>
-		<file name="C:\BinaryClinic\js\mt5candlealerter.js" crc="1502803371"/>
-		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1502714552"/>
+		<file name="C:\BinaryClinic\js\mt5candlealerter.js" crc="1502851411"/>
+		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1502822335"/>
 		<file name="C:\BinaryClinic\js\jsoncalls.js" crc="1502650287"/>
-		<file name="C:\BinaryClinic\js\inputvariables.js" crc="1502733140"/>
+		<file name="C:\BinaryClinic\js\inputvariables.js" crc="1502815880"/>
 		<file name="C:\BinaryClinic\js\Gruntfile.js" crc="1419045706"/>
 		<file name="C:\BinaryClinic\js\functions.js" crc="1502626596"/>
 		<file name="C:\BinaryClinic\js\connect.js" crc="1502107916"/>
@@ -71,7 +67,7 @@
 		<file name="C:\BinaryClinic\API\index_files\docson.css" crc="1502642120"/>
 		<file name="C:\BinaryClinic\API\index_files\binary.css" crc="1502642120"/>
 		<file name="C:\BinaryClinic\API\index.html" crc="1502642122"/>
-		<file name="C:\BinaryClinic\index.php" crc="1502799866"/>
+		<file name="C:\BinaryClinic\index.php" crc="1502816991"/>
 		<file name="C:\BinaryClinic\examples.html" crc="1502790654"/>
 		<file name="C:\BinaryClinic\example1.html" crc="1502765841"/>
 		<file name="C:\BinaryClinic\example.html" crc="1502766208"/>
