@@ -53,7 +53,7 @@ function dot_update(dbgindex, minutes){
   	xhr.onreadystatechange = display_data;
 	
 	function display_data() {
-
+		if(timer2.lap('{S}') === 0) alert(timer2.lap('{S}') );
 	    if (xhr.readyState == 4) {
 	      	if (xhr.status == 200) {
 	      		document.querySelector('#showtradeLock').innerHTML = tradeLock;
@@ -75,7 +75,7 @@ function dot_update(dbgindex, minutes){
 			               	tradeOption("CALL",minutes);
 						}
 						//If timer is 3 during the Interval minute and lock is off
-						else if((timer2.lap('{S}') == 3)  && (searchMinute != -1) && (portfolioLock == "Off")) {
+						else if((timer2.lap('{S}') == 3)  && (searchMinute != -1) && (portfolioLock == "Off") && (tradeLock == "On")) {
 							
 							portfolioLock = "On";
 							statementLock = "Off"
@@ -100,12 +100,12 @@ function dot_update(dbgindex, minutes){
 	           		
 	           		if(data == "candle_id=dot3") {
 	           			
-						if((timer2.lap('{S}') == 2) && (searchMinute != -1) && (tradeLock == "Off")){
+						if((timer2.lap('{S}') == 1 ) && (searchMinute != -1) && (tradeLock == "Off")){
 							
 							tradeLock = "On";
 							tradeOption("PUT",minutes);
 						}
-						else if((timer2.lap('{S}') == 3) && (searchMinute != -1) && (portfolioLock == "Off")) {
+						else if((timer2.lap('{S}') == 3) && (searchMinute != -1) && (portfolioLock == "Off") && (tradeLock == "On")) {
 							
 							portfolioLock = "On";
 							statementLock = "Off"
