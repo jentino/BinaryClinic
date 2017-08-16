@@ -216,7 +216,7 @@
 	<td>	
 		<div id="ash" class="pad" contenteditable="true">
 		 	<div id="a" class="alignDivs"><b>MIN</b>  = </div><div id="currentMinutes" class="alignDivs"></div>
-		 	<div id="a" class="alignDivs"><b>EXP</b>  = </div><div id="expirySeconds" class="alignDivs"></div>
+		 	<!--<div id="a" class="alignDivs"><b>EXP</b>  = </div><div id="expirySeconds" class="alignDivs"></div>-->
 			<div id="a" class="alignDivs"><b>ACTION</b> =    </div><div id="tradeaction" class="alignDivs"></div>
 			<div id="a" class="alignDivs"><b>RESCUE</b> =   </div><div id="rescueamount" class="alignDivs"></div>
 			<div id="a" class="alignDivs"><b>ORIGINAL BAL</b> =   </div><div id="originalbalance" class="alignDivs"></div>
