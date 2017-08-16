@@ -21,13 +21,9 @@
 <script type="text/javascript" src="js/tradingOperations.js"></script>
 <script type="text/javascript" src="js/tock.js"></script>
 
-
-
 </head>
 
 <body> <!--onLoad="timer2.start();"-->
-
-
 
 <!-------------------------------------- AUDIO ------------------------------------------------- -->
 
