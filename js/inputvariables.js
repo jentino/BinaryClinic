@@ -9,6 +9,7 @@ var OriginalBalance = 0;
 
 var countlosses = 0;
 var countwins = 0;
+var totalwins = 0;
 
 var trader_name = "";
 

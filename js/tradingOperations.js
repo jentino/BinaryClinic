@@ -3,7 +3,7 @@ function checkWinOrLoss(amount){
 	var str_return;
 	
 	if (amount > 0) {
-		countwins++;
+		totalwins++;
 		countlosses = 0;
 		rescue = 0;
 		str_return = "win ".bold().fontcolor("Green");

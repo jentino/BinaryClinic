@@ -40,7 +40,8 @@ function writeBalanceToDash(updatedbalance) {
 		
 function writeWinLossToScreen() {
 	var winlossresult = countwins - countlosses;
-	document.getElementById("winlossDash").innerHTML = winlossresult;	
+	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;	
+	//if(winlossresult <= -1) tradeLock = "Off";;
 }
 
 function returnTime(thetime) {

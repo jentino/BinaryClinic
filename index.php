@@ -192,7 +192,7 @@
 	  	</div>
 	  	
 	  	<div id="right">
-	  		<div> portfoliLock: </div>
+	  		<div> portfolioLock: </div>
 	  	</div>
 	  	<div id="right">
 	  		<div id="showportfolioLock"></div>

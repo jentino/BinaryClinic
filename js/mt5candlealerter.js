@@ -114,7 +114,7 @@ function dot_update(dbgindex, minutes){
 							statementLock = "Off"
 							GetPortfolio();
 						} 
-						else if(timer2.lap('{S}') == 4 && (searchMinute == -1) && (statementLock == "Off") && (tradeLock == "On")){
+						else if(timer2.lap('{S}') == 4 && (searchMinute == -1) && (portfolioLock == "On") && (tradeLock == "On") && (statementLock == "Off") ){
 							
 							tradeLock = "Off";
 						 	portfolioLock = "Off";
