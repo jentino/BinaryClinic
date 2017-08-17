@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="C:\BinaryClinic\binaryclinic.clpprj">
 	<settings><PM_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_URL><PM_HOME_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
-		<file name="C:\BinaryClinic\js\jsonresponses.js"/>
+		<file name="C:\BinaryClinic\js\writetoscreen.js"/>
+		<file name="C:\BinaryClinic\js\tradingOperations.js"/>
 	</lastopfiles>
 	<errors version="5.11">
 		<errfile name="C:\BinaryClinic\css\main.css">
@@ -10,66 +11,54 @@
 			<error val="13;0;22;0;2501;1;"/>
 		</errfile>
 		<errfile name="C:\BinaryClinic\index.php">
-			<error val="39;33;57;33;2002;1;"/>
-			<error val="46;34;64;34;2002;1;"/>
-			<error val="46;35;64;35;2002;1;"/>
+			<error val="39;35;57;35;2002;1;"/>
 			<error val="46;36;64;36;2002;1;"/>
 			<error val="46;37;64;37;2002;1;"/>
 			<error val="46;38;64;38;2002;1;"/>
+			<error val="46;39;64;39;2002;1;"/>
 			<error val="46;40;64;40;2002;1;"/>
-			<error val="47;41;65;41;2002;1;"/>
-			<error val="47;42;65;42;2002;1;"/>
+			<error val="46;42;64;42;2002;1;"/>
 			<error val="47;43;65;43;2002;1;"/>
 			<error val="47;44;65;44;2002;1;"/>
-			<error val="45;46;63;46;2002;1;"/>
-			<error val="45;47;63;47;2002;1;"/>
-			<error val="41;48;59;48;2002;1;"/>
-			<error val="46;49;64;49;2002;1;"/>
-			<error val="44;50;62;50;2002;1;"/>
-			<error val="44;51;62;51;2002;1;"/>
-			<error val="45;52;63;52;2002;1;"/>
+			<error val="47;45;65;45;2002;1;"/>
+			<error val="47;46;65;46;2002;1;"/>
+			<error val="45;48;63;48;2002;1;"/>
+			<error val="45;49;63;49;2002;1;"/>
+			<error val="41;50;59;50;2002;1;"/>
+			<error val="46;51;64;51;2002;1;"/>
+			<error val="44;52;62;52;2002;1;"/>
 			<error val="44;53;62;53;2002;1;"/>
-			<error val="42;54;60;54;2002;1;"/>
-			<error val="42;55;60;55;2002;1;"/>
+			<error val="45;54;63;54;2002;1;"/>
+			<error val="44;55;62;55;2002;1;"/>
+			<error val="42;56;60;56;2002;1;"/>
+			<error val="42;57;60;57;2002;1;"/>
 		</errfile>
 	</errors>
 	<todoblock>
 	</todoblock>
 	<filescache>
-		<file name="C:\BinaryClinic\web\index_files\pixel.html" crc="1502634097"/>
-		<file name="C:\BinaryClinic\web\index_files\binary.min.css" crc="1502634095"/>
-		<file name="C:\BinaryClinic\web\index_files\binary.css" crc="1502634095"/>
-		<file name="C:\BinaryClinic\web\index.html" crc="1502634097"/>
-		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1502815923"/>
-		<file name="C:\BinaryClinic\js\tradingOperations.js" crc="1502877658"/>
+		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1502965044"/>
+		<file name="C:\BinaryClinic\js\tradingOperations.js" crc="1502965021"/>
 		<file name="C:\BinaryClinic\js\tock.min.js" crc="1419045706"/>
 		<file name="C:\BinaryClinic\js\tock.js" crc="1419045706"/>
-		<file name="C:\BinaryClinic\js\timers.js" crc="1502792884"/>
+		<file name="C:\BinaryClinic\js\timers.js" crc="1502907357"/>
 		<file name="C:\BinaryClinic\js\splitwebstring.js" crc="1501458106"/>
 		<file name="C:\BinaryClinic\js\scroller.js" crc="1501437156"/>
 		<file name="C:\BinaryClinic\js\playsound.js" crc="1502111740"/>
 		<file name="C:\BinaryClinic\js\onOpen.js" crc="1501458144"/>
-		<file name="C:\BinaryClinic\js\mt5candlealerter.js" crc="1502851411"/>
-		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1502822335"/>
+		<file name="C:\BinaryClinic\js\mt5candlealerter.js" crc="1502934425"/>
+		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1502964224"/>
 		<file name="C:\BinaryClinic\js\jsoncalls.js" crc="1502650287"/>
-		<file name="C:\BinaryClinic\js\inputvariables.js" crc="1502815880"/>
+		<file name="C:\BinaryClinic\js\inputvariables.js" crc="1502964234"/>
 		<file name="C:\BinaryClinic\js\Gruntfile.js" crc="1419045706"/>
-		<file name="C:\BinaryClinic\js\functions.js" crc="1502626596"/>
-		<file name="C:\BinaryClinic\js\connect.js" crc="1502107916"/>
+		<file name="C:\BinaryClinic\js\functions.js" crc="1502932047"/>
+		<file name="C:\BinaryClinic\js\connect.js" crc="1502964243"/>
 		<file name="C:\BinaryClinic\js\buttonswitch.js" crc="1502549703"/>
 		<file name="C:\BinaryClinic\includes\dot_dbupdate.php" crc="1501976225"/>
 		<file name="C:\BinaryClinic\includes\dot_dblist.php" crc="1502416164"/>
 		<file name="C:\BinaryClinic\css\stylesheet.css" crc="1499868830"/>
 		<file name="C:\BinaryClinic\css\main.css" crc="1502550941"/>
 		<file name="C:\BinaryClinic\css\bootstrap.css" crc="1483713768"/>
-		<file name="C:\BinaryClinic\API\index_files\select2.min.css" crc="1502642120"/>
-		<file name="C:\BinaryClinic\API\index_files\main.css" crc="1502642120"/>
-		<file name="C:\BinaryClinic\API\index_files\docson.css" crc="1502642120"/>
-		<file name="C:\BinaryClinic\API\index_files\binary.css" crc="1502642120"/>
-		<file name="C:\BinaryClinic\API\index.html" crc="1502642122"/>
-		<file name="C:\BinaryClinic\index.php" crc="1502816991"/>
-		<file name="C:\BinaryClinic\examples.html" crc="1502790654"/>
-		<file name="C:\BinaryClinic\example1.html" crc="1502765841"/>
-		<file name="C:\BinaryClinic\example.html" crc="1502766208"/>
+		<file name="C:\BinaryClinic\index.php" crc="1502963983"/>
 	</filescache>
 </project>

@@ -40,8 +40,17 @@ function writeBalanceToDash(updatedbalance) {
 		
 function writeWinLossToScreen() {
 	var winlossresult = countwins - countlosses;
-	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;	
-	//if(winlossresult <= -1) tradeLock = "Off";;
+	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;
+	
+		
+	if(winlossresult == -1 && connectLock == "Off" && appid == 10122) {
+		connectLock == "Onified";
+		reConnect("kS7A68xssbTVpkE");
+	}
+	else if (connectLock == "On" && appid == 6490) {
+		connectLock == "Onified";
+		reConnect("xwzTFS9BwGxjPZZ");
+	}
 }
 
 function returnTime(thetime) {

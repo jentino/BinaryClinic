@@ -1,18 +1,22 @@
 /////////////////////////////////////////////////////////////////  COLOUR WIN AND LOSS
+var winLock = "";
 function checkWinOrLoss(amount){
 	var str_return;
 	
 	if (amount > 0) {
+		connectLock = "On";
 		totalwins++;
 		countlosses = 0;
 		rescue = 0;
-		str_return = "win ".bold().fontcolor("Green");
+		str_return = "windddd ".bold().fontcolor("Green");
 		playSoundCustom(21);
 	}
 	else{
+		connectLock = "Off";
 		rescue++;
 		countlosses++;
-		str_return = "loss ".bold().fontcolor("Red");
+		str_return = "lossfff ".bold().fontcolor("Red");
+		
 		playSoundCustom(22);
 	}
 	return str_return;

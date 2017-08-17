@@ -1,10 +1,8 @@
-
-///////////////////////////////////////////////////////// Connect to websocket server
- function Connect(token) {
+function reConnect(token) {
 		
 		
-        output = document.getElementById("debug");
-		document.getElementById("debug").innerHTML = "Connecting ..."
+        //output = document.getElementById("debug");
+		//document.getElementById("debug").innerHTML = "Connecting ..."
 		outputemail = document.getElementById("welcomeuser");
 		playSoundCustom(16);
         if (token == '') {
