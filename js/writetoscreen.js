@@ -41,7 +41,9 @@ function writeBalanceToDash(updatedbalance) {
 function writeWinLossToScreen() {
 	var winlossresult = countwins - countlosses;
 	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;
+	var totalresult = (((totalwins * (tradeamount[0])*0.94) + winlossresult*0.31).toFixed(2)).bold();
 	
+	document.getElementById("profitupdate1").innerHTML = (((totalwins * (tradeamount[0])*0.94) + winlossresult*0.31).toFixed(2)).bold(); //show totalwins*
 		
 	if(winlossresult == -1 && connectLock == "Off" && appid == 10122) {
 		connectLock == "Onified";
@@ -53,10 +55,11 @@ function writeWinLossToScreen() {
 	}
 }
 
-function returnTime(thetime) {
+/*function returnTimer(thetime) {
+	getTimer();
 	var xd = new Date(0); // The 0 there is the key, which sets the date to the epoch
 	xd.setUTCSeconds(thetime);
-	expiry_seconds = xd.getSeconds();
-	document.getElementById("expirySeconds").innerHTML = expiry_seconds;
+	//expiry_seconds = xd.getSeconds();
+	//document.getElementById("expirySeconds").innerHTML = expiry_seconds;
 	return  xd.getHours() + ":" + xd.getMinutes() + ":" + xd.getSeconds();
-}
+}*/
