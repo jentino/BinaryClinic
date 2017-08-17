@@ -46,7 +46,7 @@ onMessage = function(msg) {
 			//writeToScreen("> ----------------------- Trade Finished ------------------------ <");
 		
 			for(var i in js.statement.transactions)
-				writeToScreen("> " + checkWinOrLoss(js.statement.transactions[i].amount));
+				writeToScreen("= " + checkWinOrLoss(js.statement.transactions[i].amount));
 				writeWinLossToScreen();
 				
         }
