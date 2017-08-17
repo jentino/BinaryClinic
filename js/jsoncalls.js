@@ -109,3 +109,12 @@ function GetTicks() {
 			}
 
 }
+
+function GetTimer() {
+	if (ws) {
+		ws.send(JSON.stringify({
+		"time": 1
+		}));
+			}
+
+}

@@ -228,7 +228,7 @@
   <div id="a" class="alignDivs">User              : </div><div id="welcomeuser" class="alignDivs"></div>
   <div id="a" class="alignDivs">Asset             : </div><div id="assetlist" class="alignDivs"></div>
   <div id="a" class="alignDivs">Balance           : </div><div id="realbalance" class="alignDivs"></div>
-  <div id="a" class="alignDivs">Profit               : </div><div id="profitupdate" class="alignDivs"></div>
+  <div id="a" class="alignDivs">Profit               : </div><div id="profitupdate1" class="alignDivs"></div>
 </div>
 
 <!-------------------------------------- MESSAGE CONSOLE  ------------------------------------ -->
