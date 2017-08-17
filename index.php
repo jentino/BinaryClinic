@@ -26,6 +26,7 @@
 <script type="text/javascript" src="js/mt5candlealerter.js"></script>
 <script type="text/javascript" src="js/tradingOperations.js"></script>
 <script type="text/javascript" src="js/tock.js"></script>
+<script type="text/javascript" src="js/reconnect.js"></script>
 
 </head>
 
@@ -216,7 +217,7 @@
 		 	<!--<div id="a" class="alignDivs"><b>EXP</b>  = </div><div id="expirySeconds" class="alignDivs"></div>-->
 			<div id="a" class="alignDivs"><b>ACTION</b> =    </div><div id="tradeaction" class="alignDivs"></div>
 			<div id="a" class="alignDivs"><b>RESCUE</b> =   </div><div id="rescueamount" class="alignDivs"></div>
-			<div id="a" class="alignDivs"><b>ORIGINAL BAL</b> =   </div><div id="originalbalance" class="alignDivs"></div>
+			<div id="a" class="alignDivs"><b>BAL 1</b> =   </div><div id="originalbalance" class="alignDivs"></div>
 			<div id="a" class="alignDivs"><b>APPID</b> =   </div><div id="showappid" class="alignDivs"></div>
 		</div>
 	</td>

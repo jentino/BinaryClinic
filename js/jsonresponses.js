@@ -11,20 +11,21 @@ onMessage = function(msg) {
 
         //Display response from authorization
 		if (js.msg_type == 'authorize') {
-		connectLock = "SDFSDF";
+			connectLock = "SDFSDF";
 			playSoundCustom(14);
 			var get = parseGetVars();            
-            writeToScreen("Authorized OK".bold().fontcolor("Green") + "<br>  Email: " + (js.authorize.email).bold() + "  Account: " + (js.authorize.loginid).bold() + " Amount = " + "$ ".bold() + (js.authorize.balance).bold());
+            writeToScreen("Authorized OK -------------------------------------------------------------------------".bold().fontcolor("Green") + "<br>  Email: " + (js.authorize.email).bold() + "  Account: " + (js.authorize.loginid).bold() + " Amount = " + "$ ".bold() + (js.authorize.balance).bold());
 			writeToScreenEmail((js.authorize.email).bold());
 			OriginalBalance = js.authorize.balance;
 			document.getElementById("originalbalance").innerHTML = OriginalBalance.bold();
 			document.getElementById("showappid").innerHTML = appid;
 		    onPinger(); //poll server ping for 24 hours
-	        onSecTimer(); //poll time for 24 hours	        
+	        onSecTimer(); //poll time for 24 hours	
+	        rescue = 0;        
 	        //onCandleTimer();
 	        subscribeTransactions();
 			showBalance(OriginalBalance);
-			//writeWinLossToScreen();
+			writeWinLossToScreen();
         }
 
 		if (js.msg_type == 'time') {

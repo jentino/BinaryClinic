@@ -45,11 +45,11 @@ function writeWinLossToScreen() {
 		
 	if(winlossresult == -1 && connectLock == "Off" && appid == 10122) {
 		connectLock == "Onified";
-		Connect("kS7A68xssbTVpkE");
+		reConnect("kS7A68xssbTVpkE");
 	}
 	else if (connectLock == "On" && appid == 6490) {
 		connectLock == "Onified";
-		Connect("xwzTFS9BwGxjPZZ");
+		reConnect("xwzTFS9BwGxjPZZ");
 	}
 }
 
