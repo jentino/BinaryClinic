@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="C:\BinaryClinic\binaryclinic.clpprj">
 	<settings><PM_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_URL><PM_HOME_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
+		<file name="C:\BinaryClinic\js\writetoscreen.js"/>
 	</lastopfiles>
 	<errors version="5.11">
 		<errfile name="C:\BinaryClinic\css\main.css">
@@ -35,7 +36,7 @@
 	<todoblock>
 	</todoblock>
 	<filescache>
-		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1502991932"/>
+		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1502996197"/>
 		<file name="C:\BinaryClinic\js\tradingOperations.js" crc="1502982519"/>
 		<file name="C:\BinaryClinic\js\tock.min.js" crc="1419045706"/>
 		<file name="C:\BinaryClinic\js\tock.js" crc="1419045706"/>
