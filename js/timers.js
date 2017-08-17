@@ -1,28 +1,4 @@
-///////////////////////////////////////////////////////////////////////////////////////////////// TIMERS
-
-//////////////////////////////////////////////////// SHOW TRADING COUNTDOWN TIMER IN DASHBOARD
-/*function tradeTimer(heartbeat) {
-  	document.getElementById('mycounter').innerHTML = heartbeat;
-  	heartbeat++;
-  	
-  	/*if(heartbeat == 59)
-  			GetStatement();*/
-  	
-  	/*if (heartbeat > 60) {
-		resetTimer();
- 	}
-  	else {
-    setTimeout(tradeTimer, 1000);
-  	}
-//}*//**/
-
-function resetTimer() {
-	
-	heartbeat = 0;
-	
-	tradeTimer();
-}
-//////////////////////////////////////////////////////////////////  DISPLAY SERVER TIME SECONDS ON DASHBOARD
+/////////////////////////////////////////////////////////////////  DISPLAY SERVER TIME SECONDS ON DASHBOARD
 ii = 86400;
 function onSecTimer() {
 		  

@@ -1,7 +1,8 @@
 
 ///////////////////////////////////////////////////////// Connect to websocket server
  function Connect(token) {
-		var appid;
+		
+		
         output = document.getElementById("debug");
 		document.getElementById("debug").innerHTML = "Connecting ..."
 		outputemail = document.getElementById("welcomeuser");
@@ -14,6 +15,7 @@
 		else if (token == "kS7A68xssbTVpkE"){
 			appid = 6490;
 			trader_name = "Jenty Demo Account";
+			
 		}
 
 		else if (token == "nBvBHHOe84bgXMK"){

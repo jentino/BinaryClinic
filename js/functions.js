@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////// GET ASSET
 function getAsset(assetval) {
-    var obj = document.getElementById("myAssets");
-    document.getElementById("assetlist").innerHTML = obj.options[obj.selectedIndex].text.bold();
+    //var obj = document.getElementById("myAssets");
+    document.getElementById("assetlist").innerHTML = assetval.bold();
 	assetvalue = assetval;
 	playSoundCustom(16);
 }
@@ -24,6 +24,22 @@ function showProfit(updatedbalance) {
 
 function showRescueAmount() {
 	document.getElementById("rescueamount").innerHTML = tradeamount[rescue];
+}
+
+function loggin2Account(){
+	var xhr;
+	var data = "token_id=xwzTFS9BwGxjPZZ&asset_id=R_100";
+ 	if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+    	xhr = new XMLHttpRequest();
+  	} 
+   
+    else if (window.ActiveXObject) { // IE 8 and older
+      	xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  	}
+
+  	xhr.open("POST", ".index.php", true); 
+  	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+  	xhr.send(data);
 }
 
 

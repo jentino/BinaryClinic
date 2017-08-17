@@ -1,4 +1,10 @@
-<html>
+<?php 
+	$tokeid = $_GET['token_id'];
+	$assetid = $_GET['asset_id'];
+?>
+
+
+
 <head>
 <!--<style>
 	body {padding-top: 40px; padding-left: 25%}
@@ -23,7 +29,7 @@
 
 </head>
 
-<body> <!--onLoad="timer2.start();"-->
+<body onLoad="Connect('<?php echo $tokeid ?>'); getAsset('<?php echo $assetid ?>');">
 
 <!-------------------------------------- AUDIO ------------------------------------------------- -->
 
@@ -62,14 +68,14 @@
 	  		<p>
 	  			<div>
 	  				<form>
-						<select id="myAssets" onchange="getAsset(this.value);">
+						<!--<select id="myAssets" onchange="getAsset(this.value);">
 						 	<option value=""> </option>
 						  	<option value="R_100">Volatility 100</option>
 						  	<option value="R_75">Volatility 75</option>
 						  	<option value="R_50">Volatility 50</option>
 						  	<option value="R_25">Volatility 25</option>
 						  	<option value="R_10">Volatility 10</option>
-						</select>
+						</select>-->
 					</form>
 				</div>
 			</p>
@@ -82,13 +88,13 @@
 	    	<p>
 				<div>
 					<form>
-						<select id="myTokens" onchange="Connect(this.value);">
+						<!--<select id="myTokens" onchange="Connect(this.value);">
 						  	<option value=""> </option>
 						    <option value="kS7A68xssbTVpkE">Jenty Demo Account</option>
 						    <option value="nBvBHHOe84bgXMK">Jenty Real Account</option>
 						  	<option value="COQz3VcylK89JoT"> Carline Real Account</option>
 						  	<option value="xwzTFS9BwGxjPZZ"> Carline Demo Account</option>
-						</select>	
+						</select>	-->
 					</form>
 				</div>
 			</p>
@@ -100,19 +106,7 @@
           <div id="theseconds"></div>
         </p>
       </div>
-
-
-	<!--<div class="container">
       
-        <div id="timer2" class="block">
-            <span class="field2 time"></span>
-         </div>
-         <div>
-         	<input type="button" onclick="timer2.reset()" value= " Reset ">
-         </div>
-</div>-->
-         
-    
     <div id="middle">
     	
 	    <div id="timer2">
@@ -181,24 +175,31 @@
 	<div id="row">
 	
 		<div id="right">
-	  		<div> tradeLock: </div>
+	  		<div> trade <img src="img/icon_lock.png">: </div>
 	  	</div>
 	  	<div id="right">
 	  		<div id="showtradeLock"></div>
 	  	</div>
 	  	
 	  	<div id="right">
-	  		<div> portfolioLock: </div>
+	  		<div> portfolio <img src="img/icon_lock.png">: </div>
 	  	</div>
 	  	<div id="right">
 	  		<div id="showportfolioLock"></div>
 	  	</div>
 
 	  	<div id="left">
-	  		<div > statementLock: </div>
+	  		<div > statement <img src="img/icon_lock.png">: </div>
 	  	</div>
 	  	<div id="right">
 	  		<div id="showstatementLock"></div>
+	  	</div>
+	  	
+	  	<div id="left">
+	  		<div > connect <img src="img/icon_lock.png">: </div>
+	  	</div>
+	  	<div id="right">
+	  		<div id="showconnectLock"></div>
 	  	</div>
 	  	
 
@@ -216,6 +217,7 @@
 			<div id="a" class="alignDivs"><b>ACTION</b> =    </div><div id="tradeaction" class="alignDivs"></div>
 			<div id="a" class="alignDivs"><b>RESCUE</b> =   </div><div id="rescueamount" class="alignDivs"></div>
 			<div id="a" class="alignDivs"><b>ORIGINAL BAL</b> =   </div><div id="originalbalance" class="alignDivs"></div>
+			<div id="a" class="alignDivs"><b>APPID</b> =   </div><div id="showappid" class="alignDivs"></div>
 		</div>
 	</td>
 </table>

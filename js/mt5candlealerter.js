@@ -59,7 +59,7 @@ function dot_update(dbgindex, minutes){
 	      		document.querySelector('#showtradeLock').innerHTML = tradeLock;
 	      		document.querySelector('#showportfolioLock').innerHTML = portfolioLock;
 	      		document.querySelector('#showstatementLock').innerHTML = statementLock;
-	      		
+	      		document.querySelector('#showconnectLock').innerHTML = connectLock;
 	      		var searchMinute = Intervals.indexOf(minutes);
 	      			      		
 		        if(xhr.responseText == "1"){
