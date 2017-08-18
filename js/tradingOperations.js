@@ -8,14 +8,14 @@ function checkWinOrLoss(amount){
 		totalwins++;
 		countlosses = 0;
 		rescue = 0;
-		str_return = "windddd ".bold().fontcolor("Green");
+		str_return = "win".bold().fontcolor("Green");
 		playSoundCustom(21);
 	}
 	else{
 		connectLock = "Off";
 		rescue++;
 		countlosses++;
-		str_return = "lossfff ".bold().fontcolor("Red");
+		str_return = "loss".bold().fontcolor("Red");
 		
 		playSoundCustom(22);
 	}

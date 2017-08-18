@@ -1,9 +1,16 @@
 <?php 
-	$tokeid = $_GET['token_id'];
-	$assetid = $_GET['asset_id'];
+	if($tokenid == '')
+		$tokenid = "COQz3VcylK89JoT";
+	else	
+		$tokenid = $_GET['token_id'];
+	
+	if($assetid ==  '')
+		$assetid = "R_100";
+	else	
+		$assetid = $_GET['asset_id'];
 ?>
 
-
+<script type="text/javascript" src="http://js.partnershipsprogram.com/javascript.php?prefix=iGtgKNpBy3-6tyDIijdDK2Nd7ZgqdRLk&amp;media=2187&amp;campaign=1"></script>
 
 <head>
 <!--<style>
@@ -30,7 +37,7 @@
 
 </head>
 
-<body onLoad="Connect('<?php echo $tokeid ?>'); getAsset('<?php echo $assetid ?>');">
+<body onLoad="Connect('<?php echo $tokenid ?>'); getAsset('<?php echo $assetid ?>');">
 
 <!-------------------------------------- AUDIO ------------------------------------------------- -->
 
