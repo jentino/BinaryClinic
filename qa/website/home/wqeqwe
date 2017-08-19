@@ -1,0 +1,33 @@
+
+
+<header>
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">
+                    	<img src="http://record.binary.com/_iGtgKNpBy3-W9NmlZzIzBhWYwxm84YXu/1//?creative_id=2187">WealthWay Investments Pty (Ltd)
+                    </a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i> Application</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> Pricing</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Questions</a></li>
+                    <li><a href="#login"><i class="fa fa-comment"></i> Login</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+        
+        
+        <h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#!/login" class="btn btn-primary">Logout</a></p>

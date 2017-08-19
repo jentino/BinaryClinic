@@ -14,7 +14,7 @@ onMessage = function(msg) {
 			connectLock = "Switch";
 			playSoundCustom(14);
 			var get = parseGetVars();            
-            writeToScreen("Authorized OK -------------------------------------------------------------------------".bold().fontcolor("Green") + "<br>  Email: " + (js.authorize.email).bold() + "  Account: " + (js.authorize.loginid).bold() + " Amount = " + "$ ".bold() + (js.authorize.balance).bold() /*+ " Time: ".bold()  + returnTimer()*/);
+            writeToScreen("Authorized OK ".bold().fontcolor("Green") + "<br>  Email: " + (js.authorize.email).bold() + "  Account: " + (js.authorize.loginid).bold() + " Amount = " + "$ ".bold() + (js.authorize.balance).bold() /*+ " Time: ".bold()  + returnTimer()*/);
 			writeToScreenEmail((js.authorize.email).bold());
 			OriginalBalance = js.authorize.balance;
 			document.getElementById("originalbalance").innerHTML = OriginalBalance.bold();

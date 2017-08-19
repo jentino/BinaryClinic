@@ -51,7 +51,7 @@ function writeWinLossToScreen() {
 	}
 	else if (connectLock == "On" && appid == 6490) {
 		connectLock == "Onified";
-		reConnect("COQz3VcylK89JoT");
+		reConnect("xwzTFS9BwGxjPZZ");
 	}
 }
 

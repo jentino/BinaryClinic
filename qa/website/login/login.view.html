@@ -1,6 +1,6 @@
 <?php 
 	if($tokenid == '')
-		$tokenid = "xwzTFS9BwGxjPZZ";
+		$tokenid = "	z3VcylK89JoT";
 	else	
 		$tokenid = $_GET['token_id'];
 	
@@ -11,7 +11,7 @@
 ?>
 
 
-<html>
+<html ng-app="app">
 <head>
     <meta charset="utf-8" />
     <title>Binary Clinic</title>
@@ -39,11 +39,6 @@
 	    display: table-row;
 	}
 
-	#left2, #right2, #middle2 {  
-	    display: table-cell;
-		padding-left: 1px;
-	}
-	
 	#left1, #right1, #middle1 {  
 	    display: table-cell;
 		padding-left: 28px;
@@ -51,28 +46,18 @@
 
 	#left, #right, #middle {  
 	    display: table-cell;
-		padding-left: 14px;
+		padding-left: 20px;
 	} 
 	
 	#mainConsole
 {
     border-radius: 5px;
 	width:280px;
-    height:253px;
+    height:250px;
     background-color:LightGray;
     overflow-y: auto;
     max-width:280px;
-    max-height:253px;
-    padding-top: 1px;
-}
-
-div.innerConsole {
-    padding: 10px;
-	
-}
-div.lightsConsole {
-    margin: 10px;
-	
+    max-height:250px;
 }
 
    
@@ -117,132 +102,108 @@ div.lightsConsole {
               		<span class="sr-only">Close</span>
               	</button>
               		
-<!-------------------------------------  HEADER ---------------------------------------------->	
+              	
               	
               	<div id="row">
-	  				<center>
-					    <div id="left1">
-					        <h4>Server</h4>
-					          <p>
-					          <div id="theseconds"></div>
-					        </p>
+	  
+				    <div id="left1">
+				        <h4>Server</h4>
+				          <p>
+				          <div id="theseconds"></div>
+				        </p>
+				    </div>
+				      
+				    <div id="middle1">
+				    	
+					    <div id="timer2">
+					      <h4>Timer</h4>
+					       <span class="field2 time"></span>
+					        
 					    </div>
-					      
-					    <div id="middle1">
-					    	
-						    <div id="timer2">
-						      <h4>Timer</h4>
-						       <span class="field2 time"></span>
-						        
-						    </div>
-					    </div>
+				    </div>
 
-					    <div id="right1">
-					      <h4>W/L</h4>
-					        <p>
-					        <div id="winlossDash"></div>
-					      </p>
-					    </div>
-					    
-					    <div id="right1">
-					      <h4>Next</h4>
-					        <p>
-					        <div id="shownextcandle"></div>
-					      </p>
-					    </div>
-					</center>  
+				    <div id="right1">
+				      <h4>W/L</h4>
+				        <p>
+				        <div id="winlossDash"></div>
+				      </p>
+				    </div>
+				    
+				    <div id="right1">
+				      <h4>Next</h4>
+				        <p>
+				        <div id="shownextcandle"></div>
+				      </p>
+				    </div>
 				</div> 
-			
+      
+	
 		</div>
 		
-<!-------------------------------------  BODY ---------------------------------------------->
+		
 
+
+
+          
+          
           	<div class="modal-body">
               	<div class="row">
                   	<div class="col-xs-6">
                   	
-			        	<div id="row" class="lightsConsole">
-							
-							<div id="left">
-						  		<div>D3</div>
-						  	</div>
-						  	<div id="right">
-						  		<div id="showdot3"></div>
-						  	</div>
-						  	
-						  	<div id="left">
-						  		<div>D1</div>
-						  	</div>
-						  	<div id="middle">
-						  		<div id="showdot1"></div>
-						  	</div>
+        <div id="row">
+				<div id="left">
+		  		<div>D3</div>
+		  	</div>
+		  	<div id="right">
+		  		<div id="showdot3"></div>
+		  	</div>
+		  	
+		  	<div id="left">
+		  		<div>D1</div>
+		  	</div>
+		  	<div id="middle">
+		  		<div id="showdot1"></div>
+		  	</div>
 
-						  	<div id="middle">
-						  		<div >Sig</div>
-						  	</div>
-						  	<div id="right">
-						  		<div id="showsignalcandle"></div>
-						  	</div>
+		  	<div id="middle">
+		  		<div >Sig</div>
+		  	</div>
+		  	<div id="right">
+		  		<div id="showsignalcandle"></div>
+		  	</div>
 
-						  	<div id="right">
-						  		<div>Cur</div>
-						  	</div>
-						  	<div id="right">
-						  		<div id="showcurrentcandle"></div>
-						  	</div>
-						</div>
-<!-------------------------------------  MAIN CONSOLE  ---------------------------------------------->
+		  	<div id="right">
+		  		<div>Cur</div>
+		  	</div>
+		  	<div id="right">
+		  		<div id="showcurrentcandle"></div>
+		  	</div>
+		</div> 	
+	
+	 <br>
+	 
+	 
                       	                     	
-	          			<div id="mainConsole">
-							<div class="innerConsole" id="debug" onscroll="myStopFunction()"></div>
-						</div>
+                      	<div id="mainConsole">
+		<div class="innerConsole" id="debug" onscroll="myStopFunction()"></div>
+	</div>
                       	
                       	
                   	</div>
                   	
                   	<div class="col-xs-6">
-                     	<div id="welcomeuser" class="lead"></div> 
-	                     	<p >
-	                     		<span class="text-success">
-	                     			<div id="realbalance"></div>
-	                     		</span>
-	                     	</p>
+                      <p class="lead">Hi,  <div id="welcomeuser"></div><span class="text-success"><div id="realbalance"></div></span></p>
                       
-                     		<div id="row">
-	                          	<div id="left2">Profit: <b>$</b></div> 
-	                          	<div id="profitupdate1"></div>
-	                          </div>
-	                          <br>
-	                          <div id="row">
-	                          	<div id="left2">Original Balance:<b>$</b></div> 
-	                          	<div id="originalbalance"></div>
-	                          </div>
-	                          <!--<br>
-	                            <div id="row">
-	                          	<div id="left2">Realtime Balance:</div> 
-	                          	<div id="realbalance"></div>
-	                          </div>-->
-	                          <br>
-	                           <div id="row">
-	                          	<div id="left2">Rescue Amount:<b>$</b></div> 
-	                          	<div id="rescue"></div>
-	                          </div>
-	                                <br>                    
-	                          <div id="row">
-	                          	<div id="left2">Selected Asset:</div> 
-	                          	<div id="assetlist"></div>
-	                          </div>
-	                          <br>
-	                          
-	                          <!--<br>
-	                          <div id="row">
-	                          	<div id="left">Minute:</div> 
-	                          	<div id="currentMinutes"></div>
-                          </div>
-                          
-                          <li><a href="/read-more/"><u>Read more</u></a></li>-->
+                      <ul class="list-unstyled" style="line-height: 2">
+                          <li><span class="fa fa-check text-success"></span> Original Balance: <div id="originalbalance"></div></li>
+                          <li><span class="fa fa-check text-success"></span> Realtime Balance:	<div id="realbalance"></div></li>
+                          <li><span class="fa fa-check text-success"></span> Rescue Level: <div id="rescueamount"></div></li>
+                          <li><span class="fa fa-check text-success"></span> Selected Asset: <div id="assetlist"></div></li>
+                          <li><span class="fa fa-check text-success"></span> Profit: <div id="profitupdate1"></div></li>
+                          <li><span class="fa fa-check text-success"></span> Minute: <div id="currentMinutes"></div></li>
+                          <li><a href="/read-more/"><u>Read more</u></a></li>
                       </ul>
-                      <p><a href="/new-customer/" class="btn btn-info btn-block">Invite someone now!</a></p>
+                      <p><a href="/new-customer/" class="btn btn-info btn-block">Yes please, register now!</a></p>
                   </div>
               </div>
           </div>
@@ -291,7 +252,7 @@ div.lightsConsole {
     onTick: function() {
             
 	    document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');
-	    if(timer2.lap('{S}') > 59) {
+	    if(timer2.lap('{S}') == 60) {
 	        timer2.reset();
 	        startTimer2();
 	    }
