@@ -38,6 +38,7 @@ function onPinger() {
 stx = 0;
 
 function startTimer2() {
+	
     stx++;
     if(stx > 0)
         timer2.start();

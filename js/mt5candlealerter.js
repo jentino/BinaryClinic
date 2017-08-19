@@ -72,19 +72,19 @@ function dot_update(dbgindex, minutes){
 					else if(data == "candle_id=dot3") {
 		          		
 		          		//If timer is 1 during the Interval minute and lock is off
-		          		if((timer2.lap('{S}') == 1) && (searchMinute != -1) && (tradeLock == "Off")){			               	
+		          		if((tockSeconds == 0) && (searchMinute != -1) && (tradeLock == "Off")){			               	
 			               	tradeLock = "On";
 			               	tradeOption("CALL",minutes);
 						}
 						//If timer is 3 during the Interval minute and lock is off
-						else if((timer2.lap('{S}') == 3)  && (searchMinute != -1) && (portfolioLock == "Off") && (tradeLock == "On")) {
+						else if((tockSeconds == 3)  && (searchMinute != -1) && (portfolioLock == "Off") && (tradeLock == "On")) {
 							
 							portfolioLock = "On";
 							statementLock = "Off"
 							GetPortfolio();
 						}
 						//If timer is 1 during the next minute outside the Interval and lock is off
-						else if((timer2.lap('{S}') ==  4) && (searchMinute == -1) && (statementLock == "Off") && (tradeLock == "On")){
+						else if((tockSeconds == 4) && (searchMinute == -1) && (statementLock == "Off") && (tradeLock == "On")){
 							
 							tradeLock = "Off";
 						 	portfolioLock = "Off";
@@ -103,18 +103,18 @@ function dot_update(dbgindex, minutes){
 					}
 					else if(data == "candle_id=dot3") {
 	           			
-						if((timer2.lap('{S}') == 1 ) && (searchMinute != -1) && (tradeLock == "Off")){
+						if((tockSeconds == 0) && (searchMinute != -1) && (tradeLock == "Off")){
 							
 							tradeLock = "On";
 							tradeOption("PUT",minutes);
 						}
-						else if((timer2.lap('{S}') == 3) && (searchMinute != -1) && (portfolioLock == "Off") && (tradeLock == "On")) {
+						else if((tockSeconds == 3) && (searchMinute != -1) && (portfolioLock == "Off") && (tradeLock == "On")) {
 							
 							portfolioLock = "On";
 							statementLock = "Off"
 							GetPortfolio();
 						} 
-						else if(timer2.lap('{S}') == 4 && (searchMinute == -1) && (portfolioLock == "On") && (tradeLock == "On") && (statementLock == "Off") ){
+						else if((tockSeconds == 4) && (searchMinute == -1) && (portfolioLock == "On") && (tradeLock == "On") && (statementLock == "Off") ){
 							
 							tradeLock = "Off";
 						 	portfolioLock = "Off";

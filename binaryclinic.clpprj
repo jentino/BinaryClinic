@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="C:\BinaryClinic\binaryclinic.clpprj">
 	<settings><PM_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_URL><PM_HOME_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
+		<file name="C:\BinaryClinic\index.php"/>
+		<file name="C:\BinaryClinic\css\main.css"/>
+		<file name="C:\BinaryClinic\js\tradingOperations.js"/>
+		<file name="C:\BinaryClinic\js\functions.js"/>
 	</lastopfiles>
 	<errors version="5.11">
-		<errfile name="C:\BinaryClinic\css\main.css">
-			<error val="7;0;12;0;2501;1;"/>
-			<error val="17;0;22;0;2501;1;"/>
-			<error val="13;0;22;0;2501;1;"/>
-		</errfile>
 		<errfile name="C:\BinaryClinic\index.php">
 			<error val="39;43;57;43;2002;1;"/>
 			<error val="46;44;64;44;2002;1;"/>
@@ -34,10 +33,8 @@
 	</errors>
 	<todoblock>
 	</todoblock>
-	<dbgurls>
-	</dbgurls>
 	<filescache>
-		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1503039561"/>
+		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1503104635"/>
 		<file name="C:\BinaryClinic\js\tradingOperations.js" crc="1503016364"/>
 		<file name="C:\BinaryClinic\js\tock.min.js" crc="1419045706"/>
 		<file name="C:\BinaryClinic\js\tock.js" crc="1419045706"/>
@@ -48,8 +45,9 @@
 		<file name="C:\BinaryClinic\js\playsound.js" crc="1502111740"/>
 		<file name="C:\BinaryClinic\js\onOpen.js" crc="1501458144"/>
 		<file name="C:\BinaryClinic\js\mt5candlealerter.js" crc="1502982519"/>
-		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1502998568"/>
+		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1503104874"/>
 		<file name="C:\BinaryClinic\js\jsoncalls.js" crc="1503038808"/>
+		<file name="C:\BinaryClinic\js\js.js" crc="1503053481"/>
 		<file name="C:\BinaryClinic\js\inputvariables.js" crc="1503039723"/>
 		<file name="C:\BinaryClinic\js\Gruntfile.js" crc="1419045706"/>
 		<file name="C:\BinaryClinic\js\functions.js" crc="1502982519"/>
@@ -58,8 +56,8 @@
 		<file name="C:\BinaryClinic\includes\dot_dbupdate.php" crc="1501976225"/>
 		<file name="C:\BinaryClinic\includes\dot_dblist.php" crc="1502416164"/>
 		<file name="C:\BinaryClinic\css\stylesheet.css" crc="1499868830"/>
-		<file name="C:\BinaryClinic\css\main.css" crc="1502550941"/>
+		<file name="C:\BinaryClinic\css\first.main.css" crc="1502550941"/>
 		<file name="C:\BinaryClinic\css\bootstrap.css" crc="1483713768"/>
-		<file name="C:\BinaryClinic\index.php" crc="1503045833"/>
+		<file name="C:\BinaryClinic\index.php" crc="1503156042"/>
 	</filescache>
 </project>

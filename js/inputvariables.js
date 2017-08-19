@@ -1,4 +1,6 @@
 /////////////////////////////////////////////////////////  Input variables
+var serverSeconds;
+var tockSeconds;
 var heartbeat = 0;
 //svar expiry_seconds = -5;
 var appid;

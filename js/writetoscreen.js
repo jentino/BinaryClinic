@@ -16,7 +16,9 @@ function writeTimeToScreen(thetime) {
 	
 	var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
 	d.setUTCSeconds(thetime);
-	document.getElementById("theseconds").innerHTML = d.getSeconds();
+	serverSeconds = d.getSeconds();
+	document.getElementById("theseconds").innerHTML = serverSeconds;
+	//document.getElementById("thetimer3").innerHTML = d.getSeconds();
 	var seconds = d.getSeconds();
 	var minutes = d.getMinutes();
 
@@ -45,7 +47,7 @@ function writeWinLossToScreen() {
 	
 	document.getElementById("profitupdate1").innerHTML = (((totalwins * (tradeamount[0])*0.94) + winlossresult*0.31).toFixed(2)).bold(); //show totalwins*
 		
-	if(winlossresult == -2 && connectLock == "Off" && appid == 6841) {
+	if(winlossresult == -2 && connectLock == "Off" && appid == 10122) {
 		connectLock == "Onified";
 		reConnect("kS7A68xssbTVpkE");
 	}

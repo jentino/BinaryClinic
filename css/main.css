@@ -1,77 +1,48 @@
-<style type="text/css">
-
 #row  {
-    display: table-row;
-}
+	    display: table-row;
+	}
 
-#left, #right, #middle {  
-    display: table-cell;
-	padding-left: 25px;
-}    
+	#left2, #right2, #middle2 {  
+	    display: table-cell;
+		padding-left: 1px;
+	}
+	
+	#left1, #right1, #middle1 {  
+	    display: table-cell;
+		padding-left: 28px;
+	}   
 
-#getTradeOpDash
-{
-        padding: 2px;
-        display: inline-block;
-        background-color:LightGray;
-        width:600px;
-}
-
-
-#tblgetbuttonsDash
-{
-    
-    white-space: nowrap;
-}
-
-
-#tbltrade_buttons
-{
-    
-    white-space: nowrap;
-}
-
-
-#getbuttonsDash {
-    width:117px;
-}
-
-#getUserInfoDash
+	#left, #right, #middle {  
+	    display: table-cell;
+		padding-left: 14px;
+	} 
+	
+	#mainConsole
 {
     border-radius: 5px;
-	padding: 10px;
-	width:585px;
-    height:17px;
-    background-color:LightGray;
-    
-}
-
-#mainConsole
-{
-    border-radius: 5px;
-	width:605px;
-    height:425px;
+	width:280px;
+    height:260px;
     background-color:LightGray;
     overflow-y: auto;
-    max-width:605px;
-    max-height:325px;
+    max-width:280px;
+    max-height:260px;
+    padding-top: 1px;
 }
 
-hr.divider {
-	 width:12px;
-}
 div.innerConsole {
     padding: 10px;
 	
 }
-
-input.trade_buttons {
-    width:71.6px;
+div.lightsConsole {
+    margin: 10px;
 	
-}       
-
-
-.alignDivs {
-    display: inline; /* Or inline-block */
 }
-</style>
+
+div.realbalance {
+	
+	font-size: 26px;
+	color: #3c763d;
+	font-weight: bold;
+}
+
+   

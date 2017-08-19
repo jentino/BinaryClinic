@@ -23,7 +23,7 @@ function showProfit(updatedbalance) {
 }
 
 function showRescueAmount() {
-	document.getElementById("rescueamount").innerHTML = tradeamount[rescue];
+	document.getElementById("showrescueamount").innerHTML = tradeamount[rescue];
 }
 
 function loggin2Account(){

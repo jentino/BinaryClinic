@@ -22,6 +22,7 @@ onMessage = function(msg) {
 		    onPinger(); //poll server ping for 24 hours
 	        onSecTimer(); //poll time for 24 hours	
 	        rescue = 0;        
+	        showRescueAmount()
 	        //onCandleTimer();
 	        subscribeTransactions();
 			showBalance(OriginalBalance);

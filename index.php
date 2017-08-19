@@ -16,6 +16,7 @@
     <meta charset="utf-8" />
     <title>Binary Clinic</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link href="//cdn.rawgit.com/cornflourblue/angular-registration-login-example/master/app-content/app.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<script type="text/javascript" src="js/inputvariables.js"></script>
@@ -33,50 +34,6 @@
 	<script type="text/javascript" src="js/tradingOperations.js"></script>
 	<script type="text/javascript" src="js/tock.js"></script>
 	<script type="text/javascript" src="js/reconnect.js"></script>
-	<style type="text/css">
-
-	#row  {
-	    display: table-row;
-	}
-
-	#left2, #right2, #middle2 {  
-	    display: table-cell;
-		padding-left: 1px;
-	}
-	
-	#left1, #right1, #middle1 {  
-	    display: table-cell;
-		padding-left: 28px;
-	}   
-
-	#left, #right, #middle {  
-	    display: table-cell;
-		padding-left: 14px;
-	} 
-	
-	#mainConsole
-{
-    border-radius: 5px;
-	width:280px;
-    height:253px;
-    background-color:LightGray;
-    overflow-y: auto;
-    max-width:280px;
-    max-height:253px;
-    padding-top: 1px;
-}
-
-div.innerConsole {
-    padding: 10px;
-	
-}
-div.lightsConsole {
-    margin: 10px;
-	
-}
-
-   
-	</style>
 </head>
 
 
@@ -136,6 +93,13 @@ div.lightsConsole {
 						        
 						    </div>
 					    </div>
+					    
+					    <div id="right1">
+					      <h4>Other</h4>
+					        <p>
+					        <div id="showServerSeconds"></div>
+					      </p>
+					    </div>
 
 					    <div id="right1">
 					      <h4>W/L</h4>
@@ -144,12 +108,21 @@ div.lightsConsole {
 					      </p>
 					    </div>
 					    
-					    <div id="right1">
+					    <div id="right">
 					      <h4>Next</h4>
 					        <p>
 					        <div id="shownextcandle"></div>
 					      </p>
 					    </div>
+					    
+					    <div id="right">
+						  		<div>MT5</div>
+						  	</div>
+						  	<div id="right">
+						  		<div id="showMT5seconds"></div>
+						  	</div>
+						  	
+						  	
 					</center>  
 				</div> 
 			
@@ -190,6 +163,11 @@ div.lightsConsole {
 						  	<div id="right">
 						  		<div id="showcurrentcandle"></div>
 						  	</div>
+						  	
+						  	
+						  	
+						  	
+						  	
 						</div>
 <!-------------------------------------  MAIN CONSOLE  ---------------------------------------------->
                       	                     	
@@ -202,11 +180,17 @@ div.lightsConsole {
                   	
                   	<div class="col-xs-6">
                      	<div id="welcomeuser" class="lead"></div> 
-	                     	<p >
-	                     		<span class="text-success">
-	                     			<div id="realbalance"></div>
+	                     	
+	                     		<span >
+	                     			<div id=row>
+	                     					<div id="left2" class="realbalance">$</div>
+	                     					<div id="left2">
+	                     						<div id="realbalance" class="realbalance"></div>
+	                     					</div>
+	                     					
+	                     			</div>
 	                     		</span>
-	                     	</p>
+	                     
                       
                      		<div id="row">
 	                          	<div id="left2">Profit: <b>$</b></div> 
@@ -225,7 +209,7 @@ div.lightsConsole {
 	                          <br>
 	                           <div id="row">
 	                          	<div id="left2">Rescue Amount:<b>$</b></div> 
-	                          	<div id="rescue"></div>
+	                          	<div id="showrescueamount" class="rescueamount"></div>
 	                          </div>
 	                                <br>                    
 	                          <div id="row">
@@ -285,17 +269,21 @@ div.lightsConsole {
       </div>
   </div>
   
+  
+  
   <script type="text/javascript">
 	var timer2 = new Tock({
     interval: 1000,
+    
     onTick: function() {
-            
-	    document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');
-	    if(timer2.lap('{S}') > 59) {
-	        timer2.reset();
+        
+        tockSeconds = (timer2.lap('{S}'))%60;
+	    document.querySelector('#timer2 .field2').innerHTML = tockSeconds;
+	    //document.getElementById('showServerSeconds').innerHTML = serverSeconds%60;
+	    /*if(timer2.lap('{S}') > 59) {
+	    	timer2.reset();
 	        startTimer2();
-	    }
-            //if(timer2.lap('{S}') > 15) restart();              
+	    }  */      
 	}
 });
 
