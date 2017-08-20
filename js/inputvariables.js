@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////  Input variables
-var serverSeconds;
+//var serverSeconds;
 var tockSeconds;
 var heartbeat = 0;
 //svar expiry_seconds = -5;

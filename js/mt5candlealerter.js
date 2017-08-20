@@ -53,7 +53,7 @@ function dot_update(dbgindex, minutes){
   	xhr.onreadystatechange = display_data;
 	
 	function display_data() {
-		//if(timer2.lap('{S}') == 0) alert(timer2.lap('{S}') );
+		
 	    if (xhr.readyState == 4) {
 	      	if (xhr.status == 200) {
 	      		document.querySelector('#showtradeLock').innerHTML = tradeLock;
