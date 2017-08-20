@@ -72,7 +72,7 @@ function dot_update(dbgindex, minutes){
 					else if(data == "candle_id=dot3") {
 		          		
 		          		//If timer is 1 during the Interval minute and lock is off
-		          		if((tockSeconds == 0) && (searchMinute != -1) && (tradeLock == "Off")){			               	
+		          		if((tockSeconds ==1) && (searchMinute != -1) && (tradeLock == "Off")){			               	
 			               	tradeLock = "On";
 			               	tradeOption("CALL",minutes);
 						}
@@ -103,7 +103,7 @@ function dot_update(dbgindex, minutes){
 					}
 					else if(data == "candle_id=dot3") {
 	           			
-						if((tockSeconds == 0) && (searchMinute != -1) && (tradeLock == "Off")){
+						if((tockSeconds == 1) && (searchMinute != -1) && (tradeLock == "Off")){
 							
 							tradeLock = "On";
 							tradeOption("PUT",minutes);

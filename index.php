@@ -14,7 +14,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Binary Clinic</title>
+    <title>BinaryHaven</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link href="//cdn.rawgit.com/cornflourblue/angular-registration-login-example/master/app-content/app.css" rel="stylesheet" />
@@ -70,58 +70,88 @@
       	<div class="modal-content">
           	<div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">
-              		<span aria-hidden="true"><div id="showappid"></div></span>
-              		<span class="sr-only">Close</span>
+              		<div id="timer2">
+						     		 <div>Timer</div>
+						     			<p><span class="field2 time"></span></p>
+							    </div>
+              		
               	</button>
               		
 <!-------------------------------------  HEADER ---------------------------------------------->	
               	
+              	
               	<div id="row">
 	  				<center>
 					    <div id="left1">
-					        <h4>Server</h4>
-					          <p>
-					          <div id="theseconds"></div>
-					        </p>
+					        <img src="img/binaryhaven1.png">
 					    </div>
-					      
-					    <div id="middle1">
+					    
+					   <div id="middle">
 					    	
-						    <div id="timer2">
-						      <h4>Timer</h4>
-						       <span class="field2 time"></span>
-						        
+					    	<!--<div id="middle">
+						    	<div id="timer2">
+						     		 <div>Timer</div>
+						     			<p><span class="field2 time"></span></p>
+							    </div>
+					    	</div>-->
+					    
+						    <div id="right">
+						    	<div>W/L</div>
+						        <p>
+						        	<div id="winlossDash"></div>
+						        </p>
+										        
 						    </div>
+					    
+						    <div id="right">
+						      	<div>Next</div>
+						       	<p>
+						        	<div id="shownextcandle"></div>
+						      	</p>
+						    </div>
+						    
+						    <div id="right">
+							  	<div>Appid</div>
+								<p>
+								  	<div id="showappid"></div>
+								</p>
+							</div>
 					    </div>
 					    
-					    <div id="right1">
-					      <h4>Other</h4>
-					        <p>
-					        <div id="showServerSeconds"></div>
-					      </p>
-					    </div>
-
-					    <div id="right1">
-					      <h4>W/L</h4>
-					        <p>
-					        <div id="winlossDash"></div>
-					      </p>
-					    </div>
 					    
-					    <div id="right">
-					      <h4>Next</h4>
-					        <p>
-					        <div id="shownextcandle"></div>
-					      </p>
-					    </div>
-					    
-					    <div id="right">
-						  		<div>MT5</div>
+					   <!-- 
+						  	
+						  	
+						  	<div id="right">
+						  		<div>Win/Loss</div>
 						  	</div>
 						  	<div id="right">
 						  		<div id="showMT5seconds"></div>
 						  	</div>
 						  	
+						  	<div id="right">
+						  		<div>Next</div>
+						  	</div>
+						  	<div id="right">
+						  		<div id="showMT5seconds"></div>
+						  	</div>
+						  -->
+						  
+						  
+						  	 <!--<div id="left1">
+					        <h4>Server</h4>
+					          <p>
+					          <div id="theseconds"></div>
+					        </p>
+					    </div>
+					      -->
+					      
+					      <!-- <div id="right1">
+					      <h4>Other</h4>
+					        <p>
+					        <div id="showServerSeconds"></div>
+					      </p>
+					    </div>-->
 						  	
 					</center>  
 				</div> 
@@ -236,28 +266,28 @@
          <div id="row">
 	
 		<div id="right">
-	  		<div> trade <img src="img/icon_lock.png">: </div>
+	  		<div> trade <img src="img/tinylock.png"> </div>
 	  	</div>
 	  	<div id="right">
 	  		<div id="showtradeLock"></div>
 	  	</div>
 	  	
 	  	<div id="right">
-	  		<div> portfolio <img src="img/icon_lock.png">: </div>
+	  		<div> portfolio <img src="img/tinylock.png">  </div>
 	  	</div>
 	  	<div id="right">
 	  		<div id="showportfolioLock"></div>
 	  	</div>
 
 	  	<div id="left">
-	  		<div > statement <img src="img/icon_lock.png">: </div>
+	  		<div > statement <img src="img/tinylock.png">  </div>
 	  	</div>
 	  	<div id="right">
 	  		<div id="showstatementLock"></div>
 	  	</div>
 	  	
 	  	<div id="left">
-	  		<div > connect <img src="img/icon_lock.png">: </div>
+	  		<div > connect <img src="img/tinylock.png">  </div>
 	  	</div>
 	  	<div id="right">
 	  		<div id="showconnectLock"></div>

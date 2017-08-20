@@ -5,6 +5,7 @@
 		<file name="C:\BinaryClinic\css\main.css"/>
 		<file name="C:\BinaryClinic\js\tradingOperations.js"/>
 		<file name="C:\BinaryClinic\js\functions.js"/>
+		<file name="C:\BinaryClinic\js\writetoscreen.js"/>
 	</lastopfiles>
 	<errors version="5.11">
 		<errfile name="C:\BinaryClinic\index.php">
@@ -34,30 +35,44 @@
 	<todoblock>
 	</todoblock>
 	<filescache>
-		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1503104635"/>
+		<file name="C:\BinaryClinic\timer\epiclock\stylesheet\jquery.epiclock.css" crc="1274035894"/>
+		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro-countdown\epiclock.retro-countdown.min.js" crc="1274036202"/>
+		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro-countdown\epiclock.retro-countdown.js" crc="1274035894"/>
+		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro-countdown\epiclock.retro-countdown.css" crc="1274035894"/>
+		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro\epiclock.retro.min.js" crc="1274036202"/>
+		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro\epiclock.retro.js" crc="1279207146"/>
+		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro\epiclock.retro.css" crc="1274035894"/>
+		<file name="C:\BinaryClinic\timer\epiclock\javascript\jquery.epiclock.min.js" crc="1274037564"/>
+		<file name="C:\BinaryClinic\timer\epiclock\javascript\jquery.epiclock.js" crc="1274185172"/>
+		<file name="C:\BinaryClinic\timer\epiclock\javascript\jquery.dateformat.min.js" crc="1279557802"/>
+		<file name="C:\BinaryClinic\timer\epiclock\javascript\jquery.dateformat.js" crc="1274185172"/>
+		<file name="C:\BinaryClinic\timer\index.html" crc="1274185172"/>
+		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1503201500"/>
 		<file name="C:\BinaryClinic\js\tradingOperations.js" crc="1503016364"/>
 		<file name="C:\BinaryClinic\js\tock.min.js" crc="1419045706"/>
 		<file name="C:\BinaryClinic\js\tock.js" crc="1419045706"/>
-		<file name="C:\BinaryClinic\js\timers.js" crc="1502982519"/>
+		<file name="C:\BinaryClinic\js\timers.js" crc="1503161034"/>
 		<file name="C:\BinaryClinic\js\splitwebstring.js" crc="1501458106"/>
 		<file name="C:\BinaryClinic\js\scroller.js" crc="1501437156"/>
 		<file name="C:\BinaryClinic\js\reconnect.js" crc="1502982519"/>
 		<file name="C:\BinaryClinic\js\playsound.js" crc="1502111740"/>
 		<file name="C:\BinaryClinic\js\onOpen.js" crc="1501458144"/>
-		<file name="C:\BinaryClinic\js\mt5candlealerter.js" crc="1502982519"/>
-		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1503104874"/>
+		<file name="C:\BinaryClinic\js\mt5candlealerter.js" crc="1503174199"/>
+		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1503159125"/>
 		<file name="C:\BinaryClinic\js\jsoncalls.js" crc="1503038808"/>
 		<file name="C:\BinaryClinic\js\js.js" crc="1503053481"/>
-		<file name="C:\BinaryClinic\js\inputvariables.js" crc="1503039723"/>
+		<file name="C:\BinaryClinic\js\inputvariables.js" crc="1503172689"/>
 		<file name="C:\BinaryClinic\js\Gruntfile.js" crc="1419045706"/>
-		<file name="C:\BinaryClinic\js\functions.js" crc="1502982519"/>
+		<file name="C:\BinaryClinic\js\functions.js" crc="1503159317"/>
 		<file name="C:\BinaryClinic\js\connect.js" crc="1502982519"/>
 		<file name="C:\BinaryClinic\js\buttonswitch.js" crc="1502549703"/>
+		<file name="C:\BinaryClinic\includes\dot_dbupdatetime.php" crc="1503179259"/>
 		<file name="C:\BinaryClinic\includes\dot_dbupdate.php" crc="1501976225"/>
 		<file name="C:\BinaryClinic\includes\dot_dblist.php" crc="1502416164"/>
 		<file name="C:\BinaryClinic\css\stylesheet.css" crc="1499868830"/>
+		<file name="C:\BinaryClinic\css\main.css" crc="1503219294"/>
 		<file name="C:\BinaryClinic\css\first.main.css" crc="1502550941"/>
 		<file name="C:\BinaryClinic\css\bootstrap.css" crc="1483713768"/>
-		<file name="C:\BinaryClinic\index.php" crc="1503156042"/>
+		<file name="C:\BinaryClinic\index.php" crc="1503201449"/>
 	</filescache>
 </project>

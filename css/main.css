@@ -7,14 +7,24 @@
 		padding-left: 1px;
 	}
 	
-	#left1, #right1, #middle1 {  
+	#left1 ,#right1, #middle1 {  
 	    display: table-cell;
-		padding-left: 28px;
+		padding-right: 22px;
 	}   
 
 	#left, #right, #middle {  
 	    display: table-cell;
 		padding-left: 14px;
+	} 
+	
+	#left3, #right3, #middle3 {  
+	    display: table-cell;
+		padding-left: 14px;
+	} 
+	
+	#retest {  
+	    
+		padding-left: 114px;
 	} 
 	
 	#mainConsole

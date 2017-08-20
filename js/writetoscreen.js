@@ -17,7 +17,7 @@ function writeTimeToScreen(thetime) {
 	var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
 	d.setUTCSeconds(thetime);
 	serverSeconds = d.getSeconds();
-	document.getElementById("theseconds").innerHTML = serverSeconds;
+	//document.getElementById("theseconds").innerHTML = serverSeconds;
 	//document.getElementById("thetimer3").innerHTML = d.getSeconds();
 	var seconds = d.getSeconds();
 	var minutes = d.getMinutes();
