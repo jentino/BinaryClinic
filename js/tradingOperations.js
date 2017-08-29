@@ -1,12 +1,13 @@
 /////////////////////////////////////////////////////////////////  COLOUR WIN AND LOSS
-var winLock = "";
 function checkWinOrLoss(amount){
 	var str_return;
 	
 	if (amount > 0) {
 		connectLock = "On";
-		totalwins++;
-		countlosses = 0;
+		if(winlossLock == "Off"){
+			totalwins++;
+			countlosses = 0;
+		}
 		rescue = 0;
 		str_return = "win".bold().fontcolor("Green");
 		playSoundCustom(21);
@@ -14,20 +15,22 @@ function checkWinOrLoss(amount){
 	else{
 		connectLock = "Off";
 		rescue++;
-		countlosses++;
-		str_return = "loss".bold().fontcolor("Red");
 		
+		if(winlossLock == "Off"){
+			countlosses++;
+		}
+		str_return = "loss".bold().fontcolor("Red");
 		playSoundCustom(22);
 	}
 	return str_return;
 }
 
-var temp_minute = "";
+
 //////////////////////////////////////////////////////////////////  AUTO TRADINNG
 function tradeOption(direction, currentMinutes) {
 	
 	if(temp_minute != currentMinutes) {
-		if(direction=="CALL") {
+		if(direction == "CALL") {
 			if(signalCandle == "UP")
 				Sellit(tradeamount[rescue]);
 			else if(signalCandle == "DOWN")
@@ -41,7 +44,7 @@ function tradeOption(direction, currentMinutes) {
 		}
     	document.getElementById("currentMinutes").innerHTML = currentMinutes;
     	document.getElementById("tradeaction").innerHTML = direction;
-    	showRescueAmount();
+    	//showRescueAmount();
     	temp_minute = currentMinutes;
     	
 	}

@@ -9,8 +9,6 @@
 	else	
 		$assetid = $_GET['asset_id'];
 ?>
-
-
 <html>
 <head>
     <meta charset="utf-8" />
@@ -35,6 +33,8 @@
 	<script type="text/javascript" src="js/tock.js"></script>
 	<script type="text/javascript" src="js/reconnect.js"></script>
 </head>
+
+
 
 
 <body onLoad="Connect('<?php echo $tokenid ?>'); getAsset('<?php echo $assetid ?>');">
@@ -88,14 +88,7 @@
 					    
 					   <div id="middle">
 					    	
-					    	<!--<div id="middle">
-						    	<div id="timer2">
-						     		 <div>Timer</div>
-						     			<p><span class="field2 time"></span></p>
-							    </div>
-					    	</div>-->
-					    
-						    <div id="right">
+					    	<div id="right">
 						    	<div>W/L</div>
 						        <p>
 						        	<div id="winlossDash"></div>
@@ -116,42 +109,17 @@
 								  	<div id="showappid"></div>
 								</p>
 							</div>
+							
+							
+							<div id="right">
+							  	<div>Min</div>
+								<p>
+								  	<div id="showTheminute"></div>
+								</p>
+							</div>
+							
+						  	
 					    </div>
-					    
-					    
-					   <!-- 
-						  	
-						  	
-						  	<div id="right">
-						  		<div>Win/Loss</div>
-						  	</div>
-						  	<div id="right">
-						  		<div id="showMT5seconds"></div>
-						  	</div>
-						  	
-						  	<div id="right">
-						  		<div>Next</div>
-						  	</div>
-						  	<div id="right">
-						  		<div id="showMT5seconds"></div>
-						  	</div>
-						  -->
-						  
-						  
-						  	 <!--<div id="left1">
-					        <h4>Server</h4>
-					          <p>
-					          <div id="theseconds"></div>
-					        </p>
-					    </div>
-					      -->
-					      
-					      <!-- <div id="right1">
-					      <h4>Other</h4>
-					        <p>
-					        <div id="showServerSeconds"></div>
-					      </p>
-					    </div>-->
 						  	
 					</center>  
 				</div> 
@@ -231,11 +199,7 @@
 	                          	<div id="left2">Original Balance:<b>$</b></div> 
 	                          	<div id="originalbalance"></div>
 	                          </div>
-	                          <!--<br>
-	                            <div id="row">
-	                          	<div id="left2">Realtime Balance:</div> 
-	                          	<div id="realbalance"></div>
-	                          </div>-->
+	                          
 	                          <br>
 	                           <div id="row">
 	                          	<div id="left2">Rescue Amount:<b>$</b></div> 
@@ -247,15 +211,6 @@
 	                          	<div id="assetlist"></div>
 	                          </div>
 	                          <br>
-	                          
-	                          <!--<br>
-	                          <div id="row">
-	                          	<div id="left">Minute:</div> 
-	                          	<div id="currentMinutes"></div>
-                          </div>
-                          
-                          <li><a href="/read-more/"><u>Read more</u></a></li>-->
-                      </ul>
                       <p><a href="/new-customer/" class="btn btn-info btn-block">Invite someone now!</a></p>
                   </div>
               </div>
@@ -309,13 +264,10 @@
         
         tockSeconds = (timer2.lap('{S}'))%60;
 	    document.querySelector('#timer2 .field2').innerHTML = tockSeconds;
-	    //document.getElementById('showServerSeconds').innerHTML = serverSeconds%60;
-	    /*if(timer2.lap('{S}') > 59) {
-	    	timer2.reset();
-	        startTimer2();
-	    }  */      
-	}
-});
+	    pollCandles();    
+	    //PingServer();
+		}
+	});
 
 document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');	
 </script>
@@ -323,3 +275,4 @@ document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');
 
 
   </body>
+  </html>

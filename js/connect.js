@@ -29,8 +29,10 @@
 		}
 
 		else if(token =="xwzTFS9BwGxjPZZ"){
+			
 			appid = 10122;
 			trader_name = "Carline Demo Account";
+			
 		}
 			
 		else 

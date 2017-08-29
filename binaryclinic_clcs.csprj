@@ -1,4 +1,86 @@
 <codestructure version="5.13">
 <phptree>
+<treenode node="./users.php;PHP:PHP Include;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f14;3;25;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="./websockets.php;PHP:PHP Include;C:\BinaryClinic\BinaryExtreme\test\testwebsock.php;f14;3;30;3;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="/websockets.php;PHP:PHP Include;C:\BinaryClinic\BinaryExtreme\test\index.php;f14;2;29;2;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+</treenode>
+<treenode node="echoServer;PHP:Class Name;C:\BinaryClinic\BinaryExtreme\test\testwebsock.php;f0;5;1;23;;C:\BinaryClinic\BinaryExtreme\test\index.php;f0;4;1;21;;;;vpos;;vWebSocketServer;;c;;r;;d41,5;;b0,0;;m">
+<treenode node="closed;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\testwebsock.php;f12;18;3;22;;C:\BinaryClinic\BinaryExtreme\test\index.php;f12;16;3;20;;;;vpos;;v;;r;;d36,18;;b2,0;;muser;;p">
+</treenode>
+<treenode node="connected;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\testwebsock.php;f12;12;3;16;;C:\BinaryClinic\BinaryExtreme\test\index.php;f12;10;3;14;;;;vpos;;v;;r;;d39,12;;b2,0;;muser;;p">
+</treenode>
+<treenode node="process;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\testwebsock.php;f12;8;3;10;;C:\BinaryClinic\BinaryExtreme\test\index.php;f12;6;3;8;;;;vpos;;v;;r;;d47,8;;b2,0;;muser;;pmessage;;p">
+</treenode>
+</treenode>
+<treenode node="WebSocketServer;PHP:Class Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f9;5;1;607;;;;vpos;;v;;r;;d31,5;;b0,0;;m">
+<treenode node="__construct;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f2;18;3;28;;;;vpos;;v;;r;;d59,18;;b0,0;;maddr;;pport;;pbufferLength;;p">
+</treenode>
+<treenode node="_tick;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;56;3;74;;;;vpos;;v;;r;;d29,56;;b2,0;;m">
+</treenode>
+<treenode node="applyMask;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;547;3;563;;;;vpos;;v;;r;;d50,547;;b2,0;;mheaders;;ppayload;;p">
+</treenode>
+<treenode node="calcoffset;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;417;3;428;;;;vpos;;v;;r;;d42,417;;b2,0;;mheaders;;p">
+</treenode>
+<treenode node="checkHost;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;259;3;263;;;;vpos;;v;;r;;d42,259;;b2,0;;mhostName;;p">
+</treenode>
+<treenode node="checkOrigin;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;265;3;267;;;;vpos;;v;;r;;d42,265;;b2,0;;morigin;;p">
+</treenode>
+<treenode node="checkRSVBits;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;564;3;570;;;;vpos;;v;;r;;d50,564;;b2,0;;mheaders;;puser;;p">
+</treenode>
+<treenode node="checkWebsocExtensions;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;273;3;275;;;;vpos;;v;;r;;d56,273;;b2,0;;mextensions;;p">
+</treenode>
+<treenode node="checkWebsocProtocol;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;269;3;271;;;;vpos;;v;;r;;d52,269;;b2,0;;mprotocol;;p">
+</treenode>
+<treenode node="closed;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f21;32;43;32;;;;vpos;;v;;r;;d-1,-1;;b2,0;;muser;;p">
+</treenode>
+<treenode node="connect;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;150;3;155;;;;vpos;;v;;r;;d38,150;;b2,0;;msocket;;p">
+</treenode>
+<treenode node="connected;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f21;31;46;31;;;;vpos;;v;;r;;d-1,-1;;b2,0;;muser;;p">
+</treenode>
+<treenode node="connecting;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;34;3;37;;;;vpos;;v;;r;;d39,34;;b2,0;;muser;;p">
+</treenode>
+<treenode node="deframe;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;430;3;492;;;;vpos;;v;;r;;d47,430;;b2,0;;mmessage;;puser;;p">
+</treenode>
+<treenode node="disconnect;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;157;3;181;;;;vpos;;v;;r;;d83,157;;b2,0;;msocket;;ptriggerClosed;;psockErrNo;;p">
+</treenode>
+<treenode node="doHandshake;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;183;3;257;;;;vpos;;v;;r;;d49,183;;b2,0;;muser;;pbuffer;;p">
+</treenode>
+<treenode node="extractHeaders;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;494;3;531;;;;vpos;;v;;r;;d46,494;;b2,0;;mmessage;;p">
+</treenode>
+<treenode node="extractPayload;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;533;3;545;;;;vpos;;v;;r;;d55,533;;b2,0;;mmessage;;pheaders;;p">
+</treenode>
+<treenode node="frame;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;309;3;376;;;;vpos;;v;;r;;d90,309;;b2,0;;mmessage;;puser;;pmessageType;;pmessageContinues;;p">
+</treenode>
+<treenode node="getUserBySocket;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;288;3;295;;;;vpos;;v;;r;;d46,288;;b2,0;;msocket;;p">
+</treenode>
+<treenode node="printHeaders;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;593;3;606;;;;vpos;;v;;r;;d44,593;;b2,0;;mheaders;;p">
+</treenode>
+<treenode node="process;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f21;30;53;30;;;;vpos;;v;;r;;d-1,-1;;b2,0;;muser;;pmessage;;p">
+</treenode>
+<treenode node="processExtensions;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;284;3;286;;;;vpos;;v;;r;;d52,284;;b2,0;;mextensions;;p">
+</treenode>
+<treenode node="processProtocol;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;277;3;282;;;;vpos;;v;;r;;d48,277;;b2,0;;mprotocol;;p">
+</treenode>
+<treenode node="run;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f9;79;3;148;;;;vpos;;v;;r&#10;Definition&#10;    run()&#10;&#10;Description&#10;     Main processing loop;;d24,79;;b1,0;;m">
+</treenode>
+<treenode node="send;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;39;3;49;;;;vpos;;v;;r;;d43,39;;b2,0;;muser;;pmessage;;p">
+</treenode>
+<treenode node="split_packet;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;379;3;415;;;;vpos;;v;;r;;d58,379;;b2,0;;mlength;;ppacket;;puser;;p">
+</treenode>
+<treenode node="stderr;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f9;303;3;307;;;;vpos;;v;;r;;d35,303;;b1,0;;mmessage;;p">
+</treenode>
+<treenode node="stdout;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f9;297;3;301;;;;vpos;;v;;r;;d35,297;;b1,0;;mmessage;;p">
+</treenode>
+<treenode node="strtohex;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;572;3;591;;;;vpos;;v;;r;;d36,572;;b2,0;;mstr;;p">
+</treenode>
+<treenode node="tick;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\websockets.php;f12;51;3;54;;;;vpos;;v;;r;;d28,51;;b2,0;;m">
+</treenode>
+</treenode>
+<treenode node="WebSocketUser;PHP:Class Name;C:\BinaryClinic\BinaryExtreme\test\users.php;f0;2;1;21;;;;vpos;;v;;r;;d20,2;;b0,0;;m">
+<treenode node="__construct;PHP:Function Name;C:\BinaryClinic\BinaryExtreme\test\users.php;f2;17;3;20;;;;vpos;;v;;r;;d37,17;;b0,0;;mid;;psocket;;p">
+</treenode>
+</treenode>
 </phptree>
 </codestructure>

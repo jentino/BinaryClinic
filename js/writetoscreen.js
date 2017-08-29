@@ -16,47 +16,52 @@ function writeTimeToScreen(thetime) {
 	
 	var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
 	d.setUTCSeconds(thetime);
-
+	
+	globalMinutes = d.getMinutes();
+	
 	if(d.getSeconds() == 0  && setTimerOnce == 1) {
-		startTimer2();
+		startTockClock();
 		setTimerOnce = 10000;
 	}
-
-	dot_update("sig", d.getMinutes());
-	dot_update("d3", d.getMinutes());
-	dot_update("d1", d.getMinutes());
-	dot_update("cur", d.getMinutes());
-	dot_update("nxt", d.getMinutes());
+	document.getElementById("showTheminute").innerHTML = d.getMinutes();
 
 }	
+
+function pollCandles(){
+	
+	//pingServer();
+	
+	dot_update("sig", globalMinutes);
+	dot_update("d3", globalMinutes);
+	dot_update("d1", globalMinutes);
+	dot_update("cur", globalMinutes);
+	dot_update("nxt", globalMinutes);
+	
+}
 
 function writeBalanceToDash(updatedbalance) {
 	document.getElementById("realbalance").innerHTML = updatedbalance.bold();
 	showProfit(updatedbalance);		
 }
 		
-function writeWinLossToScreen() {
+function writeWinLossToScreen() {	
 	var winlossresult = countwins - countlosses;
 	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;
-	var totalresult = (((totalwins * (tradeamount[0])*0.94) + winlossresult*0.31).toFixed(2)).bold();
 	
-	document.getElementById("profitupdate1").innerHTML = (((totalwins * (tradeamount[0])*0.94) + winlossresult*0.31).toFixed(2)).bold(); 
+	var calcResult = totalwins*0.31 - countlosses*0.35;
+	document.getElementById("profitupdate1").innerHTML = ((calcResult).toFixed(2)).bold(); 
 	
-	if(winlossresult == -2 && connectLock == "Off" && appid == 10122) {
-		connectLock == "Onified";
+	if(winlossresult == -1 && connectLock == "Off" && appid == 10122) {
+		winlossLock = "On";
+		connectLock = "DEMO";
 		reConnect("kS7A68xssbTVpkE");
 	}
 	else if (connectLock == "On" && appid == 6490) {
-		connectLock == "Onified";
+		winlossLock = "Off";
+		countlosses = 0;
+		masterLock = "On";
+		connectLock = "Live";
 		reConnect("xwzTFS9BwGxjPZZ");
 	}
 }
 
-/*function returnTimer(thetime) {
-	getTimer();
-	var xd = new Date(0); // The 0 there is the key, which sets the date to the epoch
-	xd.setUTCSeconds(thetime);
-	//expiry_seconds = xd.getSeconds();
-	//document.getElementById("expirySeconds").innerHTML = expiry_seconds;
-	return  xd.getHours() + ":" + xd.getMinutes() + ":" + xd.getSeconds();
-}*/
