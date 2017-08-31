@@ -117,13 +117,20 @@ function GetTimer() {
 
 }
 
+<<<<<<< HEAD
 function PingBinServer() {
+=======
+function PingServer() {
+>>>>>>> d271453551015127415b73ae7cbe4893f4043038
 	if (ws) {
 		ws.send(JSON.stringify({
 		"ping": 1
 		}));
 	}
+<<<<<<< HEAD
 	else	
 		//reConnect("nBvBHHOe84bgXMK"); //Jenty live
 		reConnect("xwzTFS9BwGxjPZZ");
+=======
+>>>>>>> d271453551015127415b73ae7cbe4893f4043038
 }

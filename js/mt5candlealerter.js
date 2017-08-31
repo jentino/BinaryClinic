@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 var tradeLock = 333;
 function dot_update(dbgindex){
+=======
+
+function dot_update(dbgindex, minutes){
+>>>>>>> d271453551015127415b73ae7cbe4893f4043038
 
   	if (dbgindex == "d3") {
   		
@@ -60,8 +65,16 @@ function dot_update(dbgindex){
 	    if (xhr.readyState == 4) {
 	      	if (xhr.status == 200) {
 	      		document.querySelector('#showtradeLock').innerHTML = tradeLock;
+<<<<<<< HEAD
 	      		
 	      		var searchMinute = Intervals.indexOf(globalMinutes);
+=======
+	      		document.querySelector('#showportfolioLock').innerHTML = portfolioLock;
+	      		document.querySelector('#showstatementLock').innerHTML = statementLock;
+	      		document.querySelector('#showconnectLock').innerHTML = connectLock;
+	      		
+	      		var searchMinute = Intervals.indexOf(minutes);
+>>>>>>> d271453551015127415b73ae7cbe4893f4043038
 	      			      		
 		        if(xhr.responseText == "1"){
 		        	
@@ -71,6 +84,7 @@ function dot_update(dbgindex){
 		          		signalCandle = "UP";
 					}
 					
+<<<<<<< HEAD
 					if(data == "candle_id=dot2") {
 	           			
 						if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
@@ -91,6 +105,35 @@ function dot_update(dbgindex){
 							//playSoundCustom("20");
 						}
 						
+=======
+					if(data == "candle_id=dot3") {
+	           			
+						if(tockSeconds == 59 && searchMinute == -1){
+							
+							tradeLock = "On";
+							tradeOption("CALL",globalMinutes);
+							playSoundCustom("2");	
+						}
+						
+						else if(tockSeconds == 3 && searchMinute != -1) {
+							
+							portfolioLock = "On";
+							statementLock = "Off";
+							GetPortfolio();
+							playSoundCustom("18");
+							
+						} 
+						
+						else if(tockSeconds == 4 && tradeLock == "On" && statementLock == "Off" && searchMinute == -1){
+							GetProfitTable();
+							tradeLock = "Off";
+							portfolioLock = "Off";
+							statementLock = "On";
+							playSoundCustom("20");
+						}
+						
+						
+>>>>>>> d271453551015127415b73ae7cbe4893f4043038
 	           		}
 		          	
 		        }
@@ -102,6 +145,7 @@ function dot_update(dbgindex){
 		          		signalCandle = "DOWN";
 					}
 					
+<<<<<<< HEAD
 					if(data == "candle_id=dot2") {
 	           			
 						if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
@@ -120,6 +164,32 @@ function dot_update(dbgindex){
 							tradeLock = 333;
 							GetProfitTable();
 							//playSoundCustom("20");
+=======
+					if(data == "candle_id=dot3") {
+	           			
+						if(tockSeconds == 59 && searchMinute == -1){
+							
+							tradeLock = "On";
+							tradeOption("PUT",globalMinutes);
+							playSoundCustom("2");	
+						}
+						
+						else if(tockSeconds == 3 && searchMinute != -1) {
+							
+							portfolioLock = "On";
+							statementLock = "Off";
+							GetPortfolio();
+							playSoundCustom("18");
+							
+						} 
+						
+						else if(tockSeconds == 4 && tradeLock == "On" && statementLock == "Off" && searchMinute == -1){
+							GetProfitTable();
+							tradeLock = "Off";
+							portfolioLock = "Off";
+							statementLock = "On";
+							playSoundCustom("20");
+>>>>>>> d271453551015127415b73ae7cbe4893f4043038
 						}
 						
 	           		}

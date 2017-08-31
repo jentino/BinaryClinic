@@ -27,7 +27,11 @@ onMessage = function(msg) {
 			document.getElementById("showappid").innerHTML = appid;
 		    //onPinger(); //poll server ping for 24 hours
 	        onSecTimer(); //poll time for 24 hours	
+<<<<<<< HEAD
 	        //rescue = 0;        
+=======
+	        rescue = 0;        
+>>>>>>> d271453551015127415b73ae7cbe4893f4043038
 	        //showRescueAmount();
 	        subscribeTransactions();
 			showBalance(OriginalBalance);
