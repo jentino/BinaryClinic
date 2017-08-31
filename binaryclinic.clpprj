@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="C:\BinaryClinic\binaryclinic.clpprj">
 	<settings><PM_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_URL><PM_HOME_URL><![CDATA[C:/Users/Jenty/AppData/Roaming/ClPhpEd/Projects/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><lastopfiles>
-<<<<<<< HEAD
 		<file name="C:\BinaryClinic\js\mt5candlealerter.js"/>
 		<file name="C:\BinaryClinic\js\inputvariables.js"/>
-=======
->>>>>>> d271453551015127415b73ae7cbe4893f4043038
 	</lastopfiles>
 	<errors version="5.11">
 		<errfile name="C:\BinaryClinic\index.php">
@@ -33,16 +30,8 @@
 		</errfile>
 	</errors>
 	<todoblock>
-		<todofile name="C:\BinaryClinic\BinaryExtreme\test\websockets.php">
-			<todo name="todo: fail the connection" pos="7;201"/>
-			<todo name="todo: close the connection" pos="9;441"/>
-			<todo name="todo: fail the connection" pos="7;467"/>
-		</todofile>
 	</todoblock>
-	<dbgurls>
-	</dbgurls>
 	<filescache>
-<<<<<<< HEAD
 		<file name="C:\BinaryClinic\timer\epiclock\stylesheet\jquery.epiclock.css" crc="1503992668"/>
 		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro-countdown\epiclock.retro-countdown.min.js" crc="1503992668"/>
 		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro-countdown\epiclock.retro-countdown.js" crc="1503992668"/>
@@ -81,44 +70,5 @@
 		<file name="C:\BinaryClinic\css\main.css" crc="1503992668"/>
 		<file name="C:\BinaryClinic\index.php" crc="1504089767"/>
 		<file name="C:\BinaryClinic\c.js" crc="1503992668"/>
-=======
-		<file name="C:\BinaryClinic\timer\epiclock\stylesheet\jquery.epiclock.css" crc="1274035894"/>
-		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro-countdown\epiclock.retro-countdown.min.js" crc="1274036202"/>
-		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro-countdown\epiclock.retro-countdown.js" crc="1274035894"/>
-		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro-countdown\epiclock.retro-countdown.css" crc="1274035894"/>
-		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro\epiclock.retro.min.js" crc="1274036202"/>
-		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro\epiclock.retro.js" crc="1279207146"/>
-		<file name="C:\BinaryClinic\timer\epiclock\renderers\retro\epiclock.retro.css" crc="1274035894"/>
-		<file name="C:\BinaryClinic\timer\epiclock\javascript\jquery.epiclock.min.js" crc="1274037564"/>
-		<file name="C:\BinaryClinic\timer\epiclock\javascript\jquery.epiclock.js" crc="1274185172"/>
-		<file name="C:\BinaryClinic\timer\epiclock\javascript\jquery.dateformat.min.js" crc="1279557802"/>
-		<file name="C:\BinaryClinic\timer\epiclock\javascript\jquery.dateformat.js" crc="1274185172"/>
-		<file name="C:\BinaryClinic\timer\index.html" crc="1274185172"/>
-		<file name="C:\BinaryClinic\json\index.php" crc="1503257043"/>
-		<file name="C:\BinaryClinic\js\writetoscreen.js" crc="1503755153"/>
-		<file name="C:\BinaryClinic\js\tradingOperations.js" crc="1503670065"/>
-		<file name="C:\BinaryClinic\js\tock.min.js" crc="1419045706"/>
-		<file name="C:\BinaryClinic\js\tock.js" crc="1419045706"/>
-		<file name="C:\BinaryClinic\js\timers.js" crc="1503161034"/>
-		<file name="C:\BinaryClinic\js\splitwebstring.js" crc="1501458106"/>
-		<file name="C:\BinaryClinic\js\scroller.js" crc="1501437156"/>
-		<file name="C:\BinaryClinic\js\reconnect.js" crc="1503253352"/>
-		<file name="C:\BinaryClinic\js\playsound.js" crc="1503253316"/>
-		<file name="C:\BinaryClinic\js\onOpen.js" crc="1501458144"/>
-		<file name="C:\BinaryClinic\js\mt5candlealerter.js" crc="1503754821"/>
-		<file name="C:\BinaryClinic\js\login.js" crc="1503252951"/>
-		<file name="C:\BinaryClinic\js\jsonresponses.js" crc="1503690879"/>
-		<file name="C:\BinaryClinic\js\jsoncalls.js" crc="1503038808"/>
-		<file name="C:\BinaryClinic\js\inputvariables.js" crc="1503675962"/>
-		<file name="C:\BinaryClinic\js\Gruntfile.js" crc="1419045706"/>
-		<file name="C:\BinaryClinic\js\functions.js" crc="1503159317"/>
-		<file name="C:\BinaryClinic\js\connect.js" crc="1503652408"/>
-		<file name="C:\BinaryClinic\js\buttonswitch.js" crc="1502549703"/>
-		<file name="C:\BinaryClinic\includes\dot_dbupdatetime.php" crc="1503257947"/>
-		<file name="C:\BinaryClinic\includes\dot_dbupdate.php" crc="1501976225"/>
-		<file name="C:\BinaryClinic\includes\dot_dblist.php" crc="1502416164"/>
-		<file name="C:\BinaryClinic\css\main.css" crc="1503230301"/>
-		<file name="C:\BinaryClinic\index.php" crc="1503652647"/>
->>>>>>> d271453551015127415b73ae7cbe4893f4043038
 	</filescache>
 </project>

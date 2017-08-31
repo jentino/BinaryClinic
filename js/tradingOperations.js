@@ -7,35 +7,21 @@ function checkWinOrLoss(amount){
 		if(winlossLock == "Off"){
 			totalwins++;
 			countlosses = 0;
-<<<<<<< HEAD
 			rescue = 0;
 		}
 		
-=======
-		}
-		rescue = 0;
->>>>>>> d271453551015127415b73ae7cbe4893f4043038
 		str_return = "win".bold().fontcolor("Green");
 		//playSoundCustom(21);
 	}
 	else{
 		connectLock = "Off";
-<<<<<<< HEAD
 		
 		
-=======
-		rescue++;
-		
->>>>>>> d271453551015127415b73ae7cbe4893f4043038
 		if(winlossLock == "Off"){
 			countlosses++;
 		}
 		str_return = "loss".bold().fontcolor("Red");
-<<<<<<< HEAD
 		//playSoundCustom(22);
-=======
-		playSoundCustom(22);
->>>>>>> d271453551015127415b73ae7cbe4893f4043038
 	}
 	return str_return;
 }

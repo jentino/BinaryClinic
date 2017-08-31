@@ -1,5 +1,5 @@
 <?php 
-//version 9
+//version 9.1
 	if($tokenid == '')
 //		$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
 		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
@@ -120,7 +120,6 @@
 								</p>
 							</div>
 							
-<<<<<<< HEAD
 							<!--<div id="right">
 							  	<div>TckM</div>
 								<p>
@@ -128,8 +127,6 @@
 								</p>
 							</div>-->
 							
-=======
->>>>>>> d271453551015127415b73ae7cbe4893f4043038
 						  	
 					    </div>
 						  	
@@ -266,10 +263,7 @@
         tockSeconds = (timer2.lap('{S}'))%60;
         //tockMinutes = (timer2.lap('{M}'));
 	    document.querySelector('#timer2 .field2').innerHTML = tockSeconds;
-<<<<<<< HEAD
 	    //document.querySelector('#showTockMinutes').innerHTML = tockMinutes + globalMinutes;
-=======
->>>>>>> d271453551015127415b73ae7cbe4893f4043038
 	    pollCandles();    
 	    //PingServer();
 		}

@@ -5,15 +5,8 @@ var tockSeconds;
 var masterLock = "Off";
 var connectLock = "OnOn";
 var winlossLock = "Off";
-<<<<<<< HEAD
 
 var tockMinutes;
-=======
-var tradeLock = "Off";
-var portfolioLock  = "Off";
-var statementLock = "On";
-
->>>>>>> d271453551015127415b73ae7cbe4893f4043038
 
 var signalCandle;
 var temp_minute = "";
