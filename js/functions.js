@@ -26,20 +26,11 @@ function showRescueAmount() {
 	document.getElementById("showrescueamount").innerHTML = tradeamount[rescue];
 }
 
-function loggin2Account(){
-	var xhr;
-	var data = "token_id=xwzTFS9BwGxjPZZ&asset_id=R_100";
- 	if (window.XMLHttpRequest) { // Mozilla, Safari, ...
-    	xhr = new XMLHttpRequest();
-  	} 
-   
-    else if (window.ActiveXObject) { // IE 8 and older
-      	xhr = new ActiveXObject("Microsoft.XMLHTTP");
-  	}
-
-  	xhr.open("POST", ".index.php", true); 
-  	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
-  	xhr.send(data);
+function returnTime(thetime) {
+	//getTimer();
+	var xd = new Date(0); // The 0 there is the key, which sets the date to the epoch
+	xd.setUTCSeconds(thetime);
+	//expiry_seconds = xd.getSeconds();
+	//document.getElementById("expirySeconds").innerHTML = expiry_seconds;
+	return  xd.getHours() + ":" + xd.getMinutes() + ":" + xd.getSeconds();
 }
-
-

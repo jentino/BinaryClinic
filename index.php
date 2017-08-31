@@ -1,6 +1,7 @@
 <?php 
 	if($tokenid == '')
-		$tokenid = "xwzTFS9BwGxjPZZ";
+//		$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
+		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
 	else	
 		$tokenid = $_GET['token_id'];
 	
@@ -9,8 +10,6 @@
 	else	
 		$assetid = $_GET['asset_id'];
 ?>
-
-
 <html>
 <head>
     <meta charset="utf-8" />
@@ -35,6 +34,8 @@
 	<script type="text/javascript" src="js/tock.js"></script>
 	<script type="text/javascript" src="js/reconnect.js"></script>
 </head>
+
+
 
 
 <body onLoad="Connect('<?php echo $tokenid ?>'); getAsset('<?php echo $assetid ?>');">
@@ -88,14 +89,7 @@
 					    
 					   <div id="middle">
 					    	
-					    	<!--<div id="middle">
-						    	<div id="timer2">
-						     		 <div>Timer</div>
-						     			<p><span class="field2 time"></span></p>
-							    </div>
-					    	</div>-->
-					    
-						    <div id="right">
+					    	<div id="right">
 						    	<div>W/L</div>
 						        <p>
 						        	<div id="winlossDash"></div>
@@ -116,42 +110,24 @@
 								  	<div id="showappid"></div>
 								</p>
 							</div>
+							
+							
+							<div id="right">
+							  	<div>Min</div>
+								<p>
+								  	<div id="showTheminute"></div>
+								</p>
+							</div>
+							
+							<!--<div id="right">
+							  	<div>TckM</div>
+								<p>
+								  	<div id="showTockMinutes"></div>
+								</p>
+							</div>-->
+							
+						  	
 					    </div>
-					    
-					    
-					   <!-- 
-						  	
-						  	
-						  	<div id="right">
-						  		<div>Win/Loss</div>
-						  	</div>
-						  	<div id="right">
-						  		<div id="showMT5seconds"></div>
-						  	</div>
-						  	
-						  	<div id="right">
-						  		<div>Next</div>
-						  	</div>
-						  	<div id="right">
-						  		<div id="showMT5seconds"></div>
-						  	</div>
-						  -->
-						  
-						  
-						  	 <!--<div id="left1">
-					        <h4>Server</h4>
-					          <p>
-					          <div id="theseconds"></div>
-					        </p>
-					    </div>
-					      -->
-					      
-					      <!-- <div id="right1">
-					      <h4>Other</h4>
-					        <p>
-					        <div id="showServerSeconds"></div>
-					      </p>
-					    </div>-->
 						  	
 					</center>  
 				</div> 
@@ -167,28 +143,40 @@
 			        	<div id="row" class="lightsConsole">
 							
 							<div id="left">
-						  		<div>D3</div>
+						  		
 						  	</div>
 						  	<div id="right">
 						  		<div id="showdot3"></div>
 						  	</div>
 						  	
+						  	
+						  						  	
 						  	<div id="left">
-						  		<div>D1</div>
+						  		
+						  	</div>
+						  	<div id="middle">
+						  		<div id="showdot2"></div>
+						  	</div>
+						  	
+						  	
+						  	<div id="left">
+						  		
 						  	</div>
 						  	<div id="middle">
 						  		<div id="showdot1"></div>
 						  	</div>
+						  	
+						  	
 
 						  	<div id="middle">
-						  		<div >Sig</div>
+						  		
 						  	</div>
 						  	<div id="right">
 						  		<div id="showsignalcandle"></div>
 						  	</div>
 
 						  	<div id="right">
-						  		<div>Cur</div>
+						  		
 						  	</div>
 						  	<div id="right">
 						  		<div id="showcurrentcandle"></div>
@@ -231,11 +219,7 @@
 	                          	<div id="left2">Original Balance:<b>$</b></div> 
 	                          	<div id="originalbalance"></div>
 	                          </div>
-	                          <!--<br>
-	                            <div id="row">
-	                          	<div id="left2">Realtime Balance:</div> 
-	                          	<div id="realbalance"></div>
-	                          </div>-->
+	                          
 	                          <br>
 	                           <div id="row">
 	                          	<div id="left2">Rescue Amount:<b>$</b></div> 
@@ -247,15 +231,6 @@
 	                          	<div id="assetlist"></div>
 	                          </div>
 	                          <br>
-	                          
-	                          <!--<br>
-	                          <div id="row">
-	                          	<div id="left">Minute:</div> 
-	                          	<div id="currentMinutes"></div>
-                          </div>
-                          
-                          <li><a href="/read-more/"><u>Read more</u></a></li>-->
-                      </ul>
                       <p><a href="/new-customer/" class="btn btn-info btn-block">Invite someone now!</a></p>
                   </div>
               </div>
@@ -271,29 +246,6 @@
 	  	<div id="right">
 	  		<div id="showtradeLock"></div>
 	  	</div>
-	  	
-	  	<div id="right">
-	  		<div> portfolio <img src="img/tinylock.png">  </div>
-	  	</div>
-	  	<div id="right">
-	  		<div id="showportfolioLock"></div>
-	  	</div>
-
-	  	<div id="left">
-	  		<div > statement <img src="img/tinylock.png">  </div>
-	  	</div>
-	  	<div id="right">
-	  		<div id="showstatementLock"></div>
-	  	</div>
-	  	
-	  	<div id="left">
-	  		<div > connect <img src="img/tinylock.png">  </div>
-	  	</div>
-	  	<div id="right">
-	  		<div id="showconnectLock"></div>
-	  	</div>
-	  	</div> 	 
-		<br>
 	
 	 </center>
       </div>
@@ -308,14 +260,13 @@
     onTick: function() {
         
         tockSeconds = (timer2.lap('{S}'))%60;
+        //tockMinutes = (timer2.lap('{M}'));
 	    document.querySelector('#timer2 .field2').innerHTML = tockSeconds;
-	    //document.getElementById('showServerSeconds').innerHTML = serverSeconds%60;
-	    /*if(timer2.lap('{S}') > 59) {
-	    	timer2.reset();
-	        startTimer2();
-	    }  */      
-	}
-});
+	    //document.querySelector('#showTockMinutes').innerHTML = tockMinutes + globalMinutes;
+	    pollCandles();    
+	    //PingServer();
+		}
+	});
 
 document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');	
 </script>
@@ -323,3 +274,4 @@ document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');
 
 
   </body>
+  </html>

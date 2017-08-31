@@ -19,7 +19,7 @@ function onSecTimer() {
 
 
 //////////////////////////////////////////////////////////////////  PING SERVER
-k = 86400;
+/*k = 86400;
 function onPinger() {
   k--;
 	if (ws) {
@@ -31,19 +31,19 @@ function onPinger() {
         }
     setTimeout(onPinger, 1000);
 	
-}
+}*/
 
 
        
 stx = 0;
 
-function startTimer2() {
+function startTockClock() {
 	
     stx++;
     if(stx > 0)
         timer2.start();
     else
-        setTimeout(startTimer2, 1000);
+        setTimeout(startTockClock, 1000);
 }
 
 

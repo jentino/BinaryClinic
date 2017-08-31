@@ -1,13 +1,16 @@
-var tradeLock = "Off";
-var portfolioLock  = "Off";
-var statementLock = "On";
-
-function dot_update(dbgindex, minutes){
+var tradeLock = 333;
+function dot_update(dbgindex){
 
   	if (dbgindex == "d3") {
   		
 	    var display_div_id = "showdot3";
 	    var data = "candle_id=dot3";
+	    var green = "greendot";
+	    var red = "reddot";
+  	}
+  	else if (dbgindex == "d2") {
+	    var display_div_id = "showdot2";
+	    var data = "candle_id=dot2";
 	    var green = "greendot";
 	    var red = "reddot";
   	}
@@ -57,75 +60,72 @@ function dot_update(dbgindex, minutes){
 	    if (xhr.readyState == 4) {
 	      	if (xhr.status == 200) {
 	      		document.querySelector('#showtradeLock').innerHTML = tradeLock;
-	      		document.querySelector('#showportfolioLock').innerHTML = portfolioLock;
-	      		document.querySelector('#showstatementLock').innerHTML = statementLock;
-	      		document.querySelector('#showconnectLock').innerHTML = connectLock;
-	      		var searchMinute = Intervals.indexOf(minutes);
+	      		
+	      		var searchMinute = Intervals.indexOf(globalMinutes);
 	      			      		
 		        if(xhr.responseText == "1"){
 		        	
 		        	document.getElementById(display_div_id).innerHTML = "<img src=../img/"+green+".png>";
 		          	
-		          	if (data == "candle_id=candle6") {
+		          	if (data == "candle_id=candle5") {
 		          		signalCandle = "UP";
 					}
-					else if(data == "candle_id=dot3") {
-		          		
-		          		//If timer is 1 during the Interval minute and lock is off
-		          		if((tockSeconds ==1) && (searchMinute != -1) && (tradeLock == "Off")){			               	
-			               	tradeLock = "On";
-			               	tradeOption("CALL",minutes);
+					
+					if(data == "candle_id=dot2") {
+	           			
+						if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
+							tradeLock = 111;
+							tradeOption("CALL",globalMinutes);
+							//playSoundCustom("2");	
 						}
-						//If timer is 3 during the Interval minute and lock is off
-						else if((tockSeconds == 3)  && (searchMinute != -1) && (portfolioLock == "Off") && (tradeLock == "On")) {
-							
-							portfolioLock = "On";
-							statementLock = "Off"
+						
+						else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
+							tradeLock = 222;
 							GetPortfolio();
+							//playSoundCustom("18");
+						} 
+						
+						else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){
+							tradeLock = 333;
+							GetProfitTable();
+							//playSoundCustom("20");
 						}
-						//If timer is 1 during the next minute outside the Interval and lock is off
-						else if((tockSeconds == 4) && (searchMinute == -1) && (statementLock == "Off") && (tradeLock == "On")){
-							
-							tradeLock = "Off";
-						 	portfolioLock = "Off";
-						 	statementLock = "On";
-						 	GetStatement();
-						}	
-		          	}
+						
+	           		}
 		          	
 		        }
 	       		else if(xhr.responseText == "2"){
 	        		
 	          		document.getElementById(display_div_id).innerHTML = "<img src=../img/"+red+".png>";
 	           		
-	           		if (data == "candle_id=candle6") {
+	           		if (data == "candle_id=candle5") {
 		          		signalCandle = "DOWN";
 					}
-					else if(data == "candle_id=dot3") {
+					
+					if(data == "candle_id=dot2") {
 	           			
-						if((tockSeconds == 1) && (searchMinute != -1) && (tradeLock == "Off")){
-							
-							tradeLock = "On";
-							tradeOption("PUT",minutes);
+						if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
+							tradeLock = 111;
+							tradeOption("PUT",globalMinutes);
+							//playSoundCustom("2");	
 						}
-						else if((tockSeconds == 3) && (searchMinute != -1) && (portfolioLock == "Off") && (tradeLock == "On")) {
-							
-							portfolioLock = "On";
-							statementLock = "Off"
+						
+						else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
+							tradeLock = 222;
 							GetPortfolio();
+							//playSoundCustom("18");
 						} 
-						else if((tockSeconds == 4) && (searchMinute == -1) && (portfolioLock == "On") && (tradeLock == "On") && (statementLock == "Off") ){
-							
-							tradeLock = "Off";
-						 	portfolioLock = "Off";
-						 	statementLock = "On";
-						 	GetStatement();
+						
+						else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){
+							tradeLock = 333;
+							GetProfitTable();
+							//playSoundCustom("20");
 						}
+						
 	           		}
 	           		
 	        	}
 		        else {
-		        	
 					document.getElementById(display_div_id).innerHTML = "!";
 				}
 		    }

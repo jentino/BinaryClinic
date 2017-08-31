@@ -1,5 +1,4 @@
 ///////////////////////////////////////////////// BUY FUNCTION /////////////////
-var countbuys = 0;
 function Buyit(buydollars) {
         if (ws) {
 		    
@@ -26,8 +25,6 @@ function Buyit(buydollars) {
 }
 	
 //////////////////////////////////////////////////// SELL FUNCTION ///////////////////////
-var countsells = 0;
-
 function Sellit(selldollars) {
        if (ws) {
 		    
@@ -94,27 +91,39 @@ function GetPortfolio() {
         if (ws) {
 		    
             ws.send(JSON.stringify({
-				portfolio: 1
+				"portfolio": 1
 			}));
         }
 }
 
-//////////////////////////////////////////////////// GET TICKS
-	
-function GetTicks() {
-	if (ws) {
-		ws.send(JSON.stringify({
-		"website_status": 1
-		}));
-			}
 
+function GetProfitTable() {
+        if (ws) {
+		    
+            ws.send(JSON.stringify({
+			  "profit_table": 1,
+			  "limit": 1
+			}));
+        }
 }
+
 
 function GetTimer() {
 	if (ws) {
 		ws.send(JSON.stringify({
 		"time": 1
 		}));
-			}
+	}
 
+}
+
+function PingBinServer() {
+	if (ws) {
+		ws.send(JSON.stringify({
+		"ping": 1
+		}));
+	}
+	else	
+		//reConnect("nBvBHHOe84bgXMK"); //Jenty live
+		reConnect("xwzTFS9BwGxjPZZ");
 }
