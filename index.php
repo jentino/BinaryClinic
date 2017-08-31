@@ -222,7 +222,7 @@
                       
                      		<div id="row">
 	                          	<div id="left2">Profit: <b>$</b></div> 
-	                          	<div id="profitupdate1"></div>
+	                          	<div id="profitupdate"></div>
 	                          </div>
 	                          <br>
 	                          <div id="row">

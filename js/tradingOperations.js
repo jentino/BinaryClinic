@@ -1,10 +1,11 @@
 /////////////////////////////////////////////////////////////////  COLOUR WIN AND LOSS
-function checkWinOrLoss(amount){
+function checkWinOrLoss(buyprice,amount){
 	var str_return;
 	
 	if (amount > 0) {
 		connectLock = "On";
 		if(winlossLock == "Off"){
+			tradeProfit = tradeProfit + parseFloat(buyprice)*0.89;
 			totalwins++;
 			countlosses = 0;
 			rescue = 0;
@@ -19,6 +20,7 @@ function checkWinOrLoss(amount){
 		
 		
 		if(winlossLock == "Off"){
+			tradeLoss = tradeLoss + parseFloat(buyprice);
 			countlosses++;
 		}
 		str_return = "loss".bold().fontcolor("Red");

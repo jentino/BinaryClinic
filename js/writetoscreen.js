@@ -42,15 +42,15 @@ function pollCandles(){
 
 function writeBalanceToDash(updatedbalance) {
 	document.getElementById("realbalance").innerHTML = updatedbalance.bold();
-	showProfit(updatedbalance);		
+	//showProfit(updatedbalance);		
 }
 		
 function writeWinLossToScreen() {	
 	var winlossresult = countwins - countlosses;
-	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;
 	
-	var calcResult = totalwins*0.31 - countlosses*0.35;
-	document.getElementById("profitupdate1").innerHTML = ((calcResult).toFixed(2)).bold(); 
+	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;
+
+	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2).bold(); 
 	
 	if(winlossresult == -4 && connectLock == "Off" && appid == 10122 /*appid == 10123*/) {
 		winlossLock = "On";

@@ -1,8 +1,9 @@
 /////////////////////////////////////////////////////////  Input variables
 //var serverSeconds;
 var tockSeconds;
-
-var masterLock = "Off";
+var tradeProfit = 0;
+var tradeLoss = 0;
+//var masterLock = "Off";
 var connectLock = "OnOn";
 var winlossLock = "Off";
 
@@ -10,7 +11,7 @@ var tockMinutes;
 
 var signalCandle;
 var temp_minute = "";
-var heartbeat = 0;
+//var heartbeat = 0;
 var appid;
 var output;
 var outputemail;
@@ -24,7 +25,7 @@ var totalwins = 0;
 var globalMinutes;
 var trader_name = "";
 
-var carlineDemoToken = "xwzTFS9BwGxjPZZ"; 
+/*var carlineDemoToken = "xwzTFS9BwGxjPZZ"; 
 var carlineDemoAppId = 10122;
 
 var carlineLiveToken = "COQz3VcylK89JoT"; 
@@ -34,15 +35,15 @@ var jentyDemoToken = "kS7A68xssbTVpkE";
 var jentyDemoAppId = 6490;
 
 var jentyLiveToken = "nBvBHHOe84bgXMK";
-var jentyLiveAppId = 10123;
+var jentyLiveAppId = 10123;*/
 
 var rescue 	= 0;
 
 
 
 
-var delayCount = -5;
-var previousMinute = -4;
+//var delayCount = -5;
+//var previousMinute = -4;
 
 
 
