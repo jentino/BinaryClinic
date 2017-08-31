@@ -113,13 +113,13 @@ function dot_update(dbgindex){
 						else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
 							tradeLock = 222;
 							GetPortfolio();
-							//playSoundCustom("18");
+							playSoundCustom("18");
 						} 
 						
 						else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){
 							tradeLock = 333;
 							GetProfitTable();
-							//playSoundCustom("20");
+							playSoundCustom("20");
 						}
 						
 	           		}

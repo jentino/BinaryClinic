@@ -8,6 +8,7 @@ function checkWinOrLoss(amount){
 			totalwins++;
 			countlosses = 0;
 			rescue = 0;
+			//reConnect("xwzTFS9BwGxjPZZ");
 		}
 		
 		str_return = "win".bold().fontcolor("Green");

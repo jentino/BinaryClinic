@@ -97,20 +97,29 @@
 						        </p>
 										        
 						    </div>
-					    
+						    
+					   		<div id="right">
+							  	<div>dot 2</div>
+								<div><p>
+								  	<div id="showdot2"></div>
+								</p></div>
+							</div>
+							
 						    <div id="right">
-						      	<div>Next</div>
+						      	<div>next</div>
 						       	<p>
 						        	<div id="shownextcandle"></div>
 						      	</p>
 						    </div>
 						    
-						    <div id="right">
+						    
+							
+							<!--<div id="right">
 							  	<div>Appid</div>
 								<p>
 								  	<div id="showappid"></div>
 								</p>
-							</div>
+							</div>-->
 							
 							
 							<div id="right">
@@ -143,7 +152,7 @@
                   	
 			        	<div id="row" class="lightsConsole">
 							
-							<div id="left">
+							<!--<div id="left">
 						  		
 						  	</div>
 						  	<div id="right">
@@ -181,7 +190,7 @@
 						  	</div>
 						  	<div id="right">
 						  		<div id="showcurrentcandle"></div>
-						  	</div>
+						  	</div>-->
 						  	
 						  	
 						  	
@@ -261,11 +270,8 @@
     onTick: function() {
         
         tockSeconds = (timer2.lap('{S}'))%60;
-        //tockMinutes = (timer2.lap('{M}'));
 	    document.querySelector('#timer2 .field2').innerHTML = tockSeconds;
-	    //document.querySelector('#showTockMinutes').innerHTML = tockMinutes + globalMinutes;
-	    pollCandles();    
-	    //PingServer();
+	    pollCandles();  
 		}
 	});
 

@@ -52,7 +52,7 @@ function writeWinLossToScreen() {
 	var calcResult = totalwins*0.31 - countlosses*0.35;
 	document.getElementById("profitupdate1").innerHTML = ((calcResult).toFixed(2)).bold(); 
 	
-	if(winlossresult == -3 && connectLock == "Off" && appid == 10122 /*appid == 10123*/) {
+	if(winlossresult == -4 && connectLock == "Off" && appid == 10122 /*appid == 10123*/) {
 		winlossLock = "On";
 		connectLock = "DEMO";
 		reConnect("kS7A68xssbTVpkE");
