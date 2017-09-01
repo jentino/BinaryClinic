@@ -33,7 +33,7 @@
 	width:280px;
     height:270px;
     background-color:LightGray;
-    overflow-y: hidden;
+    overflow-y: auto;
     max-width:280px;
     max-height:270px;
     padding-top: 1px;

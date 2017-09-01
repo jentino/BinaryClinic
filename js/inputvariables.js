@@ -3,7 +3,7 @@ var tockMinutes;
 var temp_minute = "";
 var globalMinutes;
 var rescue 	= 0;
-var tradeamount = [0.35,0.72,1.49,3.08,6.35,13.11,27.05,55.82];
+var tradeamount = [0.35,0.35,0.74,1.19,2.52,5.34,11.35,24.10];
 var Intervals = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59];
 
 var tradeProfit = 0;
