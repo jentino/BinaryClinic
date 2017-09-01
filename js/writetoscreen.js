@@ -52,13 +52,13 @@ function writeWinLossToScreen() {
 
 	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2).bold(); 
 	
-	if(winlossresult == -4 && connectLock == "Off" && appid == 10122 /*appid == 10123*/) {
+	if(winlossresult == -2 && connectLock == "Off" && appid == 10122) {    /*appid == 10123 Jenty Reall*/
 		winlossLock = "On";
 		connectLock = "DEMO";
 		reConnect("kS7A68xssbTVpkE");
 	}
 	else if (connectLock == "On" && appid == 6490) {
-		rescue++;
+		
 		winlossLock = "Off";
 		countlosses = 0;
 		masterLock = "On";

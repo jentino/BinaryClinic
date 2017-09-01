@@ -5,6 +5,7 @@
 		
         output = document.getElementById("debug");
 		document.getElementById("debug").innerHTML = "Connecting ..."
+		document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
 		outputemail = document.getElementById("welcomeuser");
 		playSoundCustom(16);
         if (token == '') {

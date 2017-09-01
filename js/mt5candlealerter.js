@@ -1,6 +1,6 @@
 var tradeLock = 333;
 function dot_update(dbgindex){
-
+	
   	if (dbgindex == "d3") {
   		
 	    var display_div_id = "showdot3";
@@ -70,29 +70,6 @@ function dot_update(dbgindex){
 		          	if (data == "candle_id=candle5") {
 		          		signalCandle = "UP";
 					}
-					
-					if(data == "candle_id=dot2") {
-	           			
-						if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
-							tradeLock = 111;
-							tradeOption("CALL",globalMinutes);
-							//playSoundCustom("2");	
-						}
-						
-						else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
-							tradeLock = 222;
-							GetPortfolio();
-							//playSoundCustom("18");
-						} 
-						
-						else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){
-							tradeLock = 333;
-							GetProfitTable();
-							//playSoundCustom("20");
-						}
-						
-	           		}
-		          	
 		        }
 	       		else if(xhr.responseText == "2"){
 	        		
@@ -101,33 +78,37 @@ function dot_update(dbgindex){
 	           		if (data == "candle_id=candle5") {
 		          		signalCandle = "DOWN";
 					}
-					
-					if(data == "candle_id=dot2") {
-	           			
-						if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
-							tradeLock = 111;
-							tradeOption("PUT",globalMinutes);
-							//playSoundCustom("2");	
-						}
-						
-						else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
-							tradeLock = 222;
-							GetPortfolio();
-							playSoundCustom("18");
-						} 
-						
-						else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){
-							tradeLock = 333;
-							GetProfitTable();
-							playSoundCustom("20");
-						}
-						
-	           		}
 	           		
 	        	}
 		        else {
 					document.getElementById(display_div_id).innerHTML = "!";
 				}
+				
+				if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
+					tradeLock = 111;
+					if(tradeDirection == "RED"){
+						tradeDirection = "GREEN";
+						document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
+						tradeOption("RED",globalMinutes);
+					}else if(tradeDirection == "GREEN") {
+						tradeDirection = "RED";
+						document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
+						tradeOption("GREEN",globalMinutes);
+					}
+				}
+						
+				else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
+					tradeLock = 222;
+					GetPortfolio();
+					playSoundCustom("18");
+				} 
+						
+				else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){
+					tradeLock = 333;
+					GetProfitTable();
+					playSoundCustom("20");
+				}
+	           	
 		    }
 		}
 	}

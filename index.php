@@ -114,12 +114,12 @@
 						    
 						    
 							
-							<!--<div id="right">
-							  	<div>Appid</div>
+							<div id="right">
+							  	<div>Dir</div>
 								<p>
-								  	<div id="showappid"></div>
+								  	<div id="tradeDirectionqq"></div>
 								</p>
-							</div>-->
+							</div><!---->
 							
 							
 							<div id="right">
