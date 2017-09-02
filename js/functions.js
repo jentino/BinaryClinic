@@ -11,7 +11,7 @@ function showBalance(balance) {
 	
 	document.getElementById("realbalance").innerHTML = balance.bold().fontcolor("Green");
 }
-s
+
 function showRescueAmount() {
 	document.getElementById("showrescueamount").innerHTML = tradeamount[rescue];
 }
