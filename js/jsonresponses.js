@@ -17,18 +17,18 @@ onMessage = function(msg) {
             writeToScreen(js.authorize.email + "-------------------");
 			writeToScreenEmail((js.authorize.email).bold());
 			
-			//if(masterLock == "Off"){
+			if(OriginalBalanceLock == "Off"){
 				OriginalBalance = js.authorize.balance;
-				//document.getElementById("originalbalance").innerHTML = OriginalBalance.bold();
-				
-	        	writeWinLossToScreen();
-			//}
+				document.getElementById("originalbalance").innerHTML = OriginalBalance.bold();
+				OriginalBalanceLock = "On";
+				writeWinLossToScreen();
+			}
 				
 			//document.getElementById("showappid").innerHTML = appid;
 		    //onPinger(); //poll server ping for 24 hours
 	        onSecTimer(); //poll time for 24 hours	
 	        //rescue = 0;        
-	        //showRescueAmount();
+	        showRescueAmount();
 	        subscribeTransactions();
 			showBalance(OriginalBalance);
 			

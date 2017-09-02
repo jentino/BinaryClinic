@@ -48,7 +48,7 @@ function tradeOption(direction, currentMinutes) {
 		}
     	document.getElementById("currentMinutes").innerHTML = currentMinutes;
     	document.getElementById("tradeaction").innerHTML = direction;
-    	//showRescueAmount();
+    	showRescueAmount();
     	temp_minute = currentMinutes;
     	
 	}

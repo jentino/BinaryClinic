@@ -1,8 +1,8 @@
 <?php 
 //version 9.1
 	if($tokenid == '')
-//		$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
-		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
+		$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
+//		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
 	else	
 		$tokenid = $_GET['token_id'];
 	
@@ -226,7 +226,7 @@
 	                          </div>
 	                          <br>
 	                          <div id="row">
-	                          	<div id="left2">Original Balance:<b>$</b></div> 
+	                          	<div id="left2">Original Balance:<b>$ </b></div> 
 	                          	<div id="originalbalance"></div>
 	                          </div>
 	                          
