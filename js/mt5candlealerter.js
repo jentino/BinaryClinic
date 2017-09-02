@@ -1,4 +1,4 @@
-//test
+//testing
 var tradeLock = 333;
 function dot_update(dbgindex){
 	
