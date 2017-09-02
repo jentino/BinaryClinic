@@ -1,3 +1,4 @@
+//test
 var tradeLock = 333;
 function dot_update(dbgindex){
 	
@@ -87,10 +88,13 @@ function dot_update(dbgindex){
 				if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
 					tradeLock = 111;
 					if(tradeDirection == "RED"){
+
 						tradeDirection = "GREEN";
 						document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
 						tradeOption("RED",globalMinutes);
-					}else if(tradeDirection == "GREEN") {
+					}
+					else if(tradeDirection == "GREEN") {
+
 						tradeDirection = "RED";
 						document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
 						tradeOption("GREEN",globalMinutes);
