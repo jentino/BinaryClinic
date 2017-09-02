@@ -1,5 +1,5 @@
 <?php 
-//version1111111111111111111111 
+//version11
 	if($tokenid == '')
 //		$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
 		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
