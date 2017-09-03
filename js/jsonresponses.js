@@ -57,7 +57,7 @@ onMessage = function(msg) {
 
 				newtradeOptionIdLock = js.buy.transaction_id;
 
-				writeToScreen(js.buy.transaction_id + "," + returnTime(js.buy.start_time));
+				writeToScreen(js.buy.transaction_id);
 
 			}
 
