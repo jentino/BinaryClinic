@@ -9,7 +9,7 @@ function onSecTimer() {
 	            }));
 	          }
 		  if (ii < 0) {
-			writeToScreen("Time is Up")
+			writeToScreen("Time is Up");
 		  }
 		  else {
 			setTimeout(onSecTimer, 1000);
