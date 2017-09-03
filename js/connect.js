@@ -49,11 +49,11 @@
 		
 		//listen to request to open websocket
 		ws.onopen = function(evt) {
-            onOpen(evt,token)
+            onOpen(evt,token);
         };
         
 		//listen to request to write to console
 		ws.onmessage = function(evt) {
-            onMessage(evt)
+            onMessage(evt);
         };
 }
