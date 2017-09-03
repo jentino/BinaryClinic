@@ -1,4 +1,3 @@
-//testsing 12 mt5
 var tradeLock = 333;
 function dot_update(dbgindex){
 

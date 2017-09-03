@@ -1,4 +1,3 @@
-//testing 12 jsonresponsEs
 onMessage = function(msg) {
 	
         js = JSON.parse(msg.data);
