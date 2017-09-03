@@ -27,22 +27,8 @@ function writeTimeToScreen(thetime) {
 
 }	
 
-function pollCandles(){
-	
-	//pingServer();
-	
-	//dot_update("sig");
-	//dot_update("d3");
-		/*dot_update("d2");
-dot_update("d1");
-	dot_update("cur");*/
-	dot_update("nxt");
-	
-}
-
 function writeBalanceToDash(updatedbalance) {
 	document.getElementById("realbalance").innerHTML = updatedbalance.bold();
-	//showProfit(updatedbalance);		
 }
 		
 function writeWinLossToScreen() {	

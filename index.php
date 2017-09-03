@@ -271,7 +271,7 @@
         
         tockSeconds = (timer2.lap('{S}'))%60;
 	    document.querySelector('#timer2 .field2').innerHTML = tockSeconds;
-	    pollCandles();  
+	    dot_update();  
 		}
 	});
 
