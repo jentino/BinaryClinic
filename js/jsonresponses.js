@@ -41,8 +41,13 @@ onMessage = function(msg) {
 		
 		else if (js.msg_type == 'portfolio') {
 			        
-			for(var g in js.portfolio.contracts)
+			for(var g in js.portfolio.contracts){
+
 				writeToScreen("> " + js.portfolio.contracts[g].buy_price + " ," + js.portfolio.contracts[g].contract_type + " ," + js.portfolio.contracts[g].transaction_id + " ," + returnTime(js.portfolio.contracts[g].purchase_time));
+
+				tradeOptionIdLock = js.portfolio.contracts[g].transaction_id;
+				
+			}
 				
         }
         

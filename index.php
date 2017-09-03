@@ -1,8 +1,8 @@
 <?php 
-//version 9.1
+//version 12
 	if($tokenid == '')
-		$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
-//		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
+		//$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
+		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
 	else	
 		$tokenid = $_GET['token_id'];
 	
