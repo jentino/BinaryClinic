@@ -17,18 +17,18 @@ onMessage = function(msg) {
             writeToScreen(js.authorize.email + "-------------------");
 			writeToScreenEmail((js.authorize.email).bold());
 			
-			//if(masterLock == "Off"){
+			if(OriginalBalanceLock == "Off"){
 				OriginalBalance = js.authorize.balance;
-				//document.getElementById("originalbalance").innerHTML = OriginalBalance.bold();
+				document.getElementById("originalbalance").innerHTML = OriginalBalance.bold();
+				OriginalBalanceLock = "On";
+				writeWinLossToScreen();
+			}
 				
-	        	writeWinLossToScreen();
-			//}
-				
-			document.getElementById("showappid").innerHTML = appid;
+			//document.getElementById("showappid").innerHTML = appid;
 		    //onPinger(); //poll server ping for 24 hours
 	        onSecTimer(); //poll time for 24 hours	
 	        //rescue = 0;        
-	        //showRescueAmount();
+	        showRescueAmount();
 	        subscribeTransactions();
 			showBalance(OriginalBalance);
 			
@@ -49,7 +49,7 @@ onMessage = function(msg) {
 		
 		else if (js.msg_type == 'profit_table') {
 			for(var f in js.profit_table.transactions)
-            	writeToScreen("= " + checkWinOrLoss(js.profit_table.transactions[f].sell_price) + " ," + js.profit_table.transactions[f].transaction_id);
+            	writeToScreen("= " + checkWinOrLoss(js.profit_table.transactions[f].buy_price,js.profit_table.transactions[f].sell_price) + " ," + js.profit_table.transactions[f].transaction_id);
             	writeWinLossToScreen();
         }
         

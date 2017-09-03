@@ -1,26 +1,29 @@
 /////////////////////////////////////////////////////////////////  COLOUR WIN AND LOSS
-function checkWinOrLoss(amount){
+function checkWinOrLoss(buyprice,amount){
 	var str_return;
 	
 	if (amount > 0) {
 		connectLock = "On";
 		if(winlossLock == "Off"){
+			tradeProfit = tradeProfit + parseFloat(buyprice)*0.89;
 			totalwins++;
 			countlosses = 0;
 			rescue = 0;
+			//reConnect("xwzTFS9BwGxjPZZ");
 		}
 		
-		str_return = "win".bold().fontcolor("Green");
+		str_return = "Win".bold().fontcolor("Green");
 		//playSoundCustom(21);
 	}
-	else{
+	else {
 		connectLock = "Off";
-		
-		
+
 		if(winlossLock == "Off"){
+			tradeLoss = tradeLoss + parseFloat(buyprice);
 			countlosses++;
+			rescue++;
 		}
-		str_return = "loss".bold().fontcolor("Red");
+		str_return = "Loss".bold().fontcolor("Red");
 		//playSoundCustom(22);
 	}
 	return str_return;
@@ -31,21 +34,21 @@ function checkWinOrLoss(amount){
 function tradeOption(direction, currentMinutes) {
 	
 	if(temp_minute != currentMinutes) {
-		if(direction == "CALL") {
+		if(direction == "RED") {
 			if(signalCandle == "UP")
-				Sellit(tradeamount[rescue]);
-			else if(signalCandle == "DOWN")
 				Buyit(tradeamount[rescue]);
+			else if(signalCandle == "DOWN")
+				Sellit(tradeamount[rescue]);
 		}	
-    	else if (direction=="PUT") {
+    	else if (direction=="GREEN") {
     		if(signalCandle == "UP")
-				Buyit(tradeamount[rescue]);
-			else if(signalCandle == "DOWN")
 				Sellit(tradeamount[rescue]);
+			else if(signalCandle == "DOWN")
+				Buyit(tradeamount[rescue]);
 		}
     	document.getElementById("currentMinutes").innerHTML = currentMinutes;
     	document.getElementById("tradeaction").innerHTML = direction;
-    	//showRescueAmount();
+    	showRescueAmount();
     	temp_minute = currentMinutes;
     	
 	}

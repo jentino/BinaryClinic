@@ -42,29 +42,28 @@ function pollCandles(){
 
 function writeBalanceToDash(updatedbalance) {
 	document.getElementById("realbalance").innerHTML = updatedbalance.bold();
-	showProfit(updatedbalance);		
+	//showProfit(updatedbalance);		
 }
 		
 function writeWinLossToScreen() {	
 	var winlossresult = countwins - countlosses;
+	
 	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;
+
+	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2).bold(); 
 	
-	var calcResult = totalwins*0.31 - countlosses*0.35;
-	document.getElementById("profitupdate1").innerHTML = ((calcResult).toFixed(2)).bold(); 
-	
-	if(winlossresult == -3 && connectLock == "Off" && appid == 10122 /*appid == 10123*/) {
+	if(winlossresult == -2 && connectLock == "Off" && appid == 10123) {    /*appid == 10122 Jenty Reall*/
 		winlossLock = "On";
 		connectLock = "DEMO";
 		reConnect("kS7A68xssbTVpkE");
 	}
 	else if (connectLock == "On" && appid == 6490) {
-		rescue++;
+		
 		winlossLock = "Off";
 		countlosses = 0;
-		masterLock = "On";
 		connectLock = "Live";
-		//reConnect("nBvBHHOe84bgXMK"); //Jenty Live
-		reConnect("xwzTFS9BwGxjPZZ"); //Carline demo
+		reConnect("nBvBHHOe84bgXMK"); //Jenty Live
+		//reConnect("xwzTFS9BwGxjPZZ"); //Carline demo
 	}
 }
 
