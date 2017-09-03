@@ -4,4 +4,4 @@ onOpen = function(evt,tk) {
         ws.send(JSON.stringify({
             authorize: token
         }));
-}
+};

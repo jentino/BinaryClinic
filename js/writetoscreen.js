@@ -33,8 +33,8 @@ function pollCandles(){
 	
 	//dot_update("sig");
 	//dot_update("d3");
-	dot_update("d2");
-	/*dot_update("d1");
+		/*dot_update("d2");
+dot_update("d1");
 	dot_update("cur");*/
 	dot_update("nxt");
 	
@@ -52,7 +52,7 @@ function writeWinLossToScreen() {
 
 	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2).bold(); 
 	
-	if(winlossresult == -2 && connectLock == "Off" && appid == 10123) {    /*appid == 10122 Jenty Reall*/
+	if(winlossresult == -2 && connectLock == "Off" && appid == 10122) {    /*appid == 10123*/
 		winlossLock = "On";
 		connectLock = "DEMO";
 		reConnect("kS7A68xssbTVpkE");
@@ -62,8 +62,8 @@ function writeWinLossToScreen() {
 		winlossLock = "Off";
 		countlosses = 0;
 		connectLock = "Live";
-		reConnect("nBvBHHOe84bgXMK"); //Jenty Live
-		//reConnect("xwzTFS9BwGxjPZZ"); //Carline demo
+		//reConnect("nBvBHHOe84bgXMK"); //Jenty Live
+		reConnect("xwzTFS9BwGxjPZZ"); //Carline demo
 	}
 }
 

@@ -1,45 +1,11 @@
-//testing
 var tradeLock = 333;
-function dot_update(dbgindex){
-	
-  	if (dbgindex == "d3") {
-  		
-	    var display_div_id = "showdot3";
-	    var data = "candle_id=dot3";
-	    var green = "greendot";
-	    var red = "reddot";
-  	}
-  	else if (dbgindex == "d2") {
-	    var display_div_id = "showdot2";
-	    var data = "candle_id=dot2";
-	    var green = "greendot";
-	    var red = "reddot";
-  	}
-  	else if (dbgindex == "d1") {
-	    var display_div_id = "showdot1";
-	    var data = "candle_id=dot1";
-	    var green = "greendot";
-	    var red = "reddot";
-  	}
-  	else if (dbgindex == "sig") {
-	    var display_div_id = "showsignalcandle";
-	    var data = "candle_id=candle6";
-	    var green = "greencandle";
-	    var red = "redcandle";
-  	}
-  	else if (dbgindex == "cur") {
-	    var display_div_id = "showcurrentcandle";
-	    var data = "candle_id=candle1";
-	    var green = "greencandle";
-	    var red = "redcandle";
-  	}
-  	else if (dbgindex == "nxt") {
-	    var display_div_id = "shownextcandle";
-	    var data = "candle_id=candle5";
-	    var green = "greencandle";
-	    var red = "redcandle";
-  	}
 
+function dot_update(dbgindex){
+
+  	var display_div_id = "shownextcandle";
+	var data = "candle_id=candle5";
+	var green = "greencandle";
+	var red = "redcandle";
  	var xhr;
 
  	if (window.XMLHttpRequest) { // Mozilla, Safari, ...
@@ -67,25 +33,21 @@ function dot_update(dbgindex){
 		        if(xhr.responseText == "1"){
 		        	
 		        	document.getElementById(display_div_id).innerHTML = "<img src=../img/"+green+".png>";
-		          	
-		          	if (data == "candle_id=candle5") {
-		          		signalCandle = "UP";
-					}
+					signalCandle = "UP";
+					  
 		        }
 	       		else if(xhr.responseText == "2"){
 	        		
 	          		document.getElementById(display_div_id).innerHTML = "<img src=../img/"+red+".png>";
-	           		
-	           		if (data == "candle_id=candle5") {
-		          		signalCandle = "DOWN";
-					}
-	           		
+					signalCandle = "DOWN";
+					   
 	        	}
 		        else {
 					document.getElementById(display_div_id).innerHTML = "!";
 				}
 				
 				if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
+
 					tradeLock = 111;
 					if(tradeDirection == "RED"){
 
@@ -93,21 +55,34 @@ function dot_update(dbgindex){
 						document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
 						tradeOption("RED",globalMinutes);
 					}
-					else if(tradeDirection == "GREEN") {
 
+					else if(tradeDirection == "GREEN") {
+						
 						tradeDirection = "RED";
 						document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
 						tradeOption("GREEN",globalMinutes);
 					}
-				}
+				}  
 						
 				else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
-					tradeLock = 222;
-					GetPortfolio();
-					playSoundCustom("18");
+						if(newtradeOptionIdLock != oldtradeOptionIdLock){
+
+							tradeLock = 222;
+							GetPortfolio();
+							playSoundCustom("18");
+							oldtradeOptionIdLock = newtradeOptionIdLock;
+							
+						}
+						else {
+							
+							tradeLock = 333;
+							return;
+						}
+							
 				} 
 						
 				else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){
+
 					tradeLock = 333;
 					GetProfitTable();
 					playSoundCustom("20");
