@@ -2,7 +2,7 @@
 function parseGetVars()
 	{
 	 
-	  var args = new Array();
+	  var args = [];
 
 	  var query = window.location.search.substring(1);
 	  
@@ -11,7 +11,7 @@ function parseGetVars()
 	   
 		var strList = query.split('&');
 	   
-		for(str in strList)
+		for(var str in strList)
 		{
 		
 		  var parts = strList[str].split('=');
