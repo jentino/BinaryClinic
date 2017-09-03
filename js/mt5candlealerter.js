@@ -1,4 +1,5 @@
 var tradeLock = 333;
+
 function dot_update(dbgindex){
 
   	var display_div_id = "shownextcandle";
