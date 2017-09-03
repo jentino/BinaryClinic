@@ -1,12 +1,11 @@
 
-///////////////////////////////////////////////////////// Connect to websocket server
- function Connect(token) {
-		
-		
+function Connect(token) {
+
         output = document.getElementById("debug");
-		document.getElementById("debug").innerHTML = "Connecting ..."
+		document.getElementById("debug").innerHTML = "Connecting ...";
 		document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
 		outputemail = document.getElementById("welcomeuser");
+
 		playSoundCustom(16);
         if (token == '') {
             writeToScreen("Invalid API Token");
@@ -14,17 +13,19 @@
         } 
 
 		else if (token == "kS7A68xssbTVpkE"){
+
 			appid = 6490;
 			trader_name = "Jenty Demo Account";
-			
 		}
 
 		else if (token == "nBvBHHOe84bgXMK"){
+
 			appid = 10123;
 			trader_name = "Jenty Real Account";
 		}
 
 		else if (token =="COQz3VcylK89JoT"){
+
 			appid = 6841;
 			trader_name = "Carline Real Account";
 		}
@@ -36,14 +37,12 @@
 			
 		}
 			
-		else 
-			{ 
+		else { 
 			writeToScreen("API token is not authorized");
 			return;
-			}
+		}
 			
 		ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id='+appid); 
-		
 			
 //////////////////////////////////////////////////////////Event listeners
 		
