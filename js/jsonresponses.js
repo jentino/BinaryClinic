@@ -47,12 +47,25 @@ onMessage = function(msg) {
 			}
 			
 			else if (js.msg_type == 'profit_table') {
+
 				for(var f in js.profit_table.transactions)
 					writeToScreen("= " + checkWinOrLoss(js.profit_table.transactions[f].buy_price,js.profit_table.transactions[f].sell_price) + " ," + js.profit_table.transactions[f].transaction_id);
 					writeWinLossToScreen();
 			}
-			
-			else if (js.msg_type == 'transaction') 
+
+			else if (js.msg_type == 'buy') {
+
+				newtradeOptionIdLock = js.buy.transaction_id;
+
+				writeToScreen(js.buy.transaction_id + "," + returnTime(js.buy.start_time));
+
+			}
+
+			else if (js.msg_type == 'transaction') {
+
 				writeBalanceToDash(js.transaction.balance);
+			}
+				
+
 
 };

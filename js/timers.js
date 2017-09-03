@@ -16,24 +16,6 @@ function onSecTimer() {
 		  }
 		  
 }
-
-
-//////////////////////////////////////////////////////////////////  PING SERVER
-/*k = 86400;
-function onPinger() {
-  k--;
-	if (ws) {
-		    
-            ws.send(JSON.stringify({
-                ping: 1
-            }));
-            
-        }
-    setTimeout(onPinger, 1000);
-	
-}*/
-
-
        
 stx = 0;
 

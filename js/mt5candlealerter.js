@@ -65,10 +65,20 @@ function dot_update(dbgindex){
 				}  
 						
 				else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
+						if(newtradeOptionIdLock != oldtradeOptionIdLock){
 
-						tradeLock = 222;
-						GetPortfolio();
-						playSoundCustom("18");
+							tradeLock = 222;
+							GetPortfolio();
+							playSoundCustom("18");
+							oldtradeOptionIdLock = newtradeOptionIdLock;
+							
+						}
+						else {
+							
+							tradeLock = 333;
+							return;
+						}
+							
 				} 
 						
 				else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){

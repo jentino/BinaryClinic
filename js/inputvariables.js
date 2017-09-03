@@ -23,7 +23,8 @@ var connectLock = "OnOn";
 var winlossLock = "Off";
 var OriginalBalanceLock = "Off";
 var tradeDirection = "RED";
-var tradeOptionIdLock = 1000;
+var newtradeOptionIdLock = 12345;
+var oldtradeOptionIdLock = 12345;
 
 var signalCandle;
 var appid;
