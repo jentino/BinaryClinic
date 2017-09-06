@@ -115,7 +115,7 @@ if($_POST){
           </div>
           <div class="modal-body">
               <div class="row">
-                  <div class="col-xs-6">
+                  <div class="col-xs-6" >
                       <div class="well">
                           <form id="loginForm" method="POST">
                               <div class="form-group">
