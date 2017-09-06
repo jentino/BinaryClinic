@@ -83,8 +83,20 @@ div.realbalance {
 	font-size: 26px;
 	color: #3c763d;
 	font-weight: bold;
+	width: 205px;
 	
 }
+
+div.tockTime {
+	padding-left: 0px;
+	padding-top: 10px;
+	font-size: 26px;
+	color: #B9B9B9;
+	font-weight: bold;
+	width: auto;
+	
+}
+
 /* .col-xs-6-index {
 	width:350px; 
 }

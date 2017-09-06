@@ -91,7 +91,7 @@ if($_POST){
                                 </div>
 
                                 <div class="col-xs-6 col-xs-4-main-profiledash-above">
-                                    <div><h4>Jenty Mepa</h4></div>
+                                    <div><h4>jentino</h4></div>
                                     <div>
                                         <div class="container">
                                             <div class="row">
@@ -111,8 +111,11 @@ if($_POST){
                             </div>
 
                             <div class="row">
-                                <div class="realbalance">
+                                <div  class="col-xs-6 realbalance">
                                         $
+                                </div>
+                                <div class="col-xs-6 tockTime">
+                                        Time
                                 </div>
                             </div>
 
@@ -166,15 +169,15 @@ if($_POST){
                                 </div>
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>SG <img  class="statusdots"  src="img/tinygreendot.png"></small></h6>
+                                    <h6><small>SG <img  class="statusdots"  src="img/tinyredbox.png"></small></h6>
                                 </div>
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>CR <img  class="statusdots"  src="img/tinygreendot.png"></small></h6>
+                                    <h6><small>CR <img  class="statusdots"  src="img/tinygreenbox.png"></small></h6>
                                 </div>
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>NX <img  class="statusdots"  src="img/tinyreddot.png"></small></h6>
+                                    <h6><small>NX <img  class="statusdots"  src="img/tinyredbox.png"></small></h6>
                                 </div>
                             
                         </div>
@@ -189,9 +192,9 @@ if($_POST){
 <br> <div><a href="http://127.0.0.1/logout.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Logout</a><br>
 
 </div>
-                <br>
+<br><br><center>
         <footer class="footer">
-      <div class="container">
+      <div class="">
         <span class="text-muted">
             <p> <span class="glyphicon glyphicon-copyright-mark"></span> Copyright, 2017, BinaryHaven  
         <span class="glyphicon glyphicon-envelope"></span> </p></span>
