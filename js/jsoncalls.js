@@ -125,5 +125,5 @@ function PingBinServer() {
 	}
 	else	
 		//reConnect("nBvBHHOe84bgXMK"); //Jenty live
-		reConnect("xwzTFS9BwGxjPZZ");
+		reConnect("COQz3VcylK89JoT");
 }

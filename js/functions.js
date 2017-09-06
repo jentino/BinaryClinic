@@ -13,7 +13,7 @@ function showBalance(balance) {
 }
 
 function showRescueAmount() {
-	document.getElementById("showrescueamount").innerHTML = (tradeamount[rescue]).bold();
+	document.getElementById("showrescueamount").innerHTML = tradeamount[rescue];
 }
 
 function returnTime(thetime) {

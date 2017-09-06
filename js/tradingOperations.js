@@ -9,7 +9,7 @@ function checkWinOrLoss(buyprice,amount){
 			totalwins++;
 			countlosses = 0;
 			rescue = 0;
-			//reConnect("xwzTFS9BwGxjPZZ");
+			//reConnect("COQz3VcylK89JoT");
 		}
 		
 		str_return = "Win".bold().fontcolor("Green");

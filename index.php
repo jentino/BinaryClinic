@@ -1,10 +1,18 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+ echo "<script>location.href='login.php'</script>";
+}
+
+?>
 <?php 
 //version 12.1
-	if($tokenid == '')
+	//if($tokenid == '')
 		//$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
-		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
-	else	
-		$tokenid = $_GET['token_id'];
+		//$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo 
+		//$tokenid = "COQz3VcylK89JoT"; //Carline demo
+	//else	
+		//$tokenid = $_GET['token_id'];
 	
 	if($assetid ==  '')
 		$assetid = "R_100";
@@ -13,6 +21,8 @@
 ?>
 <html>
 <head>
+	
+	
     <meta charset="utf-8" />
     <title>BinaryHaven</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
@@ -71,8 +81,10 @@
     <div id="login-overlay" class="modal-dialog">
       	<div class="modal-content">
           	<div class="modal-header">
+			  
                 <button type="button" class="close" data-dismiss="modal">
               		<div id="timer2">
+					  
 						     		 <div>Timer</div>
 						     			<p><span class="field2 time"></span></p>
 							    </div>
@@ -241,7 +253,7 @@
 	                          	<div id="assetlist"></div>
 	                          </div>
 	                          <br>
-                      <p><a href="/new-customer/" class="btn btn-info btn-block">Invite someone now!</a></p>
+                      <p><a href="/logout.php" class="btn btn-info btn-block">Logout</a></p>
                   </div>
               </div>
           </div>
