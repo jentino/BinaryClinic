@@ -102,7 +102,7 @@ if($_POST){
                                                     <h6><small>CREDITS <br><b>2</b></small></h6>
                                                 </div>
                                                 <div class="col-xs-4 col-xs-4-main-profiledash-under">
-                                                    <h6><small>LEVEL <br>1</small></h6>
+                                                    <h6><small>LEVEL <br><b>1</b></small></h6>
                                                 </div>                                       
                                             </div>
                                         </div>
@@ -119,17 +119,33 @@ if($_POST){
                                 </div>
                             </div>
 
+                            
 
                             <div class="row">
-                                <div class="col-xs-4 col-xs-4-main-profiledash-under-1">
+
+                                <div class="col-xs-3 padleft">
+                                
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                        50%
+                                         </div>
+                                    </div>
+                                
+                                        </div>
+                                </div>
+
+                                <div class="row padup" >
+
+                                <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
                                     <h6><small>PROFIT <br><b>$</b></small></h6>
                                 </div>
                                 
-                                <div class="col-xs-4 col-xs-4-main-profiledash-under-1">
+                                <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
                                     <h6><small>ORIGINAL BALANCE <br><b>$</b></small></h6>
                                 </div>
                                 
-                                <div class="col-xs-4 col-xs-4-main-profiledash-under-1">
+                                <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
                                     <h6><small>RESCUE AMOUNT <br><b>$</b></small></h6>
                                 </div> 
                             </div>
@@ -200,5 +216,8 @@ if($_POST){
         <span class="glyphicon glyphicon-envelope"></span> </p></span>
       </div>
     </footer></center>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="js/progressbar.js"></script>
   </body>
 </html>

@@ -77,6 +77,16 @@ div.lightsConsole {
 	
 }
 
+.paddown {
+    padding-top: 10px;
+	
+}
+
+.padup {
+    padding-bottom: -50px;
+	
+}
+
 div.realbalance {
 	padding-left: 0px;
 	padding-top: 10px;
@@ -85,6 +95,23 @@ div.realbalance {
 	font-weight: bold;
 	width: 205px;
 	
+}
+
+.container{
+	width: 350px;
+	max-width: 350px;
+}
+
+.progress {
+	width: 269px;
+}
+
+p.visible {
+    visibility: visible
+}
+
+p.hidden {
+    visibility: hidden
 }
 
 div.tockTime {
