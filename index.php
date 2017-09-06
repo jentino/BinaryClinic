@@ -96,7 +96,7 @@ if($_POST){
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-xs-4 col-xs-4-main-profiledash-under">
-                                                    <h6><small>COUNTRY<br> S.AFRICA</small></h6>
+                                                    <h6><small>COUNTRY<br><img src="img/saflagicontiny.jpg"></small></h6>
                                                 </div>
                                                 <div class="col-xs-4 col-xs-4-main-profiledash-under">
                                                     <h6><small>CREDITS <br><b>2</b></small></h6>
@@ -143,8 +143,39 @@ if($_POST){
                                 </div>
                             </div>
 
+                            <div class="row padleft ">
+                            
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D5 <img  class="statusdots" src="img/tinygreendot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D4 <img class="statusdots" src="img/tinyreddot.png"></small></h6>
+                                </div>
 
-
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D3 <img  class="statusdots"  src="img/tinygreendot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D2 <img  class="statusdots"  src="img/tinyreddot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D1 <img  class="statusdots"  src="img/tinyreddot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>SG <img  class="statusdots"  src="img/tinygreendot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>CR <img  class="statusdots"  src="img/tinygreendot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>NX <img  class="statusdots"  src="img/tinyreddot.png"></small></h6>
+                                </div>
                             
                         </div>
 

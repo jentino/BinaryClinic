@@ -135,6 +135,17 @@ div.realbalance {
 	text-align: center;
 }
 
+.col-xs-4-main-profiledash-under-1-dots {
+	padding-right:0;
+    padding-left:0;
+	padding-top: 1.5px;
+	width: 33.4px;
+	height:12px;
+	background-color:#F5F5F5;
+	text-align: center;
+	
+}
+
 
 .colorbackground {
 
@@ -154,5 +165,10 @@ img.propic {
 	top: 0;
 	left: 0;
 	border-radius: 5px;
+}
+
+img.statusdots{
+	padding-top: 0.6px;
+	margin-top: 0;
 }
 
