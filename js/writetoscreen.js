@@ -51,18 +51,18 @@ function writeWinLossToScreen() {
 
 	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2).bold(); 
 	
-	if(winlossresult == -2 && connectLock == "Off" && appid == 6841) {    /*appid == 10122*/
+	if(winlossresult == -2 && connectLock == "Off" && appid == 6490) {    /*appid == 10122*/
 		winlossLock = "On";
 		connectLock = "DEMO";
-		reConnect("kS7A68xssbTVpkE");
+		reConnect("xwzTFS9BwGxjPZZ");
 	}
-	else if (connectLock == "On" && appid == 6490) {
+	else if (connectLock == "On" && appid == 10122) {
 		
 		winlossLock = "Off";
 		countlosses = 0;
 		connectLock = "Live";
 		//reConnect("nBvBHHOe84bgXMK"); //Jenty Live
-		reConnect("COQz3VcylK89JoT"); //Carline live
+		reConnect("kS7A68xssbTVpkE"); //Carline live
 	}
 }
 

@@ -35,13 +35,6 @@ if($_POST){
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <style>
-		img.ribbon {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-	</style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -167,7 +160,7 @@ if($_POST){
       </div>
 
   </div>
-	<div class="container" style="padding-top:30px">
+	<div class="container padleft" style="padding-top:30px">
     <h1 class="text-center">An online automated system that generates $10 a day.<br><br>
 
     How does it work?

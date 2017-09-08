@@ -67,6 +67,12 @@ div.sidewin {
 	
 }
 
+img.ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 div.lightsConsole {
     margin: 10px;
 	
@@ -78,7 +84,7 @@ div.lightsConsole {
 }
 
 .paddown {
-    padding-top: 10px;
+    padding-top: 3px;
 	
 }
 
@@ -93,15 +99,19 @@ div.realbalance {
 	font-size: 26px;
 	color: #3c763d;
 	font-weight: bold;
-	width: 205px;
+	width: 5px;
+	max-width: 5px;
 	
 }
 
-.container{
+.width350{
 	width: 350px;
 	max-width: 350px;
-}
+} 
 
+.extrasmall{
+	font-size: 8px;
+}
 .progress {
 	width: 269px;
 }
@@ -115,7 +125,7 @@ p.hidden {
 }
 
 div.tockTime {
-	padding-left: 0px;
+	padding-left: 200px;
 	padding-top: 10px;
 	font-size: 26px;
 	color: #B9B9B9;
@@ -140,6 +150,15 @@ div.tockTime {
 	border-radius: 5px;
 	background-color:#F5F5F5;
 }
+
+table.tablepropic{
+	width:80px; 
+	max-width:80x;
+	height:80px;
+	max-height:80x;
+	margin-left: -15px;
+}
+
 .col-xs-6-main-profiledash {
 	width:180px; 
 	max-width:80x;
@@ -204,10 +223,23 @@ img.propic {
 	top: 0;
 	left: 0;
 	border-radius: 5px;
+	width: 80px;
+	max-width: 80px;
+	height: 80px;
+	max-height: 80px;
 }
 
 img.statusdots{
 	padding-top: 0.6px;
 	margin-top: 0;
+}
+
+span.glyphicon-cog { 
+	font-size: 0.8em; 
+}
+
+p.Offline { 
+	
+	color:	#C40000;
 }
 

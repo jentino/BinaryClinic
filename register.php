@@ -16,8 +16,9 @@ if($_POST){
  $user->email = $_POST['email']; 
  $user->hash = $hash;
  $user->vcode = $user->makevcode(7);
+ $user->picfile = "propicblank.png";
 
- if($user->create()){
+ if($user->createUser()){
 
 ?>
 
@@ -250,13 +251,19 @@ $(document).ready(function() {
                     },
                     stringLength: {
                         min: 6,
-                        max: 30,
-                        message: 'The username must be more than 6 and less than 30 characters long'
+                        max: 25,
+                        message: 'The username must be more than 6 and less than 10 characters long'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9_\.]+$/,
                         message: 'The username can only consist of alphabetical, number, dot and underscore'
+                    },
+                    remote: {
+                        message: 'The username is already taken',
+                        url: 'checkusername.php',
+                        type: 'POST'                        
                     }
+
                 }
             },
             country: {
@@ -273,10 +280,31 @@ $(document).ready(function() {
                     },
                     emailAddress: {
                         message: 'The input is not a valid email address'
+                    },
+                    remote: {
+                        message: 'The email is already registered',
+                        url: 'checkemail.php',
+                        type: 'POST'                        
                     }
                 }
             },
             
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required and can\'t be empty'
+                    },
+                    identical: {
+                        field: 'password',
+                        message: 'The password and its confirm are not the same'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 25,
+                        message: 'The password must be more than 6 and less than 10 characters long'
+                    }
+                }
+            },
             confirmPassword: {
                 validators: {
                     notEmpty: {
