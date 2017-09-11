@@ -334,6 +334,5 @@ $(document).ready(function(){
         document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');	
 </script>
 
-
 </body>
 </html>
