@@ -28,17 +28,15 @@ function writeTimeToScreen(thetime) {
 }	
 
 function pollCandles(){
-	//alert("I am in pollCandles function");
-	
-	//pingServer();
-	
-	//dot_update("sig");
-	//dot_update("d3");
-		/*dot_update("d2");
-dot_update("d1");
-	dot_update("cur");*/
-	dot_update("nxt");
-	
+
+	mypb(tockSeconds);
+	dot_update("next");
+	dot_update("current");
+	dot_update("signal");
+	dot_update("dot1");
+	dot_update("dot2");
+	dot_update("dot3");
+	dot_update("dot4");
 }
 
 function writeBalanceToDash(updatedbalanceamount) {
@@ -59,6 +57,8 @@ function writeWinLossToScreen() {
 	//document.getElementById("winlossDash").innerHTML = totalwins + "/32";
 
 	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2); 
+
+	maxProfit = (tradeProfit - tradeLoss).toFixed(0);
 	
 	if(winlossresult == -2 && connectLock == "Off" && appid_temp == appidlive) {
 		winlossLock = "On";

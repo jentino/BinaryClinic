@@ -1,13 +1,52 @@
 var tradeLock = 333;
 
 function dot_update(dbgindex){
-	//alert("sdfsfsfs");
-	//document.getElementById("assetvalue").innerHTML = assetvalue;
 	
-  	var display_div_id = "shownextcandle";
-	var data = "candle_id=candle5";
-	var green = "tinygreenbox";
-	var red = "tinyredbox";
+	if (dbgindex == "next") {
+		
+		var display_div_id = "shownextcandle";
+		var data = "candle_id=candle5";
+		var green = "tinygreenbox";
+		var red = "tinyredbox";
+	}
+	else if (dbgindex == "current") {
+
+		var display_div_id = "showcurrentcandle";
+		var data = "candle_id=candle1";
+		var green = "tinygreenbox";
+		var red = "tinyredbox";
+	}
+	else if (dbgindex == "signal") {
+		var display_div_id = "showsignalcandle";
+		var data = "candle_id=candle6";
+		var green = "tinygreenbox";
+		var red = "tinyredbox";	
+	}
+	else if (dbgindex == "dot1") {
+		var display_div_id = "showdot1";
+		var data = "candle_id=dot1";
+		var green = "tinygreendot";
+		var red = "tinyreddot";	
+	}
+	else if (dbgindex == "dot2") {
+		var display_div_id = "showdot2";
+		var data = "candle_id=dot2";
+		var green = "tinygreendot";
+		var red = "tinyreddot";	
+	}
+	else if (dbgindex == "dot3") {
+		var display_div_id = "showdot3";
+		var data = "candle_id=dot3";
+		var green = "tinygreendot";
+		var red = "tinyreddot";	
+	}
+	else if (dbgindex == "dot4") {
+		var display_div_id = "showdot4";
+		var data = "candle_id=dot4";
+		var green = "tinygreendot";
+		var red = "tinyreddot";	
+	}
+	
  	var xhr;
 
  	if (window.XMLHttpRequest) { // Mozilla, Safari, ...

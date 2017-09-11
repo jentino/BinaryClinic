@@ -22,6 +22,7 @@ $user->getUserData();
 	src: url(fonts/Sansation/SansationLight.ttf);
     }  
     </style>  
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -218,9 +219,8 @@ $user->getUserData();
                                 <div class="col-xs-3 padleft">
                                 
                                 <div class="progress">
-                                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
-                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo '<script>showtock();</script>'; ?>%">
-                                  40%
+                                <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span id="current-progress"></span>
                                 </div>
                               </div>
                                         </div>
@@ -258,31 +258,38 @@ $user->getUserData();
                                 
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>D4 <img class="statusdots" src="img/tinyreddot.png"></small></h6>
+                                    <h6><small>D4  <span id="showdot4"> </small></h6>
                                 </div>
 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>D3 <img  class="statusdots"  src="img/tinygreendot.png"></small></h6>
+                                    <h6><small>D3  <span id="showdot3"> </small></h6>
                                 </div>
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>D2 <img  class="statusdots"  src="img/tinyreddot.png"></small></h6>
+                                    <h6><small>D2  <span id="showdot2"> </small></h6>
                                 </div>
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>D1 <img  class="statusdots"  src="img/tinyreddot.png"></small></h6>
+                                    <h6><small>D1  <span id="showdot1"> </small></h6>
                                 </div>
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>SG <img  class="statusdots"  src="img/tinyredbox.png"></small></h6>
+                                    <h6><small>SG  <span id="showsignalcandle"> </small></h6>
                                 </div>
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>CR <img  class="statusdots"  src="img/tinygreenbox.png"></small></h6>
+                                    <h6><small>NXT <span id="shownextcandle"> </span></small></h6>
                                 </div>
-                                <div id="shownextcandle" class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>CR  <span id="showcurrentcandle"> </small></h6>
+                                </div>
+
+                                
+
+                                <!-- <div id="shownextcandle" class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
                                     
-                                </div>
+                                </div> -->
                             
                         </div>
 

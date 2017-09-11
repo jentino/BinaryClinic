@@ -26,3 +26,16 @@ function returnTime(thetime) {
 	xd.setUTCSeconds(thetime);
 	return  xd.getMinutes() + ":" + xd.getSeconds();
 }
+
+function mypb(ticks){
+	$(function() {
+		var current_progress = 0;
+			current_progress = (ticks/60 * 100).toFixed();
+			$("#dynamic")
+			.css("width", current_progress + "%")
+			.attr("aria-valuenow", current_progress)
+			.text(current_progress + "% Profit");
+			if (current_progress >= 100)
+				current_progress = 0;
+	  });
+}
