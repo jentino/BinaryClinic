@@ -3,20 +3,14 @@ session_start();
 if(!isset($_SESSION['username'])){    
  echo "<script>location.href='login.php'</script>";
 }
-
 include_once 'includes/config.php';
  
 $config = new dbConfig();
 $db = $config->getConnection();
-
 include_once 'includes/data.inc.php';
-
 $user = new userData($db);
-
 $user->username = $_SESSION['username'];
-
 $user->getUserData();
-
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +29,13 @@ $user->getUserData();
     <meta name="author" content="">
  
     <title>BinaryHaven&trade;</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
     <link href="//cdn.rawgit.com/cornflourblue/angular-registration-login-example/master/app-content/app.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -213,20 +213,16 @@ $user->getUserData();
                                 <span class="field2 time"></span>
                                 </div>
                             </div>
-
-                            
-
                             <div class="row">
 
                                 <div class="col-xs-3 padleft">
                                 
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                        aria-valuemin="0" aria-valuemax="100" style="width:50%">
-                                        50%
-                                         </div>
-                                    </div>
-                                
+                                <div class="progress">
+                                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo '<script>showtock();</script>'; ?>%">
+                                  40%
+                                </div>
+                              </div>
                                         </div>
                                 </div>
 
@@ -315,8 +311,6 @@ $user->getUserData();
     $("input[type='image']").click(function() {
     $("input[id='my_file']").click();
 });
-
-
 </script>
 
 <script>
@@ -337,7 +331,6 @@ $(document).ready(function(){
             pollCandles();  
             }
         });
-
         document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');	
 </script>
 

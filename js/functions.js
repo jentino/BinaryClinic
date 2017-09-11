@@ -6,6 +6,10 @@
 // 	playSoundCustom(16);
 // }
 
+function showtock() {
+	return tockSeconds;
+  }
+
 //////////////////////////////////////////////////// SHOW BALANCE
 function showBalance(balance) {
 	

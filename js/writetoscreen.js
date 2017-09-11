@@ -60,7 +60,7 @@ function writeWinLossToScreen() {
 
 	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2); 
 	
-	if(winlossresult == -1 && connectLock == "Off" && appid_temp == appidlive) {
+	if(winlossresult == -2 && connectLock == "Off" && appid_temp == appidlive) {
 		winlossLock = "On";
 		connectLock = "DEMO";
 		//writeToScreen("Loggedin as" + appiddemo);
