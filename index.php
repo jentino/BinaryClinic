@@ -1,25 +1,57 @@
-<?php 
-//version 12.2
-	if($tokenid == '')
-		//$tokenid = "nBvBHHOe84bgXMK"; //Jenty Live
-		$tokenid = "xwzTFS9BwGxjPZZ"; //Carline demo
-	else	
-		$tokenid = $_GET['token_id'];
-	
-	if($assetid ==  '')
-		$assetid = "R_100";
-	else	
-		$assetid = $_GET['asset_id'];
+<?php
+session_start();
+if(!isset($_SESSION['username'])){    
+ echo "<script>location.href='login.php'</script>";
+}
+include_once 'includes/config.php';
+ 
+$config = new dbConfig();
+$db = $config->getConnection();
+include_once 'includes/data.inc.php';
+$user = new userData($db);
+$user->username = $_SESSION['username'];
+$user->getUserData();
 ?>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>BinaryHaven</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        @font-face {
+	font-family: myFont;
+	src: url(fonts/Sansation/SansationLight.ttf);
+    }  
+    </style>  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="BinaryHaven officail website" content="binaryhaven">
+    <meta name="author" content="">
+ 
+    <title>BinaryHaven&trade;</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
     <link href="//cdn.rawgit.com/cornflourblue/angular-registration-login-example/master/app-content/app.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	<script type="text/javascript" src="js/inputvariables.js"></script>
+	
+    <!-- Bootstrap core CSS 
+    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+ 
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/testimonial.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/inputvariables.js"></script>
 	<script type="text/javascript" src="js/splitwebstring.js"></script>
 	<script type="text/javascript" src="js/connect.js"></script>
 	<script type="text/javascript" src="js/onOpen.js"></script>
@@ -33,15 +65,12 @@
 	<script type="text/javascript" src="js/mt5candlealerter.js"></script>
 	<script type="text/javascript" src="js/tradingOperations.js"></script>
 	<script type="text/javascript" src="js/tock.js"></script>
-	<script type="text/javascript" src="js/reconnect.js"></script>
-</head>
+    <script type="text/javascript" src="js/reconnect.js"></script>
+    
 
-
-
-
-<body onLoad="Connect('<?php echo $tokenid ?>'); getAsset('<?php echo $assetid ?>');">
-
-<!-------------------------------------- AUDIO ------------------------------------------------- -->
+  </head>
+ 
+<body>
 
 <audio id="audio" src="sounds/beep.wav" autostart="false" ></audio>
 <audio id="audio1" src="sounds/pokerchip1.wav" autostart="false" ></audio>
@@ -67,218 +96,243 @@
 <audio id="audio22" src="sounds/lost1.wav" autostart="false" ></audio>
 <audio id="audio23" src="sounds/lost2.wav" autostart="false" ></audio>
 
+ 
 
-    <div id="login-overlay" class="modal-dialog">
-      	<div class="modal-content">
-          	<div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-              		<div id="timer2">
-						     		 <div>Timer</div>
-						     			<p><span class="field2 time"></span></p>
-							    </div>
-              		
-              	</button>
-              		
-<!-------------------------------------  HEADER ---------------------------------------------->	
-              	
-              	
-              	<div id="row">
-	  				<center>
-					    <div id="left1">
-					        <img src="img/binaryhaven1.png">
-					    </div>
-					    
-					   <div id="middle">
-					    	
-					    	<div id="right">
-						    	<div>W/L</div>
-						        <p>
-						        	<div id="winlossDash"></div>
-						        </p>
-										        
-						    </div>
-						    
-					   		<div id="right">
-							  	<div>dot 2</div>
-								<div><p>
-								  	<div id="showdot2"></div>
-								</p></div>
-							</div>
-							
-						    <div id="right">
-						      	<div>next</div>
-						       	<p>
-						        	<div id="shownextcandle"></div>
-						      	</p>
-						    </div>
-						    
-						    
-							
-							<div id="right">
-							  	<div>Dir</div>
-								<p>
-								  	<div id="tradeDirectionqq"></div>
-								</p>
-							</div><!---->
-							
-							
-							<div id="right">
-							  	<div>Min</div>
-								<p>
-								  	<div id="showTheminute"></div>
-								</p>
-							</div>
-							
-							<!--<div id="right">
-							  	<div>TckM</div>
-								<p>
-								  	<div id="showTockMinutes"></div>
-								</p>
-							</div>-->
-							
-						  	
-					    </div>
-						  	
-					</center>  
-				</div> 
-			
-		</div>
-		
-<!-------------------------------------  BODY ---------------------------------------------->
+	
+<p><br>
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<div id="login-overlay" class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <img class="ribbon" src="img/ribbon.png">
+            <div class="row">
+                <div class="col-xs-6">
+                  <h4 class="modal-title" id="myModalLabel"><b>Binary<font color="#59E817">Haven</font>&trade;</b> TradePortal </h4>
+                </div>
+                <div class="col-xs-6 paddown padleftbuttons">
+               
+               
+                <!-- <b id="tradeaction"></b>
+                <b id="tradeDirectionqq"></b> 
+                <b id="tradeDirectionqq"></b>
+                <b id="tradeDirectionqq"></b>
+                <b id="tradeDirectionqq"></b> <b id="currentappid"></b>-->
 
-          	<div class="modal-body">
-              	<div class="row">
-                  	<div class="col-xs-6">
-                  	
-			        	<div id="row" class="lightsConsole">
-							
-							<!--<div id="left">
-						  		
-						  	</div>
-						  	<div id="right">
-						  		<div id="showdot3"></div>
-						  	</div>
-						  	
-						  	
-						  						  	
-						  	<div id="left">
-						  		
-						  	</div>
-						  	<div id="middle">
-						  		<div id="showdot2"></div>
-						  	</div>
-						  	
-						  	
-						  	<div id="left">
-						  		
-						  	</div>
-						  	<div id="middle">
-						  		<div id="showdot1"></div>
-						  	</div>
-						  	
-						  	
+                <script>
+                    tokenidlive = "<?php echo $user->token_id_live; ?>";
+                    appidlive = "<?php echo $user->app_id_live; ?>";
+                    tokeniddemo = "<?php echo $user->token_id_demo; ?>";
+                    appiddemo = "<?php echo $user->app_id_demo; ?>";
+                </script>
 
-						  	<div id="middle">
-						  		
-						  	</div>
-						  	<div id="right">
-						  		<div id="showsignalcandle"></div>
-						  	</div>
 
-						  	<div id="right">
-						  		
-						  	</div>
-						  	<div id="right">
-						  		<div id="showcurrentcandle"></div>
-						  	</div>-->
-						  	
-						  	
-						  	
-						  	
-						  	
-						</div>
-<!-------------------------------------  MAIN CONSOLE  ---------------------------------------------->
-                      	                     	
-	          			<div id="mainConsole">
-							<div class="innerConsole" id="debug" onscroll="myStopFunction()"></div>
-						</div>
-                      	
-                      	
-                  	</div>
-                  	
-                  	<div class="col-xs-6">
-                     	<div id="welcomeuser" class="lead"></div> 
-	                     	
-	                     		<span >
-	                     			<div id=row>
-	                     					<div id="left2" class="realbalance">$</div>
-	                     					<div id="left2">
-	                     						<div id="realbalance" class="realbalance"></div>
-	                     					</div>
-	                     					
-	                     			</div>
-	                     		</span>
-	                     
-                      
-                     		<div id="row">
-	                          	<div id="left2">Profit: <b>$</b></div> 
-	                          	<div id="profitupdate"></div>
-	                          </div>
-	                          <br>
-	                          <div id="row">
-	                          	<div id="left2">Original Balance:<b>$ </b></div> 
-	                          	<div id="originalbalance"></div>
-	                          </div>
-	                          
-	                          <br>
-	                           <div id="row">
-	                          	<div id="left2">Rescue Amount:<b>$</b></div> 
-	                          	<div id="showrescueamount" class="rescueamount"></div>
-	                          </div>
-	                                <br>                    
-	                          <div id="row">
-	                          	<div id="left2">Selected Asset:</div> 
-	                          	<div id="assetlist"></div>
-	                          </div>
-	                          <br>
-                      <p><a href="/new-customer/" class="btn btn-info btn-block">Invite someone now!</a></p>
-                  </div>
-              </div>
-          </div>
+               
+
+                <img src="img/tinylock.png"><b id="showtradeLock"></b>&nbsp;
+                   <b id="showTheTime">00:00</b>
+                    <a href="#" id="btnconnect" onclick="Connect('<?php echo $user->token_id_live;?>', '<?php echo $user->app_id_live;?>'); return false"><button type="button" class="btn btn-default btn-xs extrasmall" >Connect</button></a> 
+                    <a href="http://127.0.0.1/logout.php" id="btnlogout"><button type="button" class="btn btn-default btn-xs extrasmall" >Logout</button></a> 
+                  
+
+
+                </div>
+            </div>
           
-          <center>
-          		
-         <div id="row">
-	
-		<div id="right">
-	  		<div> trade <img src="img/tinylock.png"> </div>
-	  	</div>
-	  	<div id="right">
-	  		<div id="showtradeLock"></div>
-	  	</div>
-	
-	 </center>
-      </div>
-  </div>
-  
-  
-  
-  <script type="text/javascript">
-	var timer2 = new Tock({
-    interval: 1000,
-    
-    onTick: function() {
-        
-        tockSeconds = (timer2.lap('{S}'))%60;
-	    document.querySelector('#timer2 .field2').innerHTML = tockSeconds;
-	    pollCandles();  
-		}
-	});
+            </div>
 
-document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');	
+
+          <div class="modal-body">
+              <div class="row">
+<!----------------------------------------------------------------------MAIN CONSOLE ---------------------------->
+<!----------------------------------------------------------------------MAIN CONSOLE ---------------------------->
+<!----------------------------------------------------------------------MAIN CONSOLE ---------------------------->
+<!----------------------------------------------------------------------MAIN CONSOLE ---------------------------->
+            
+                  <div class="col-xs-6">
+                      <div class="well">
+                            <div id="mainConsole">
+							    <div class="innerConsole debug" id="debug" onscroll="myStopFunction()"></div>
+						    </div>
+                      </div>
+                  </div>
+ <!----------------------------------------------------------------------HEADER------------------------------------>
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+
+                  <div class="col-xs-6 "> <!--  -->
+                        <div class="container padleft">
+
+                            <div class="row">
+
+                                <div class="col-xs-4 col-xs-6-main-profilepic">
+
+
+                                <img class="propic" src="img/profilepics/<?php echo $user->picfile; ?>">
+                                
+
+                                </div>
+
+                                
+
+                                <div class="col-xs-4 col-xs-4-main-profiledash-above">
+                                    <div><h4><?php echo $user->firstname; ?>&nbsp;&nbsp;
+                                        <a href="updateuser.php" data-toggle="tooltip" title="Setup your account here to go online!"><button type="button" class="btn btn-default btn-xs extrasmall" >Edit</button><span class="glyphicon glyphicon-cog padup text-success"  style="padding-left: 4px;">
+                                        </span></a></h4>
+                                    </div>
+                                    <div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-xs-4 col-xs-4-main-profiledash-under">
+                                                    <h6><small>COUNTRY<br><img src="img/saflagicontiny.jpg"></small></h6>
+                                                </div>
+                                                <div class="col-xs-4 col-xs-4-main-profiledash-under ">
+                                                    <h6 ><small>STATUS <br><p class="Offline paddown" id="statusblock"><b >Offline</b></p></small></h6>
+                                                </div>
+                                                <div class="col-xs-4 col-xs-4-main-profiledash-under">
+                                                    <h6><small>LEVEL <br><b id="winlossDash">0</b></small></h6>
+                                                </div>                                       
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div  class="col-xs-4 realbalance">
+                                        $
+                                </div>
+                                
+                                <div id="realbalance" class=" col-xs-4 realbalance"> 
+                                    
+                                </div>
+                                <div class="col-xs-4 tockTime" id="timer2">
+                                <span class="field2 time"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-xs-3 padleft">
+                                
+                                <div class="progress">
+                                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo '<script>showtock();</script>'; ?>%">
+                                  40%
+                                </div>
+                              </div>
+                                        </div>
+                                </div>
+
+                                <div class="row padup" >
+
+                                <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
+                                    <h6><small>PROFIT <br><b>$</b><b id="profitupdate">0</b></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
+                                    <h6><small >ORIGINAL BALANCE <br><b>$</b><b id="originalbalance">0</b></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
+                                    <h6><small>RESCUE AMOUNT <br><b>$</b><b id="showrescueamount">0</b></small></h6>
+                                </div> 
+                            </div>
+                            
+
+
+                            <div class="row row_width">                                
+                                <div>
+                                    
+                                        <div id="miniConsole">
+                                            <div class="innerConsole" id="debug" onscroll="myStopFunction()"></div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="row padleft ">
+                            
+                                
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D4 <img class="statusdots" src="img/tinyreddot.png"></small></h6>
+                                </div>
+
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D3 <img  class="statusdots"  src="img/tinygreendot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D2 <img  class="statusdots"  src="img/tinyreddot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>D1 <img  class="statusdots"  src="img/tinyreddot.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>SG <img  class="statusdots"  src="img/tinyredbox.png"></small></h6>
+                                </div>
+                                
+                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    <h6><small>CR <img  class="statusdots"  src="img/tinygreenbox.png"></small></h6>
+                                </div>
+                                <div id="shownextcandle" class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    
+                                </div>
+                            
+                        </div>
+
+                        <!-- --------------- -------------- ------------------ -->
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+  </div><center>
+<br>
+</div>
+<br><br><center>
+        <footer class="footer">
+      <div class="">
+        <span class="text-muted">
+            <p> <span class="glyphicon glyphicon-copyright-mark"></span> Copyright, 2017, BinaryHaven  
+        <span class="glyphicon glyphicon-envelope"></span> </p></span>
+      </div>
+    </footer></center>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="js/progressbar.js"></script>
+
+    <script>
+    $("input[type='image']").click(function() {
+    $("input[id='my_file']").click();
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
 </script>
 
 
+<script type="text/javascript">
+        var timer2 = new Tock({
+        interval: 1000,
+        
+        onTick: function() {
+            
+            tockSeconds = (timer2.lap('{S}'))%60;
+            document.querySelector('#timer2 .field2').innerHTML = tockSeconds;
+            pollCandles();  
+            }
+        });
+        document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');	
+</script>
 
-  </body>
-  </html>
+</body>
+</html>

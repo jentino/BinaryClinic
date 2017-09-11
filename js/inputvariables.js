@@ -1,4 +1,4 @@
-var tockSeconds;
+var tockSeconds= 89;
 var tockMinutes;
 var temp_minute = "";
 var globalMinutes;
@@ -7,6 +7,7 @@ var rescue 	= 0;
 //var tradeamount = [0.35,0.46,0.58,0.65,0.85,1.85,2,5];
 //var tradeamount = [0.35,0.46,0.35,0.41,0.86,1.83,3.89,8.26];
 //var tradeamount = [0.35,0.45,0.35,0.74,0.74,1.58,3.35,7.12,15.12];
+//var tradeamount = [0.35,0.46,0.52,1.10,2.30,4.89,10.37];
 var tradeamount = [0.35,0.74,1.58,3.35,7.12,15.12];
 var Intervals = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59];
 
@@ -27,10 +28,14 @@ var newtradeOptionIdLock = 12345;
 var oldtradeOptionIdLock = 12345;
 
 var signalCandle;
-var appid;
+var appid_temp = "";
+var appidlive = "";
+var appiddemo = "";
+var tokenidlive = "";
+var tokeniddemo = "";
 var output;
 var outputemail;
-var assetvalue = "";
+var assetvalue = "R_100";
 var OriginalBalance = 0;
 var trader_name = "";
 

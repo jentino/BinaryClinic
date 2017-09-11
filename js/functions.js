@@ -1,10 +1,14 @@
 //////////////////////////////////////////////////// GET ASSET
-function getAsset(assetval) {
-    //var obj = document.getElementById("myAssets");
-    document.getElementById("assetlist").innerHTML = assetval.bold();
-	assetvalue = assetval;
-	playSoundCustom(16);
-}
+// function getAsset(assetval) {
+//     //var obj = document.getElementById("myAssets");
+//     document.getElementById("assetlist").innerHTML = assetval.bold();
+// 	assetvalue = assetval;
+// 	playSoundCustom(16);
+// }
+
+function showtock() {
+	return tockSeconds;
+  }
 
 //////////////////////////////////////////////////// SHOW BALANCE
 function showBalance(balance) {
@@ -13,7 +17,7 @@ function showBalance(balance) {
 }
 
 function showRescueAmount() {
-	document.getElementById("showrescueamount").innerHTML = (tradeamount[rescue]).bold();
+	document.getElementById("showrescueamount").innerHTML = tradeamount[rescue];
 }
 
 function returnTime(thetime) {

@@ -7,9 +7,9 @@ function writeToScreen(message) {
 	div.scrollIntoView(); 	       
 }
 		
-function writeToScreenEmail(email) {
-	document.getElementById("welcomeuser").innerHTML = trader_name.bold();
-}
+// function writeToScreenEmail(email) {
+// 	document.getElementById("welcomeuser").innerHTML = trader_name.bold();
+// }
 
 var setTimerOnce = 1;	
 function writeTimeToScreen(thetime) {
@@ -23,11 +23,12 @@ function writeTimeToScreen(thetime) {
 		startTockClock();
 		setTimerOnce = 10000;
 	}
-	document.getElementById("showTheminute").innerHTML = d.getMinutes();
+	document.getElementById("showTheTime").innerHTML = d.getHours() +  ":" + d.getMinutes();
 
 }	
 
 function pollCandles(){
+	//alert("I am in pollCandles function");
 	
 	//pingServer();
 	
@@ -40,30 +41,37 @@ dot_update("d1");
 	
 }
 
-function writeBalanceToDash(updatedbalance) {
-	document.getElementById("realbalance").innerHTML = updatedbalance.bold();
-	//showProfit(updatedbalance);		
+function writeBalanceToDash(updatedbalanceamount) {
+	document.getElementById("realbalance").innerHTML = updatedbalanceamount.bold();
 }
-		
+//var cyclecount = 0;	
 function writeWinLossToScreen() {	
+
+	
 	var winlossresult = countwins - countlosses;
 	
 	document.getElementById("winlossDash").innerHTML = totalwins + " / " + winlossresult;
 
-	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2).bold(); 
+	// if(totalwins > 1) {
+	// 	cyclecount++;
+	// }
+
+	//document.getElementById("winlossDash").innerHTML = totalwins + "/32";
+
+	document.getElementById("profitupdate").innerHTML = (tradeProfit - tradeLoss).toFixed(2); 
 	
-	if(winlossresult == -2 && connectLock == "Off" && appid == 10122) {    /*appid == 10123*/
+	if(winlossresult == -2 && connectLock == "Off" && appid_temp == appidlive) {
 		winlossLock = "On";
 		connectLock = "DEMO";
-		reConnect("kS7A68xssbTVpkE");
+		//writeToScreen("Loggedin as" + appiddemo);
+		reConnect(tokeniddemo, appiddemo);
 	}
-	else if (connectLock == "On" && appid == 6490) {
-		
+	else if (connectLock == "On" && appid_temp == appiddemo) {
 		winlossLock = "Off";
 		countlosses = 0;
 		connectLock = "Live";
-		//reConnect("nBvBHHOe84bgXMK"); //Jenty Live
-		reConnect("xwzTFS9BwGxjPZZ"); //Carline demo
+		//writeToScreen("Loggedin as" + appidlive);
+		reConnect(tokenidlive,appidlive);
 	}
 }
 
