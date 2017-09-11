@@ -21,5 +21,4 @@ else{
     echo json_encode(array(
         'valid' => $isAvailable,
     ));
-
 ?>
