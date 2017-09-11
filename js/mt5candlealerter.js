@@ -88,26 +88,21 @@ function dot_update(dbgindex){
 				}
 				
 				if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
-						//alert("seeeeeeeeeeeeeeeeeelllllllllllllllllllll");
 					tradeLock = 111;
 					if(tradeDirection == "RED"){
 
 						tradeDirection = "GREEN";
-						//document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
 						tradeOption("RED",globalMinutes);
 					}
 
 					else if(tradeDirection == "GREEN") {
-						//alert("seeeeeeeeeeeeeeeeeelllllllllllllllllllll");
 						tradeDirection = "RED";
-						//document.getElementById("tradeDirectionqq").innerHTML = tradeDirection;
 						tradeOption("GREEN",globalMinutes);
 					}
 				}  
 						
 				else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
 						if(newtradeOptionIdLock != oldtradeOptionIdLock){
-							//alert("seeeeeeeeeeeeeeeeeelllllllllllllllllllll");
 							tradeLock = 222;
 							GetPortfolio();
 							playSoundCustom("18");

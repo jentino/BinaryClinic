@@ -1,4 +1,3 @@
-/////////////////////////////////////////////////////////////////  COLOUR WIN AND LOSS
 function checkWinOrLoss(buyprice,amount){
 	var str_return;
 	
@@ -9,11 +8,9 @@ function checkWinOrLoss(buyprice,amount){
 			totalwins++;
 			countlosses = 0;
 			rescue = 0;
-			//reConnect("COQz3VcylK89JoT");
 		}
 		
 		str_return = "Win".bold().fontcolor("Green");
-		//playSoundCustom(21);
 	}
 	else {
 		connectLock = "Off";
@@ -24,13 +21,10 @@ function checkWinOrLoss(buyprice,amount){
 			rescue++;
 		}
 		str_return = "Loss".bold().fontcolor("Red");
-		//playSoundCustom(22);
 	}
 	return str_return;
 }
 
-
-//////////////////////////////////////////////////////////////////  AUTO TRADINNG
 function tradeOption(direction, currentMinutes) {
 	
 	if(temp_minute != currentMinutes) {

@@ -1,4 +1,3 @@
-///////////////////////////////////////////////// BUY FUNCTION /////////////////
 function Buyit(buydollars) {
         if (ws) {
 		    
@@ -23,8 +22,7 @@ function Buyit(buydollars) {
 			playSoundCustom(5);
         }
 }
-	
-//////////////////////////////////////////////////// SELL FUNCTION ///////////////////////
+
 function Sellit(selldollars) {
        if (ws) {
 		    
@@ -49,8 +47,6 @@ function Sellit(selldollars) {
 			playSoundCustom(5);
         }
 }
-	
-//////////////////////////////////////////////////// GET BALANCE
 
 function GetBalance() {
         if (ws) {
@@ -60,8 +56,7 @@ function GetBalance() {
 			
         }
 }
-	
-//////////////////////////////////////////////////// GET PROFIT
+
 function subscribeTransactions() {
         if (ws) {
 		   
@@ -72,8 +67,6 @@ function subscribeTransactions() {
         }
 }
 
-//////////////////////////////////////////////////// GET STATEMENT
-
 function GetStatement() {
         if (ws) {
               ws.send(JSON.stringify({
@@ -83,9 +76,7 @@ function GetStatement() {
 			}));
         }
 }
-	
-//////////////////////////////////////////////////// GET PORTFOLIO
-	
+
 function GetPortfolio() {
 		// falert("inside jsoncalls.js");
         if (ws) {
@@ -123,7 +114,4 @@ function PingBinServer() {
 		"ping": 1
 		}));
 	}
-	//else	
-		//reConnect("nBvBHHOe84bgXMK"); //Jenty live
-		//reConnect(<?php echo $user->token_id_live;?>);
 }

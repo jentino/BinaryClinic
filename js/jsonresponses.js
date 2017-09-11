@@ -14,8 +14,6 @@ onMessage = function(msg) {
 				var get = parseGetVars();   
 				writeToScreen( "Connected. " );         
 				writeToScreen(js.authorize.email + "-------------------");
-				//writeToScreenEmail((js.authorize.email).bold());
-				
 				if(OriginalBalanceLock == "Off"){
 					OriginalBalance = js.authorize.balance;
 					document.getElementById("originalbalance").innerHTML = OriginalBalance;

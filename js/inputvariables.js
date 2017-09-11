@@ -1,4 +1,6 @@
-var tockSeconds= 89;
+var tockSeconds;
+
+var setTimerOnce = 1;
 var tockMinutes;
 var temp_minute = "";
 var globalMinutes;

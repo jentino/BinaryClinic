@@ -32,7 +32,7 @@
 {
     border-radius: 5px;
 	width: auto;
-    height:270px;
+    height:247px;
     background-color:LightGray;
     overflow-y: auto;
     /* max-width:280px; */
@@ -227,21 +227,16 @@ table.tablepropic{
 	text-align: center;
 	
 }
-
-
 .colorbackground {
 
 	background-color:#D2CECE;
 
 }
-
-
 img.ribbon {
 	position: absolute;
 	top: 0;
 	right: 0;
 }
-
 img.propic {
 	position: absolute;
 	top: 0;

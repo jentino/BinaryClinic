@@ -96,9 +96,6 @@ $user->getUserData();
 <audio id="audio21" src="sounds/woncoin.wav" autostart="false" ></audio>
 <audio id="audio22" src="sounds/lost1.wav" autostart="false" ></audio>
 <audio id="audio23" src="sounds/lost2.wav" autostart="false" ></audio>
-
- 
-
 	
 <p><br>
 <!----------------------------------------------------------------------HEADER-------------------------------------->

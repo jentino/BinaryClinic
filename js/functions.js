@@ -1,16 +1,15 @@
-//////////////////////////////////////////////////// GET ASSET
-// function getAsset(assetval) {
-//     //var obj = document.getElementById("myAssets");
-//     document.getElementById("assetlist").innerHTML = assetval.bold();
-// 	assetvalue = assetval;
-// 	playSoundCustom(16);
-// }
+function pollCandles(){
+	
+		mypb(totalwins);
+		dot_update("next");
+		dot_update("current");
+		dot_update("signal");
+		dot_update("dot1");
+		dot_update("dot2");
+		dot_update("dot3");
+		dot_update("dot4");
+}
 
-function showtock() {
-	return tockSeconds;
-  }
-
-//////////////////////////////////////////////////// SHOW BALANCE
 function showBalance(balance) {
 	
 	document.getElementById("realbalance").innerHTML = balance.bold().fontcolor("Green");
@@ -27,10 +26,10 @@ function returnTime(thetime) {
 	return  xd.getMinutes() + ":" + xd.getSeconds();
 }
 
-function mypb(ticks){
+function mypb(wins){
 	$(function() {
 		var current_progress = 0;
-			current_progress = (ticks/60 * 100).toFixed();
+			current_progress = (wins/33 * 100).toFixed();
 			$("#dynamic")
 			.css("width", current_progress + "%")
 			.attr("aria-valuenow", current_progress)
