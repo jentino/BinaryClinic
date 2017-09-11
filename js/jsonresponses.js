@@ -1,6 +1,4 @@
 onMessage = function(msg) {
-
-
 	
 	js = JSON.parse(msg.data);
 	
@@ -10,15 +8,17 @@ onMessage = function(msg) {
 			}
 			
 			else if (js.msg_type == 'authorize') {
+				document.getElementById("statusblock").innerHTML = "Online".bold().fontcolor("#59E817");
 				connectLock = "Switch";
 				playSoundCustom(14);
-				var get = parseGetVars();            
+				var get = parseGetVars();   
+				writeToScreen( "Connected. " );         
 				writeToScreen(js.authorize.email + "-------------------");
-				writeToScreenEmail((js.authorize.email).bold());
+				//writeToScreenEmail((js.authorize.email).bold());
 				
 				if(OriginalBalanceLock == "Off"){
 					OriginalBalance = js.authorize.balance;
-					document.getElementById("originalbalance").innerHTML = OriginalBalance.bold();
+					document.getElementById("originalbalance").innerHTML = OriginalBalance;
 					OriginalBalanceLock = "On";
 					writeWinLossToScreen();
 				}

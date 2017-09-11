@@ -1,4 +1,5 @@
-#row  {
+
+	#row  {
 	    display: table-row;
 	}
 
@@ -52,6 +53,12 @@
 }
 
 
+ 
+ 
+.debug {
+	font-size: 12px;
+	font-family: myFont;
+}
 
 div.innerConsole {
     padding: 10px;
@@ -82,6 +89,12 @@ div.lightsConsole {
     padding-left: 0px;
 	
 }
+
+.padleftbuttons {
+    padding-left: 83px;
+	
+}
+
 
 .paddown {
     padding-top: 3px;
@@ -150,6 +163,11 @@ div.tockTime {
 	border-radius: 5px;
 	background-color:#F5F5F5;
 }
+
+.container {
+	max-width:580px;
+}
+
 
 table.tablepropic{
 	width:80px; 

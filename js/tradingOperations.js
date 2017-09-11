@@ -46,8 +46,8 @@ function tradeOption(direction, currentMinutes) {
 			else if(signalCandle == "DOWN")
 				Buyit(tradeamount[rescue]);
 		}
-    	document.getElementById("currentMinutes").innerHTML = currentMinutes;
-    	document.getElementById("tradeaction").innerHTML = direction;
+    	//document.getElementById("currentMinutes").innerHTML = currentMinutes;
+    	//document.getElementById("tradeaction").innerHTML = direction;
     	showRescueAmount();
     	temp_minute = currentMinutes;
     	

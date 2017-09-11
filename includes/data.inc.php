@@ -116,18 +116,18 @@ class userData{
  
   $this->username = $row['username'];
   $this->password = $row['password'];
-  $this->email= $row['email'];
-  $this->status= $row['status'];
-  $this->firstname= $row['firstname'];
-  $this->lastname= $row['lastname'];
-  $this->token_id_live= $row['token_id_live'];
-  $this->token_id_demo= $row['token_id_demo'];
-  $this->app_id_live= $row['app_id_live'];
-  $this->app_id_demo= $row['app_id_demo'];
-  $this->role= $row['role'];
-  $this->hash= $row['hash'];
-  $this->vcode= $row['vcode'];
-  $this->picfile= $row['picfile'];
+  $this->email = $row['email'];
+  $this->status = $row['status'];
+  $this->firstname = $row['firstname'];
+  $this->lastname = $row['lastname'];
+  $this->token_id_live = $row['token_id_live'];
+  $this->token_id_demo = $row['token_id_demo'];
+  $this->app_id_live = $row['app_id_live'];
+  $this->app_id_demo = $row['app_id_demo'];
+  $this->role = $row['role'];
+  $this->hash = $row['hash'];
+  $this->vcode = $row['vcode'];
+  $this->picfile = $row['picfile'];
 
 }
 

@@ -17,12 +17,17 @@ $user->username = $_SESSION['username'];
 
 $user->getUserData();
 
-$assetid = "R_100";
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+        @font-face {
+	font-family: myFont;
+	src: url(fonts/Sansation/SansationLight.ttf);
+    }  
+    </style>  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,17 +70,7 @@ $assetid = "R_100";
 
   </head>
  
-  <body >
-
-  
-
-
-  
-<script>
-    alert(connectLock);
-</script>
-    
-
+<body>
 
 <audio id="audio" src="sounds/beep.wav" autostart="false" ></audio>
 <audio id="audio1" src="sounds/pokerchip1.wav" autostart="false" ></audio>
@@ -105,7 +100,10 @@ $assetid = "R_100";
 
 	
 <p><br>
-
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
 <div id="login-overlay" class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
@@ -114,23 +112,57 @@ $assetid = "R_100";
                 <div class="col-xs-6">
                   <h4 class="modal-title" id="myModalLabel"><b>Binary<font color="#59E817">Haven</font>&trade;</b> TradePortal </h4>
                 </div>
-                <div class="col-xs-6 paddown">
-                    Token Id: <?php if(!$user->token_id_live) echo "Empty"; else echo $user->token_id_live;?>
+                <div class="col-xs-6 paddown padleftbuttons">
+               
+               
+                <!-- <b id="tradeaction"></b>
+                <b id="tradeDirectionqq"></b> 
+                <b id="tradeDirectionqq"></b>
+                <b id="tradeDirectionqq"></b>
+                <b id="tradeDirectionqq"></b> <b id="currentappid"></b>-->
+
+                <script>
+                    tokenidlive = "<?php echo $user->token_id_live; ?>";
+                    appidlive = "<?php echo $user->app_id_live; ?>";
+                    tokeniddemo = "<?php echo $user->token_id_demo; ?>";
+                    appiddemo = "<?php echo $user->app_id_demo; ?>";
+                </script>
+
+
+               
+
+                <img src="img/tinylock.png"><b id="showtradeLock"></b>&nbsp;
+                   <b id="showTheTime">00:00</b>
+                    <a href="#" id="btnconnect" onclick="Connect('<?php echo $user->token_id_live;?>', '<?php echo $user->app_id_live;?>'); return false"><button type="button" class="btn btn-default btn-xs extrasmall" >Connect</button></a> 
+                    <a href="http://127.0.0.1/logout.php" id="btnlogout"><button type="button" class="btn btn-default btn-xs extrasmall" >Logout</button></a> 
+                  
+
+
                 </div>
             </div>
           
             </div>
+
+
           <div class="modal-body">
               <div class="row">
-<!-- LEFT COLOUMN -->             
+<!----------------------------------------------------------------------MAIN CONSOLE ---------------------------->
+<!----------------------------------------------------------------------MAIN CONSOLE ---------------------------->
+<!----------------------------------------------------------------------MAIN CONSOLE ---------------------------->
+<!----------------------------------------------------------------------MAIN CONSOLE ---------------------------->
+            
                   <div class="col-xs-6">
                       <div class="well">
                             <div id="mainConsole">
-							    <div class="innerConsole" id="debug" onscroll="myStopFunction()"></div>
+							    <div class="innerConsole debug" id="debug" onscroll="myStopFunction()"></div>
 						    </div>
                       </div>
                   </div>
- <!-- RIGHT COLOUMN-->
+ <!----------------------------------------------------------------------HEADER------------------------------------>
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+<!----------------------------------------------------------------------HEADER-------------------------------------->
+
                   <div class="col-xs-6 "> <!--  -->
                         <div class="container padleft">
 
@@ -158,10 +190,10 @@ $assetid = "R_100";
                                                     <h6><small>COUNTRY<br><img src="img/saflagicontiny.jpg"></small></h6>
                                                 </div>
                                                 <div class="col-xs-4 col-xs-4-main-profiledash-under ">
-                                                    <h6 ><small>STATUS <br><p class="Offline paddown"><b >Offline</b></p></small></h6>
+                                                    <h6 ><small>STATUS <br><p class="Offline paddown" id="statusblock"><b >Offline</b></p></small></h6>
                                                 </div>
                                                 <div class="col-xs-4 col-xs-4-main-profiledash-under">
-                                                    <h6><small>LEVEL <br><b>1</b></small></h6>
+                                                    <h6><small>LEVEL <br><b id="winlossDash">0</b></small></h6>
                                                 </div>                                       
                                             </div>
                                         </div>
@@ -201,15 +233,15 @@ $assetid = "R_100";
                                 <div class="row padup" >
 
                                 <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
-                                    <h6><small>PROFIT <br><b>$</b></small></h6>
+                                    <h6><small>PROFIT <br><b>$</b><b id="profitupdate">0</b></small></h6>
                                 </div>
                                 
                                 <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
-                                    <h6><small>ORIGINAL BALANCE <br><b>$</b></small></h6>
+                                    <h6><small >ORIGINAL BALANCE <br><b>$</b><b id="originalbalance">0</b></small></h6>
                                 </div>
                                 
                                 <div class="col-xs-3 col-xs-4-main-profiledash-under-1">
-                                    <h6><small>RESCUE AMOUNT <br><b>$</b></small></h6>
+                                    <h6><small>RESCUE AMOUNT <br><b>$</b><b id="showrescueamount">0</b></small></h6>
                                 </div> 
                             </div>
                             
@@ -227,9 +259,7 @@ $assetid = "R_100";
 
                             <div class="row padleft ">
                             
-                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>D5 <img  class="statusdots" src="img/tinygreendot.png"></small></h6>
-                                </div>
+                                
                                 
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
                                     <h6><small>D4 <img class="statusdots" src="img/tinyreddot.png"></small></h6>
@@ -254,9 +284,8 @@ $assetid = "R_100";
                                 <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
                                     <h6><small>CR <img  class="statusdots"  src="img/tinygreenbox.png"></small></h6>
                                 </div>
-                                
-                                <div class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
-                                    <h6><small>NX <img  class="statusdots"  src="img/tinyredbox.png"></small></h6>
+                                <div id="shownextcandle" class="col-xs-2 col-xs-4-main-profiledash-under-1-dots">
+                                    
                                 </div>
                             
                         </div>
@@ -268,8 +297,7 @@ $assetid = "R_100";
         </div>
 
   </div><center>
-<br> <div><a href="http://127.0.0.1/logout.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Logout</a><br>
-
+<br>
 </div>
 <br><br><center>
         <footer class="footer">
@@ -311,8 +339,8 @@ $(document).ready(function(){
         });
 
         document.querySelector('#timer2 .field2').innerHTML = timer2.lap('{S}');	
-    </script>
+</script>
 
 
-  </body>
+</body>
 </html>

@@ -17,7 +17,6 @@ include_once 'includes/data.inc.php';
 
  $user->getUserData();
  
-
 if($_POST){
 
 

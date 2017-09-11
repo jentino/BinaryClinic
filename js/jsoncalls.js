@@ -123,7 +123,7 @@ function PingBinServer() {
 		"ping": 1
 		}));
 	}
-	else	
+	//else	
 		//reConnect("nBvBHHOe84bgXMK"); //Jenty live
-		reConnect("COQz3VcylK89JoT");
+		//reConnect(<?php echo $user->token_id_live;?>);
 }

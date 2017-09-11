@@ -1,10 +1,10 @@
 //////////////////////////////////////////////////// GET ASSET
-function getAsset(assetval) {
-    //var obj = document.getElementById("myAssets");
-    document.getElementById("assetlist").innerHTML = assetval.bold();
-	assetvalue = assetval;
-	playSoundCustom(16);
-}
+// function getAsset(assetval) {
+//     //var obj = document.getElementById("myAssets");
+//     document.getElementById("assetlist").innerHTML = assetval.bold();
+// 	assetvalue = assetval;
+// 	playSoundCustom(16);
+// }
 
 //////////////////////////////////////////////////// SHOW BALANCE
 function showBalance(balance) {

@@ -126,11 +126,11 @@ if($_POST){
                           <b>Hello!</b><br>
                           <br>
                           So you have decided to register. 
-                          
-                          <p>Please enter your <b>invitation code</b> below then hit submit to proceed. 
-                          
+<!--                           
+                          <p>Please enter your <b>invitation code</b> below then hit submit to proceed.  
                           <p>Membership is limited to those who have been invited by current members at this time.</p>  
-                          
+                          -->
+                          <p>You will be given more details as a registered member.
                         </p><br><br><br> <p>
                         <div class="g-recaptcha" data-theme="light" data-sitekey="6LfeZy8UAAAAAOQFiYvgxH7ezDVUKbM3qXjvhgR6" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div></p>
                                    

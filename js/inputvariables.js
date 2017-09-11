@@ -28,10 +28,14 @@ var newtradeOptionIdLock = 12345;
 var oldtradeOptionIdLock = 12345;
 
 var signalCandle;
-var appid;
+var appid_temp = "";
+var appidlive = "";
+var appiddemo = "";
+var tokenidlive = "";
+var tokeniddemo = "";
 var output;
 var outputemail;
-var assetvalue = "";
+var assetvalue = "R_100";
 var OriginalBalance = 0;
 var trader_name = "";
 
