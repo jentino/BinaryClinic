@@ -13,18 +13,20 @@ onMessage = function(msg) {
 				playSoundCustom(14);
 				var get = parseGetVars();   
 				writeToScreen( "Connected. " );         
-				writeToScreen(js.authorize.email + "-------------------");
+				writeToScreen(js.authorize.email + "---------------");
 				if(OriginalBalanceLock == "Off"){
 					OriginalBalance = js.authorize.balance;
 					document.getElementById("originalbalance").innerHTML = OriginalBalance;
 					OriginalBalanceLock = "On";
 					writeWinLossToScreen();
+					showBalance(OriginalBalance);
 				}
 					
 				onSecTimer();
 				showRescueAmount();
 				subscribeTransactions();
-				showBalance(OriginalBalance);
+				showBalance(js.authorize.balance);
+				
 				
 			}
 			

@@ -1,5 +1,3 @@
-var tradeLock = 333;
-
 function dot_update(dbgindex){
 	
 	if (dbgindex == "next") {
@@ -87,8 +85,8 @@ function dot_update(dbgindex){
 					document.getElementById(display_div_id).innerHTML = "!";
 				}
 				
-				if(tockSeconds == 59 && searchMinute == -1 && tradeLock == 333){
-					tradeLock = 111;
+				if(tockSeconds == 59 && searchMinute == -1 && tradeLock == "Open"){
+					tradeLock = "Closed";
 					if(tradeDirection == "RED"){
 
 						tradeDirection = "GREEN";
@@ -101,25 +99,19 @@ function dot_update(dbgindex){
 					}
 				}  
 						
-				else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == 111) {
+				else if(tockSeconds == 4 && searchMinute !== -1 && tradeLock == "Closed") {
 						if(newtradeOptionIdLock != oldtradeOptionIdLock){
-							tradeLock = 222;
+							tradeLock = "Locked";
 							GetPortfolio();
 							playSoundCustom("18");
 							oldtradeOptionIdLock = newtradeOptionIdLock;
 							
-						}
-						else {
-							
-							tradeLock = 333;
-							return;
-						}
-							
+						}							
 				} 
 						
-				else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == 222){
+				else if(tockSeconds == 5 && searchMinute == -1 && tradeLock == "Locked"){
 
-					tradeLock = 333;
+					tradeLock = "Open";
 					GetProfitTable();
 					playSoundCustom("20");
 				}

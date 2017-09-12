@@ -1,3 +1,4 @@
+var tradeLock = "Open";
 var tockSeconds;
 
 var setTimerOnce = 1;
@@ -40,5 +41,6 @@ var output;
 var outputemail;
 var assetvalue = "R_100";
 var OriginalBalance = 0;
+var OriginalBalanceMain = 0;
 var trader_name = "";
 
