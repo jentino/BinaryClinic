@@ -303,7 +303,7 @@ $user->getUserData();
         <footer class="footer">
       <div class="">
         <span class="text-muted">
-            <p> <span class="glyphicon glyphicon-copyright-mark"></span> Copyright, 2017, BinaryHaven  
+            <p> <span class="glyphicon glyphicon-copyright-mark"></span> Copyright, 2017, BinaryHaven v 1.0.0.0   
         <span class="glyphicon glyphicon-envelope"></span> </p></span>
       </div>
     </footer></center>
